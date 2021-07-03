@@ -1,0 +1,633 @@
+:root {
+    --primario: #1c7c98;
+    --primario-brillante: #1689a2;
+    --secundario: #4b3994;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.bg-gray {
+    filter: grayscale(1);
+}
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secundario);
+    white-space: nowrap;
+}
+h2::before {
+    content: "";
+    border-bottom: 4px solid var(--primario);
+    padding: 1.5rem;
+    width: 85px;
+    display: inline-block;
+    position: absolute;
+}
+h3 {
+    font-size: 2rem;
+}
+
+.hero {
+    background-image: url("../img/hero.png");
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(.5);
+    height: 120vh;
+    position: relative;
+}
+.contenedor-hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.contenedor {
+    margin: 0 auto;
+    max-width: 90%;
+}
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: #fff;
+    align-content: center;
+}
+.logo {
+    width: 3.5rem;
+}
+.header i {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.datos {
+    margin: 6rem 0 0 4rem;
+    color: #fff;
+    width: fit-content;
+}
+@media only screen and (max-width: 780px) {
+    .datos {
+        margin-left: 0;
+    }
+}
+.btn {
+    padding: .8rem 3rem;
+    cursor: pointer;
+    background: var(--primario);
+    border: none;
+    width: max-content;
+    transition: .5s;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #c5c5c5;
+}
+.btn:hover {
+    background: var(--primario-brillante);
+    transform: scale(1.1);
+    color: #e9e9e9;
+}
+.btn-ghost {
+    background: transparent;
+    border: 2px solid #fff;
+}
+.btn-ghost:hover {
+    background: transparent;
+    background: #fff;
+    color: #000;
+}
+
+.servicios {
+    position: relative;
+}
+.responsive {
+    margin-top: 6rem;
+    height: 100vh;
+    width: 100%;
+    filter: brightness(.6);
+}
+.servicios .texto {
+    width: 500px;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.servicios .texto div {
+    width: 500px;
+}
+.texto div {
+    text-align: center;
+}
+.texto div button {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* SOBRE MI */
+#sobre-mi {
+    display: flex;
+    align-items: center;
+}
+#sobre-mi .descripcion {
+    margin-right: 3rem;
+    font-size: 1.1rem;
+    color: #4d4d4d;
+}
+#foto {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-left: 2rem;
+    animation-name: neon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes neon{
+    0% {
+        -webkit-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
+        -moz-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
+        box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
+    }
+    50% {
+        -webkit-box-shadow: 0px 0px 150px 10px rgba(41,34,171,1);
+        -moz-box-shadow: 0px 0px 150px 10px rgba(41,34,171,1);
+        box-shadow: 0px 0px 150px 10px rgba(41,34,171,1);
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
+        -moz-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
+        box-shadow: 0px 0px 150px 10px rgb(14, 102, 175);
+    }
+}
+@media only screen and (max-width: 780px) {
+    #sobre-mi {
+        flex-direction: column;
+
+    }
+    #sobre-mi .descripcion {
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
+}
+
+
+/* CARRUSEL */
+.tecnologias.contenedor {
+    padding: 5rem 0;
+    text-align: center;
+    color: #5d5d5d;
+}
+
+.glide__slides {
+    overflow: visible;
+}
+.glide__slide>div {
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.glide__slide img {
+    height: 80%;
+    object-fit: cover;
+    margin: 0;
+}
+.glide__slide .big img {
+    padding: 5%;
+}
+.glide__slide p {
+    color: #000;
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+.glide__slide .barra {
+    border-radius: 1rem;
+    width: 90%;
+    height: 2rem;
+    background: gray;
+    position: relative;
+    overflow: hidden;
+}
+.glide__slide .barra .progreso {
+    background: #1f6eb8;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 0%;
+}
+.glide__slide--active #html .barra .progreso {
+    animation-name: ochenta;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #css .barra .progreso {
+    animation-name: setenta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #javascript .barra .progreso {
+    animation-name: sesenta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #php .barra .progreso {
+    animation-name: treinta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #mysql .barra .progreso {
+    animation-name: treinta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #cplusplus .barra .progreso {
+    animation-name: veinte;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #git .barra .progreso {
+    animation-name: cuarenta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #github .barra .progreso {
+    animation-name: cuarenta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes veinte {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+@keyframes treinta {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
+    }
+}
+@keyframes cuarenta {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 40%;
+    }
+}
+@keyframes sesenta {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 60%;
+    }
+}
+@keyframes setenta {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+@keyframes ochenta {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+.glide__slide {
+   opacity: .7;
+   filter: blur(6px);
+   transition: .3s linear;
+}
+.glide__slide--active {
+   opacity: 1;
+   filter: none;
+   transform: scale(1.1);
+}
+.imagenes {
+   position: relative;
+}
+.glide__arrow {
+   position: absolute;
+   z-index: 1;
+   top: calc(50% - 1rem);
+   color: #353535;
+   opacity: .5;
+   font-size: 3rem;
+   transition: all .3s ease;
+}
+.glide__arrow:focus {
+   outline: none;
+}
+.glide__arrow:hover {
+   opacity: 1;
+   cursor: pointer;
+   transform: scale(1.2);
+   color: rgb(0, 0, 0);
+}
+.glide__arrow--left {
+   left: 1rem;
+   background: transparent;
+   border: none;
+}
+.glide__arrow--right {
+   right: 1rem;
+   background: transparent;
+   border: none;
+}
+
+
+/* CONTACTO */
+.contacto {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+}
+.direccion {
+    margin-bottom: 4rem;
+}
+.contacto input[type="text"], .contacto textarea {
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border: none;
+    background: #c0c0c0;
+    outline: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+.contacto input[type="text"]:focus, .contacto textarea:focus {
+    background: #a0a0a0;
+}
+.contacto textarea {
+    resize: none;
+}
+
+form#form-contacto {
+    display: flex;
+    flex-direction: column;
+}
+.btn-submit {
+    float: right;
+    align-self: flex-end;
+}
+.datos-contacto {
+    font-size: 1.1rem;
+}
+.datos-contacto i {
+    font-size: 1.8rem;
+}
+.datos-contacto #tel i, .datos-contacto #tel p,
+.datos-contacto #correo i, .datos-contacto #correo p {
+    margin-right: 2rem;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 780px) {
+    .contacto {
+        flex-direction: column;
+    }
+}
+
+/* FOOTER */
+#footer {
+    background: #353535;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.social {
+    font-size: 2rem;
+}
+.social a i {
+    margin-right: 1rem!important;
+    transition: .3s;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.social a:hover i {
+    transform: scale(1.5);
+}
+.social i:last-of-type {
+    margin-right: 0;
+}
+.social i.fa-facebook-f:hover {
+    color: #3b5998;
+}
+.social i.fa-instagram:hover {
+    color: #d6249f;
+}
+.social i.fa-twitter:hover {
+    color: #55acee;
+}
+.social i.fa-github:hover {
+    color: #000;
+}
+.social i.fa-linkedin:hover {
+    color: #007bb5;
+}
+#copyright {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 780px) {
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social {
+        margin-top: 3rem;
+        font-size: 1.8rem;
+    }
+}
+
+/* HABILIDADES */
+#bg-habilidades {
+    background-image: url('../img/habilidades.jpg');
+    background-position: center center;
+    background-size: cover;
+    filter: saturate(.8);
+    height: 90vh;
+    color: #fff;
+}
+#bg-habilidades .contenedor {
+    width: 80%;
+    padding: 2rem 0;
+    text-align: center;
+}
+.contenedor-habilidades {
+    margin-top: 2rem;
+}
+
+.habilidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.habilidad i {
+    color: #1e8dff;
+}
+.habilidad .barra {
+    height: 2rem;
+    flex-basis: 50%;
+    align-self: auto;
+}
+.barra {
+    display: flex;
+    justify-content: flex-end;
+}
+.barra div {
+    background-color: rgb(255, 255, 255, .7);
+}
+
+
+.barra.animado > .escritura {
+    animation-name: barra-escritura;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes barra-escritura {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 55%;
+    }
+}
+
+.barra.animado > .dibujo {
+    animation-name: barra-dibujo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes barra-dibujo {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 70%;
+    }
+}
+
+.barra.animado > .programacion {
+    animation-name: barra-programacion;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes barra-programacion {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 75%;
+    }
+}
+
+.barra.animado > .artes-marciales {
+    animation-name: barra-am;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes barra-am {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 75%;
+    }
+}
+.barra.animado > .logica {
+    animation-name: barra-logica;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes barra-logica {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 80%;
+    }
+}
+
+.habilidad .descripcion {
+    flex-basis: 50%;
+    display: flex;
+    align-content: center!important;
+    margin-left: 2rem;
+}
+.habilidad .descripcion i {
+    border-radius: 100%;
+    border: 3px solid #fff;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 780px) {
+    .habilidad .descripcion p {
+        display: none;
+    }
+    .habilidad .descripcion {
+        flex-basis: 20%;
+    }
+}

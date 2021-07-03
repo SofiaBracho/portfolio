@@ -1,0 +1,188 @@
+:root {
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: #164073;
+    --hovercolor: #092856;
+    --widthcollapsed: 50px;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin-right: var(--widthcollapsed);
+    transition: .5s;
+}
+
+.body-expanded {
+    margin-right: var(--width);
+}
+#main-container {
+    color: #fff;
+}
+
+#side-menu {
+    background: var(--bgcolor);
+    color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: var(--width);
+    transition: .5s;
+    z-index: 2;
+}
+
+#side-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+#side-menu #menu-header {
+    border-bottom: solid 3px var(--hovercolor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#side-menu #menu-header #title {
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+#side-menu #menu-header #title, #side-menu #menu-header #menu-btn {
+    vertical-align: middle;
+}
+#side-menu #menu-header #menu-btn {
+    display: inline-block;
+}
+#side-menu #menu-header #menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    width: var(--widthcollapsed);
+    box-sizing: border-box;
+    transition: .5s;
+}
+#side-menu #menu-header #menu-btn:hover {
+    background: var(--hovercolor);
+}
+#side-menu #menu-header #menu-btn i {
+    font-size: 2rem;
+}
+
+/* PROFILE */
+#side-menu #profile {
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--padding) 0;
+    text-align: center;
+}
+#side-menu #profile #photo {
+    padding: var(--padding);
+    margin: 0 auto;
+}
+body.body-expanded #side-menu #profile #photo img {
+    width: 200px;
+    height: 200px;
+}
+#side-menu #profile #photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#side-menu #profile #photo, #side-menu #profile #name {
+    font-size: 1.5rem;
+    padding: var(--padding) 0;
+    overflow: hidden;
+}
+
+/* ITEM */
+#side-menu #menu-items {
+    overflow: hidden;
+}
+#side-menu #menu-items .item .icon,
+#side-menu #menu-items .item .title {
+    font-size: 1rem;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+#side-menu #menu-items .item {
+    width: var(--width);
+}
+#side-menu #menu-items .item .icon {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-align: center;
+}
+#side-menu #menu-items .item a {
+    display: block;
+    transition: .5s;
+}
+#side-menu #menu-items .item:hover {
+    background: var(--hovercolor);
+    cursor: pointer;
+}
+#side-menu #menu-items .item .icon {
+    box-sizing: border-box;
+    padding: var(--padding) 0;
+    width: var(--widthcollapsed);
+}
+#side-menu #menu-items .item .icon img {
+    width: 100%;
+}
+#side-menu #menu-items .item .title {
+    padding: var(--padding) 0;
+}
+#side-menu #menu-items .item.separator {
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;
+}
+
+.menu-expanded {
+    width: var(--width)!important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #title {
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #title span {
+    width: calc(var(--widthcollapsed) - var(--widthcollapsed) -5px);
+    overflow: hidden;
+    display: inline-block;
+}
+.menu-expanded #profile #photo {
+    width: 200px;
+}
+.menu-expanded #profile #name {
+    width: 100%;
+}
+
+.menu-collapsed {
+    width: var(--widthcollapsed)!important;
+}
+.menu-collapsed #menu-header #title {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.menu-collapsed #profile #name {
+    display: none;
+}
+.menu-collapsed .item {
+    width: 100px;
+}
