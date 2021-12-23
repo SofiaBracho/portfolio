@@ -36,6 +36,7 @@ h2::before {
 }
 h3 {
     font-size: 2rem;
+    text-align: center;
 }
 
 .hero {
@@ -43,8 +44,21 @@ h3 {
     background-position: center center;
     background-size: cover;
     filter: brightness(.5);
-    height: 120vh;
+    height: 950px;
     position: relative;
+}
+@media only screen and (max-width: 470px) {
+    h2::before {
+        padding: 2.5rem;
+    }
+    h2 {
+        white-space: normal;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .hero {
+        height: 700px;
+    }
 }
 .contenedor-hero {
     position: absolute;
@@ -630,4 +644,55 @@ form#form-contacto {
     .habilidad .descripcion {
         flex-basis: 20%;
     }
+}
+
+/* PROYECTOS */
+.lista-proyectos {
+    padding: 0;
+}
+.info-proyecto {
+    background: #bbbbbb;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.info-proyecto img {
+    width: 50%;
+}
+.info-proyecto div {
+    flex-basis: 50%;
+    padding: 1rem;
+}
+.proyecto {
+    position: relative;
+}
+.cortina {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 77, 77, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: .5s;
+}
+.cortina a {
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+.cortina a p {
+    margin: 0;
+    display: inline-block;
+    margin-left: .5rem;
+}
+.cortina a:hover {
+    color: #bbbbbb;
+}
+.proyecto:hover .cortina {
+    opacity: 1;
 }

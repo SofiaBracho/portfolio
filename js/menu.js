@@ -2,6 +2,11 @@ const btn = document.querySelector('#menu-btn');
 const menu = document.querySelector('#side-menu');
 const menuItem = document.querySelectorAll(".item");
 const body = document.querySelector(".cuerpo");
+const btnContact = document.querySelector(".btn-contact");
+
+btnContact.addEventListener('click', () => {
+    btnMenu('contacto')
+})
 
 //Expandir y contraer menú
 btn.addEventListener('click', () => {
@@ -33,6 +38,9 @@ function btnMenu(id) {
     let contenedor = document.querySelector("." + id + ".contenedor");
     if(id=='habilidades') {
         contenedor = document.querySelector("." + id + ".contenedor").parentElement;        
+    }
+    else if(id=='trabajos') {
+        contenedor = document.querySelector(".contenedor-proyectos");
     }
     let scrollCont=contenedor.offsetTop;
 
