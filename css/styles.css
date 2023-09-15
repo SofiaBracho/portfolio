@@ -1,6 +1,6 @@
 :root {
-    --primario: #1c7c98;
-    --primario-brillante: #1689a2;
+    --primario: #0f8eb4;
+    --primario-brillante: #0cb4da;
     --secundario: #4b3994;
 }
 
@@ -41,10 +41,10 @@ h3 {
 
 .hero {
     background-image: url("../img/hero.png");
-    background-position: center center;
+    background-position: center bottom;
     background-size: cover;
     filter: brightness(.5);
-    height: 950px;
+    height: 85vh;
     position: relative;
 }
 @media only screen and (max-width: 470px) {
@@ -87,13 +87,39 @@ h3 {
 }
 
 .datos {
-    margin: 6rem 0 0 4rem;
+    margin: 0 0 0 4rem;
     color: #fff;
-    width: fit-content;
+    width: 50%;
+    font-size: larger;
 }
-@media only screen and (max-width: 780px) {
+.datos .title {
+    line-height: 35pt;
+    margin-bottom: 0;
+}
+.datos p.resumen {
+    margin-top: .75rem;
+}
+
+@media only screen and (max-width: 940px) {
     .datos {
         margin-left: 0;
+        font-size: medium;
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 740px) {
+    .datos {
+        width: 80%;
+    }
+}
+@media only screen and (max-height: 600px) {
+    .hero {
+        height: 100vh;
+    }
+}
+@media only screen and (min-height: 900px) {
+    .datos {
+        margin-top: 3rem;
     }
 }
 .btn {

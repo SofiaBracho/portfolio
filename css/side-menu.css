@@ -3,7 +3,7 @@
     --padding: 10px;
     --bgcolor: #164073;
     --hovercolor: #092856;
-    --widthcollapsed: 50px;
+    --widthcollapsed: 5rem;
 }
 
 html {
@@ -66,9 +66,10 @@ body {
 #side-menu #menu-header #menu-btn {
     cursor: pointer;
     padding: 10px;
-    width: var(--widthcollapsed);
+    /* width: var(--widthcollapsed); */
     box-sizing: border-box;
     transition: .5s;
+    margin: 0 calc(var(--widthcollapsed) / 5);
 }
 #side-menu #menu-header #menu-btn:hover {
     background: var(--hovercolor);
@@ -185,4 +186,20 @@ body.body-expanded #side-menu #profile #photo img {
 }
 .menu-collapsed .item {
     width: 100px;
+}
+
+@media only screen and (max-width: 780px) {
+    .menu-collapsed {
+        width: calc(var(--widthcollapsed) - 1rem)!important;
+    }
+    body {
+        margin-right: calc(var(--widthcollapsed) - 1rem);
+    }
+
+    #menu-header #menu-btn {
+        margin: 0 calc(var(--widthcollapsed) / 8)!important;
+    }
+    #side-menu #menu-items .item .icon {
+        width: calc(var(--widthcollapsed) - 1rem);
+    }
 }
