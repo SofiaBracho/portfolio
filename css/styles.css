@@ -2,6 +2,7 @@
     --primario: #0f8eb4;
     --primario-brillante: #0cb4da;
     --secundario: #4b3994;
+    --complementario: #ffd000;
 }
 
 html {
@@ -102,24 +103,46 @@ h3 {
 
 @media only screen and (max-width: 940px) {
     .datos {
-        margin-left: 0;
         font-size: medium;
         width: 60%;
     }
 }
 @media only screen and (max-width: 740px) {
     .datos {
+        margin-left: 0;
         width: 80%;
     }
 }
-@media only screen and (max-height: 600px) {
+
+@media only screen and (max-height: 655px) {
     .hero {
-        height: 100vh;
+        height: 120vh!important;
+    }
+    .datos {
+        margin-top: -1rem;
+        font-size: small !important;
+    }
+    h1 {
+        font-size: 1.5rem;
+        line-height: 20pt!important;
+    }
+}
+@media only screen and (max-height: 765px) {
+    .hero {
+        height: 100vh!important;
+    }
+    .datos {
+        margin-top: 0;
     }
 }
 @media only screen and (min-height: 900px) {
     .datos {
         margin-top: 3rem;
+    }
+}
+@media only screen and (max-height: 450px) {
+    .hero {
+        height: 140vh!important;
     }
 }
 .btn {
@@ -153,9 +176,9 @@ h3 {
 }
 .responsive {
     margin-top: 6rem;
-    height: 90vh;
+    height: 60vh;
     width: 100%;
-    filter: brightness(.6);
+    filter: brightness(.55);
     object-fit: cover;
 }
 .servicios .texto {
@@ -173,13 +196,19 @@ h3 {
 }
 .servicios .texto div {
     width: 500px;
-}
-.texto div {
     text-align: center;
 }
 .texto div button {
     font-size: 1rem;
     text-align: center;
+}
+
+@media only screen and (max-width: 850px) {
+    .servicios .texto div {
+        width: 80%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
 }
 
 /* SOBRE MI */
@@ -203,19 +232,19 @@ h3 {
 }
 @keyframes neon{
     0% {
-        -webkit-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
-        -moz-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
-        box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
+        -webkit-box-shadow: 0px 0px 100px 10px rgba(14,104,177,1);
+        -moz-box-shadow: 0px 0px 100px 10px rgba(14,104,177,1);
+        box-shadow: 0px 0px 100px 10px rgba(14,104,177,1);
     }
     50% {
-        -webkit-box-shadow: 0px 0px 150px 10px rgba(41,34,171,1);
-        -moz-box-shadow: 0px 0px 150px 10px rgba(41,34,171,1);
-        box-shadow: 0px 0px 150px 10px rgba(41,34,171,1);
+        -webkit-box-shadow: 0px 0px 100px 10px rgba(41,34,171,1);
+        -moz-box-shadow: 0px 0px 100px 10px rgba(41,34,171,1);
+        box-shadow: 0px 0px 100px 10px rgba(41,34,171,1);
     }
     100% {
-        -webkit-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
-        -moz-box-shadow: 0px 0px 150px 10px rgba(14,104,177,1);
-        box-shadow: 0px 0px 150px 10px rgb(14, 102, 175);
+        -webkit-box-shadow: 0px 0px 100px 10px rgba(14,104,177,1);
+        -moz-box-shadow: 0px 0px 100px 10px rgba(14,104,177,1);
+        box-shadow: 0px 0px 100px 10px rgb(14, 102, 175);
     }
 }
 @media only screen and (max-width: 780px) {
@@ -453,13 +482,14 @@ form#form-contacto {
     align-self: flex-end;
 }
 .datos-contacto {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 .datos-contacto i {
     font-size: 1.8rem;
 }
 .datos-contacto #tel i, .datos-contacto #tel p,
-.datos-contacto #correo i, .datos-contacto #correo p {
+.datos-contacto #correo i, .datos-contacto #correo p,
+.datos-contacto #direccion i, .datos-contacto #direccion p {
     margin-right: 2rem;
     display: inline-block;
 }
@@ -528,17 +558,33 @@ form#form-contacto {
 
 /* HABILIDADES */
 #bg-habilidades {
-    background-image: url('../img/habilidades.jpg');
-    background-position: center center;
-    background-size: cover;
-    filter: saturate(.8);
-    height: 90vh;
+    /* filter: saturate(.8); */
+    height: fit-content;
+    padding: 2rem;
     color: #fff;
+    background: linear-gradient(-45deg, var(--bgcolor), var(--primario-brillante), var(--secundario), #d931e9);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 #bg-habilidades .contenedor {
     width: 80%;
     padding: 2rem 0;
     text-align: center;
+}
+#bg-habilidades h3 {
+    margin: 0;
 }
 .contenedor-habilidades {
     margin-top: 2rem;
@@ -551,29 +597,45 @@ form#form-contacto {
     margin-bottom: 1rem;
 }
 .habilidad i {
-    color: #1e8dff;
+    color: var(--complementario);
 }
 .habilidad .barra {
     height: 2rem;
     flex-basis: 50%;
     align-self: auto;
-}
-.barra {
     display: flex;
     justify-content: flex-end;
+    background-color: rgb(255, 255, 255, .3);
 }
 .barra div {
-    background-color: rgb(255, 255, 255, .7);
+    background-color: rgb(255, 255, 255, 1);
 }
 
-
-.barra.animado > .escritura {
-    animation-name: barra-escritura;
+/* Habilidad del 35% */
+.barra.animado > .h-35 {
+    animation-name: h-35;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-@keyframes barra-escritura {
+@keyframes h-35 {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 35%;
+    }
+}
+
+/* Habilidad del 55% */
+.barra.animado > .h-55 {
+    animation-name: h-55;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h-55 {
     from {
         flex-basis: 0%;
     }
@@ -582,6 +644,24 @@ form#form-contacto {
         flex-basis: 55%;
     }
 }
+
+/* Habilidad del 70% */
+.barra.animado > .h-70 {
+    animation-name: h-70;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h-70 {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 70%;
+    }
+}
+
 
 .barra.animado > .dibujo {
     animation-name: barra-dibujo;
