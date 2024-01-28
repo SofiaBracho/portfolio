@@ -3,6 +3,7 @@
     --primario-brillante: #0cb4da;
     --secundario: #4b3994;
     --complementario: #ffd000;
+    --complementario-brillante: yellow;
 }
 
 html {
@@ -17,6 +18,12 @@ body {
 }
 .bg-gray {
     filter: grayscale(1);
+}
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: red!important;
 }
 h2 {
     font-family: 'Lobster', cursive;
@@ -94,11 +101,12 @@ h3 {
     font-size: larger;
 }
 .datos .title {
-    line-height: 35pt;
+    line-height: 1;
     margin-bottom: 0;
 }
 .datos p.resumen {
     margin-top: .75rem;
+    line-height: 1.75;
 }
 
 @media only screen and (max-width: 940px) {
@@ -146,7 +154,7 @@ h3 {
     }
 }
 .btn {
-    padding: .8rem 3rem;
+    padding: .75rem 2rem;
     cursor: pointer;
     background: var(--primario);
     border: none;
@@ -155,10 +163,11 @@ h3 {
     text-transform: uppercase;
     font-weight: 700;
     color: #c5c5c5;
+    transition: all .5s ease;
 }
 .btn:hover {
     background: var(--primario-brillante);
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: #e9e9e9;
 }
 .btn-ghost {
@@ -170,13 +179,25 @@ h3 {
     background: #fff;
     color: #000;
 }
+.btn-contact,
+.btn-submit {
+    background: var(--complementario);
+    color: black;
+    font-size: .9rem;
+    line-height: 1;
+}
+.btn-contact:hover,
+.btn-submit:hover {
+    background: var(--complementario-brillante);
+    color: black;
+}
 
 .servicios {
     position: relative;
 }
 .responsive {
-    margin-top: 6rem;
-    height: 60vh;
+    margin-top: 3rem;
+    height: 55vh;
     width: 100%;
     filter: brightness(.55);
     object-fit: cover;
@@ -202,6 +223,9 @@ h3 {
     font-size: 1rem;
     text-align: center;
 }
+.servicios h3 {
+    margin-top: 0;
+}
 
 @media only screen and (max-width: 850px) {
     .servicios .texto div {
@@ -223,8 +247,8 @@ h3 {
 }
 #foto {
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin-left: 2rem;
     animation-name: neon;
     animation-duration: 3s;
@@ -315,48 +339,42 @@ h3 {
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.glide__slide--active #css .barra .progreso {
+.glide__slide--active #css .barra .progreso,
+.glide__slide--active #javascript .barra .progreso,
+.glide__slide--active #mysql .barra .progreso {
     animation-name: setenta;
     animation-duration: 1.5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.glide__slide--active #javascript .barra .progreso {
+.glide__slide--active #git .barra .progreso,
+.glide__slide--active #github .barra .progreso,
+.glide__slide--active #bootstrap .barra .progreso {
     animation-name: sesenta;
     animation-duration: 1.5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.glide__slide--active #php .barra .progreso {
+.glide__slide--active #php .barra .progreso  {
+    animation-name: cincuenta;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #python .barra .progreso,
+.glide__slide--active #react .barra .progreso {
     animation-name: treinta;
     animation-duration: 1.5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.glide__slide--active #mysql .barra .progreso {
-    animation-name: treinta;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
-.glide__slide--active #cplusplus .barra .progreso {
+/* .glide__slide--active #cplusplus .barra .progreso {
     animation-name: veinte;
     animation-duration: 1.5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-}
-.glide__slide--active #git .barra .progreso {
-    animation-name: cuarenta;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
-.glide__slide--active #github .barra .progreso {
-    animation-name: cuarenta;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
+} */
+
 @keyframes veinte {
     from {
         width: 0%;
@@ -379,6 +397,14 @@ h3 {
     }
     to {
         width: 40%;
+    }
+}
+@keyframes cincuenta {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
     }
 }
 @keyframes sesenta {
@@ -449,6 +475,10 @@ h3 {
 
 
 /* CONTACTO */
+.contact-wrapper h2 {
+    margin-bottom: 0;
+    margin-top: 3rem;
+}
 .contacto {
     display: flex;
     justify-content: space-between;
@@ -457,7 +487,9 @@ h3 {
 .direccion {
     margin-bottom: 4rem;
 }
-.contacto input[type="text"], .contacto textarea {
+.contacto input[type="text"], 
+.contacto textarea, 
+.contacto input[type="email"] {
     padding: .5rem;
     margin-bottom: .5rem;
     border: none;
@@ -466,7 +498,9 @@ h3 {
     border-radius: 5px;
     transition: .5s;
 }
-.contacto input[type="text"]:focus, .contacto textarea:focus {
+.contacto input[type="text"]:focus, 
+.contacto input[type="email"]:focus,
+.contacto textarea:focus {
     background: #a0a0a0;
 }
 .contacto textarea {
@@ -484,13 +518,20 @@ form#form-contacto {
 .datos-contacto {
     font-size: 0.95rem;
 }
+.datos-contacto div {
+    margin-top: 1rem;
+}
 .datos-contacto i {
     font-size: 1.8rem;
 }
+#tel a {
+    text-decoration: none;
+    color: #000;
+}
 .datos-contacto #tel i, .datos-contacto #tel p,
-.datos-contacto #correo i, .datos-contacto #correo p,
+.datos-contacto #email i, .datos-contacto #email p,
 .datos-contacto #direccion i, .datos-contacto #direccion p {
-    margin-right: 2rem;
+    margin-right: 1rem;
     display: inline-block;
 }
 
@@ -506,7 +547,7 @@ form#form-contacto {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
 .social {
     font-size: 2rem;
@@ -519,7 +560,7 @@ form#form-contacto {
     cursor: pointer;
 }
 .social a:hover i {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .social i:last-of-type {
     margin-right: 0;
@@ -543,17 +584,6 @@ form#form-contacto {
     color: #fff;
     font-size: 1.2rem;
     margin: 0;
-}
-
-@media only screen and (max-width: 780px) {
-    #footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    .social {
-        margin-top: 3rem;
-        font-size: 1.8rem;
-    }
 }
 
 /* HABILIDADES */
@@ -589,6 +619,12 @@ form#form-contacto {
 .contenedor-habilidades {
     margin-top: 2rem;
 }
+.contenedor-habilidades div {
+    text-align: left;
+}
+.contenedor-habilidades div small {
+    display: none;
+}
 
 .habilidad {
     display: flex;
@@ -611,37 +647,71 @@ form#form-contacto {
     background-color: rgb(255, 255, 255, 1);
 }
 
-/* Habilidad del 35% */
-.barra.animado > .h-35 {
-    animation-name: h-35;
+/* Habilidad del 30% */
+.barra.animado > .h-30 {
+    animation-name: h-30;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-@keyframes h-35 {
+@keyframes h-30 {
     from {
         flex-basis: 0%;
     }
 
     to {
-        flex-basis: 35%;
+        flex-basis: 30%;
     }
 }
 
-/* Habilidad del 55% */
-.barra.animado > .h-55 {
-    animation-name: h-55;
+/* Habilidad del 40% */
+.barra.animado > .h-40 {
+    animation-name: h-40;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-@keyframes h-55 {
+@keyframes h-40 {
     from {
         flex-basis: 0%;
     }
 
     to {
-        flex-basis: 55%;
+        flex-basis: 40%;
+    }
+}
+
+/* Habilidad del 50% */
+.barra.animado > .h-50 {
+    animation-name: h-50;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h-50 {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 50%;
+    }
+}
+
+/* Habilidad del 60% */
+.barra.animado > .h-60 {
+    animation-name: h-60;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h-60 {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 60%;
     }
 }
 
@@ -659,6 +729,23 @@ form#form-contacto {
 
     to {
         flex-basis: 70%;
+    }
+}
+
+/* Habilidad del 80% */
+.barra.animado > .h-80 {
+    animation-name: h-80;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h-80 {
+    from {
+        flex-basis: 0%;
+    }
+
+    to {
+        flex-basis: 80%;
     }
 }
 
@@ -756,25 +843,78 @@ form#form-contacto {
 /* PROYECTOS */
 .lista-proyectos {
     padding: 0;
+    text-align: center;
+}
+.proyecto {
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 .info-proyecto {
-    background: #bbbbbb;
+    background: #e6e6e6;
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 .info-proyecto img {
     width: 50%;
+    object-fit: cover;
 }
 .info-proyecto > div > p {
     font-size:1.3rem;
 }
-.info-proyecto div {
+.info-proyecto > div {
     flex-basis: 50%;
-    padding: 1rem;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contenedor-proyectos .info-proyecto h3 {
+    margin: 0;
+    text-align: left;
 }
 .proyecto {
     position: relative;
+}
+#tecnologias div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: .5rem;
+}
+#tecnologias .tecnologia {
+    padding: .5rem;
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    max-width: max-content;
+    margin-right: .5rem;
+    font-weight: 600;
+    font-size: .95rem;
+}
+#tecnologias .tecnologia i {
+    margin-right: .5rem;
+}
+#tecnologias .tecnologia.html {
+    border-color: #db5c25;
+    color: #db5c25;
+}
+#tecnologias .tecnologia.css {
+    border-color: #0096dc;
+    color: #0096dc;
+}
+#tecnologias .tecnologia.react {
+    border-color: #00d8ff;
+    color: #00d8ff;
+}
+#tecnologias .tecnologia.javascript {
+    border-color: #f7bc18;
+    color: #f7bc18;
+}
+#tecnologias .tecnologia.php {
+    border-color: #2f3e85;
+    color: #2f3e85;
 }
 .cortina {
     position: absolute;
@@ -791,9 +931,10 @@ form#form-contacto {
     transition: .5s;
 }
 .cortina a {
-    color: #fff;
+    color: var(--complementario);
     text-decoration: none;
     transition: .5s;
+    text-align: center;
 }
 .cortina a p {
     margin: 0;
@@ -801,11 +942,88 @@ form#form-contacto {
     margin-left: .5rem;
 }
 .cortina a:hover {
-    color: #bbbbbb;
+    color: var(--complementario-brillante);
 }
 .proyecto:hover .cortina {
     opacity: 1;
 }
+#ver-mas {
+    margin: 0 auto;
+    text-decoration: none;
+    color: #000;
+    padding: .5rem 1rem;
+    background: var(--complementario);
+    transition: all .3s ease;
+}
+#ver-mas:hover {
+    background: var(--complementario-brillante);
+}
+#mas-proyectos {
+    display: none;
+}
+
+/* Copiar email */
+.mail-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+[tooltip]{
+    position: relative;
+}
+
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: var(--complementario) transparent transparent transparent;
+    z-index: 99;
+    opacity: 0;
+    transition: all 250ms ease;
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%) translateY(-500%);
+    background: var(--complementario);
+    text-align: center;
+    color: black;
+    padding: 4px 8px;
+    font-size: 14px;
+    min-width: 80px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 250ms ease;
+}
+
+[tooltip-position ='bottom']::before {
+    top: 100%;
+    margin-top: 10px;
+    transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+}
+
+[tooltip-position='bottom']::after {
+    top: 100%;
+    margin-top: 10px;
+    transform: translateX(-50%) translateY(0);
+}
+
+[tooltip]:hover::after,
+[tooltip]:hover::before {
+    opacity: 1;
+}
+
 @media only screen and (max-width: 780px) {
     .info-proyecto {
         flex-direction: column;
@@ -819,5 +1037,43 @@ form#form-contacto {
     }
     .info-proyecto > div > p {
         font-size:1rem;
+    }
+    #form-contacto {
+        margin-top: 2rem;
+    }
+    .btn.btn-submit {
+        width: 100%;
+    }
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social {
+        margin: 1rem 0 1.5rem 0;
+        font-size: 1.8rem;
+    }
+    #photo img {
+        padding: .25rem;
+    }
+    .contenedor-habilidades div small {
+        display: block;
+    }
+    #bg-habilidades {
+        padding: 1rem;
+    }
+    #bg-habilidades .contenedor {
+        width: 100%;
+    }
+    .habilidad {
+        justify-content: space-between;
+    }
+    .habilidad .barra {
+        flex-grow: 1;
+    }
+    #bg-habilidades .descripcion {
+        margin-left: .75rem;
+    }
+    .datos-contacto i {
+        margin-right: .5rem!important;
     }
 }

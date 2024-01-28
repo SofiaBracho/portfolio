@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="css/side-menu.css">
     <script src="https://kit.fontawesome.com/72df3b1037.js" crossorigin="anonymous"></script>    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Emojis https://emoji-css.afeld.me/ -->
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
 
@@ -24,7 +28,7 @@
             <div id="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
-            <div id="title"><span>Portfolio</span></div>
+            <div id="title"><span>Mi portafolio</span></div>
         </div>
 
         <!-- PROFILE -->
@@ -39,7 +43,7 @@
             <div class="item" id="tecnologias">
                 <a href="#"></a>
                     <div class="icon"> <i class="fas fa-code"></i> </div>
-                    <div class="title"> <span>Tecnologias</span> </div>
+                    <div class="title"> <span>Tecnologías</span> </div>
                 </a>
             </div>
 
@@ -55,7 +59,7 @@
             <div class="item" id="trabajos">
                 <a href="#"></a>
                     <div class="icon"> <i class="fas fa-briefcase"></i> </div>
-                    <div class="title"> <span>Trabajos</span> </div>
+                    <div class="title"> <span>Proyectos</span> </div>
                 </a>
             </div>
 
@@ -80,7 +84,7 @@
             <div class="datos">
                 <img src="" alt="" class="foto">
                 <!-- <p class=saludo>¡Hola!</p> -->
-                <h1 class="title">Hola <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>,
+                <h1 class="title">Hola <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
                     <br> 
                     Soy Sofia Bracho,
                     <br>
@@ -92,15 +96,16 @@
         </div>
     </div>
 
+    <!-- SOBRE MI -->
     <div class="contenedor">
         <h2>Sobre mi</h2>
         <div id="sobre-mi">
             <div class="descripcion">
                 <p>
-                    Soy Sofía Bracho, desarrolladora web frontend con estudios en Ingeniería Informática. Me apasiona crear experiencias digitales intuitivas y atractivas a través de la programación.     
+                    Soy desarrolladora web frontend con estudios en Ingeniería Informática y experiencia en el área de diseño. Biligue (español e inglés). Me apasiona crear experiencias digitales intuitivas y atractivas a través de la programación.     
                 </p>
                 <p>
-                    Cuanto con experiencia en desarrollo web utilizando tecnologías como HTML, CSS, JavaScript y frameworks de front-end. Mis proyectos personales demuestran mi capacidad para construir aplicaciones web responsive, eficientes y optimizadas para motores de búsqueda.
+                    He trabajado en diversos proyectos de desarrollo utilizando tecnologías web y frameworks de front-end, los cuales demuestran mi capacidad para construir aplicaciones web dinámicas, responsive y eficientes.
                 </p>
             </div>
 
@@ -111,7 +116,7 @@
 
     <!-- TECNOLOGIAS -->
     <div class="tecnologias contenedor">
-        <h3>Tecnologías que manejo</h3>
+        <h2>Tecnologías que manejo</h2>
         <!-- Carrousel con logos y nivel de progreso-->
         <div class="glide imagenes">
             
@@ -145,15 +150,6 @@
                         </div>
                     </li>
                     <li class="glide__slide">
-                        <div id="php">
-                            <img src="img/logos/php2.png" alt="PHP">
-                            <p>PHP</p>
-                            <div class="barra">
-                                <div class="progreso"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="glide__slide">
                         <div id="mysql">
                             <img src="img/logos/mysql.png" alt="MySQL">
                             <p>MySQL</p>
@@ -163,9 +159,9 @@
                         </div>
                     </li>
                     <li class="glide__slide">
-                        <div id="cplusplus" class="big">
-                            <img src="img/logos/c++.png" alt="C++">
-                            <p>C++</p>
+                        <div id="php">
+                            <img src="img/logos/php.png" alt="PHP">
+                            <p>PHP</p>
                             <div class="barra">
                                 <div class="progreso"></div>
                             </div>
@@ -189,7 +185,42 @@
                             </div>
                         </div>
                     </li>
-                    
+                    <li class="glide__slide">
+                        <div id="bootstrap">
+                            <img src="img/logos/bootstrap.png" alt="Bootstrap">
+                            <p>Bootstrap</p>
+                            <div class="barra">
+                                <div class="progreso"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div id="react">
+                            <img src="img/logos/react.png" alt="React">
+                            <p>React</p>
+                            <div class="barra">
+                                <div class="progreso"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div id="python">
+                            <img src="img/logos/python.png" alt="Python">
+                            <p>Python</p>
+                            <div class="barra">
+                                <div class="progreso"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li class="glide__slide">
+                        <div id="cplusplus" class="big">
+                            <img src="img/logos/c++.png" alt="C++">
+                            <p>C++</p>
+                            <div class="barra">
+                                <div class="progreso"></div>
+                            </div>
+                        </div>
+                    </li> -->
                 </ul>
             </div>
 
@@ -206,36 +237,97 @@
     <div id="bg-habilidades">
         <div class="habilidades contenedor">
             <h3>Habilidades</h3>
-            <p>Estas son algunas de mis habilidades</p>
+            <p>Mis habilidades técnicas y blandas</p>
             <div class="contenedor-habilidades">
 
-                    <div class="habilidad">
-                        <div class="barra">
-                            <div class="h-70"></div>
-                        </div>
-                        <div class="descripcion">
-                            <i class="fa fa-code"></i>
-                            <p>Programación</p>
-                        </div>
-                    </div>
-                    
-                    <div class="habilidad">
-                        <div class="barra">
-                            <div class="h-35"></div>
-                        </div>
-                        <div class="descripcion">
-                            <i class="fa-solid fa-code-merge"></i>
-                            <p>Control de versiones</p>
+                    <div>
+                        <small>Programación</small>
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-80"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa fa-code"></i>
+                                <p>Programación</p>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="habilidad">
-                        <div class="barra">
-                            <div class="h-55"></div>
+                    <div>
+                        <small>Control de versiones</small>
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-40"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa-solid fa-code-merge"></i>
+                                <p>Control de versiones</p>
+                            </div>
                         </div>
-                        <div class="descripcion">
-                            <i class="fa-solid fa-pen-nib"></i>
-                            <p>Diseño</p>
+                    </div>
+                    
+                    <div>
+                        <small>Diseño</small>
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-70"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa-solid fa-pen-nib"></i>
+                                <p>Diseño</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <small>Maquetación</small>        
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-60"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa-solid fa-table-cells-large"></i>
+                                <p>Maquetación</p>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div>
+                        <small>Marketing en RRSS</small>
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-30"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <p>Marketing en RRSS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <small>Resolución de problemas</small>
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-60"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa-solid fa-gears"></i>
+                                <p>Resolución de problemas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <small>Atención al detalle</small>
+                        <div class="habilidad">
+                            <div class="barra">
+                                <div class="h-50"></div>
+                            </div>
+                            <div class="descripcion">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <p>Atención al detalle</p>
+                            </div>
                         </div>
                     </div>
 
@@ -248,25 +340,154 @@
     <div class="contenedor-proyectos">
         <h2>Proyectos en los que he trabajado</h2>
             <ul class="lista-proyectos">
+
                 <li class='proyecto'>
                     <div class="info-proyecto">
                         <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
                         <div>
-                            <div class="titulo-proyecto">
-                                
-                                <h3>Mini Diary web</h3>
+                            <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Mini Diary web</h3>
+                                </div>
+                                <p>Aplicación de diario personal. Contiene funcionalidades como importación y exportación de datos en formato JSON, creación de cuentas de usuario, paginación, y CRUD de entradas diarias. Su diseño es minimalista y responsive.</p>
                             </div>
-                            <p>Alicación de diario creada para uso personal. Contiene funcionalidades como importación y exportación de datos en formato JSON, creación de cuentas de usuario, paginación,  creación, modificación, eliminación y lectura de entradas según su fecha. Tiene un diseño minimalista y atractivo.</p>
+                            <div id="tecnologias">
+                                Tecnologías utilizadas:
+                                <div>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                    </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                    </div>
+                                    <div class="tecnologia javascript">
+                                        <i class="fa-brands fa-js"></i>JavaScript
+                                    </div>
+                                    <div class="tecnologia php">
+                                        <i class="fa-brands fa-php"></i>PHP
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="cortina">
-                        <a href="http://mydiary.great-site.net/">
+                        <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
                             <i class="fas fa-link"></i>
-                            <p>Ir al sitio</p>
+                            <p>Ver código</p>
                         </a>
                     </div>
                 </li>
                 
+                <li class='proyecto'>
+                    <div class="info-proyecto">
+                        <img src="img/trabajos/piensa.jpg" alt="Imagen del proyecto">
+                        <div>
+                            <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Aula Virtual "PIENSA"</h3>
+                                </div>
+                                <p>Sistema educativo para la Universidad Politécnica Territorial de Maracaibo. Tiene sesiones para estudiantes, profesores, coordinadores y administrador. Ofrece funciones como publicar y evaluar actividades, comunicación entre profesores y estudiantes, planificar clases, dar seguimiento a calificaciones, compartir documentos y libros, manejar horarios, perfiles, periodos académicos y respaldos automáticos de la base de datos.</p>
+                            </div>
+                            <div id="tecnologias">
+                                Tecnologías utilizadas:
+                                <div>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                    </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                    </div>
+                                    <div class="tecnologia javascript">
+                                        <i class="fa-brands fa-js"></i>JavaScript
+                                    </div>
+                                    <div class="tecnologia php">
+                                        <i class="fa-brands fa-php"></i>PHP
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cortina">
+                        <a class="disabled">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Código no disponible</p>
+                            <br>
+                            <small>(El repositorio es privado)</small>
+                        </a>
+                    </div>
+                </li>
+                
+                <li class='proyecto'>
+                    <div class="info-proyecto">
+                        <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
+                        <div>
+                            <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Aplicación del clima</h3>
+                                </div>
+                                <p>Esta aplicación desarrollada con React utiliza una API de geolocalización para obtener la ubicación del usuario. Posteriormente muestra la estimación del clima en tu ubicación, con datos como la temperatura, sensación térmica, humedad, presión y velocidad del viento.</p>
+                            </div>
+                            <div id="tecnologias">
+                                Tecnologías utilizadas:
+                                <div>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                    </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                    </div>
+                                    <div class="tecnologia react">
+                                        <i class="fa-brands fa-react"></i>React
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cortina">
+                        <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
+                            <i class="fas fa-link"></i>
+                            <p>Ver código</p>
+                        </a>
+                    </div>
+                </li>
+
+                <div id="mas-proyectos">
+                    <!-- <li class='proyecto'>
+                        <div class="info-proyecto">
+                            <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
+                            <div>
+                                <div>
+                                    <div class="titulo-proyecto">
+                                        <h3>Aplicación del clima</h3>
+                                    </div>
+                                    <p>Esta aplicación desarrollada con React utiliza una API de geolocalización para obtener la ubicación del usuario. Posteriormente muestra la estimación del clima en tu ubicación, con datos como la temperatura, sensación térmica, humedad, presión y velocidad del viento.</p>
+                                </div>
+                                <div id="tecnologias">
+                                    Tecnologías utilizadas:
+                                    <div>
+                                        <div class="tecnologia html">
+                                            <i class="fa-brands fa-html5"></i></i>HTML5
+                                        </div>
+                                        <div class="tecnologia css">
+                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                        </div>
+                                        <div class="tecnologia react">
+                                            <i class="fa-brands fa-react"></i>React
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cortina">
+                            <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <p>Ver código</p>
+                            </a>
+                        </div>
+                    </li> -->
+                </div>
+                
+                <a href="#" id="ver-mas">Ver más</a>
             </ul>
     </div>
 
@@ -276,7 +497,7 @@
         <div class="texto">
             <div>
                 <h3>¡Desarrollo la web que soñaste!</h3>
-                <p>Utilizando nuevas tecnologías, con un diseño único y adaptable a todos los dispositivos para que hagas realidad tu proyecto online. </p>
+                <p>Utilizando tecnologías modernas, con un diseño único y adaptable a todos los dispositivos para que hagas realidad tu proyecto online. </p>
                 <a href="https://github.com/SofiaBracho"  target="_blank">
                     <button class="btn btn-ghost">Descubre más</button>
                 </a>
@@ -285,34 +506,41 @@
     </div>
 
     <!-- CONTACTO -->
-    <div class="contenedor contacto">
-        <div class="datos-contacto">
-            <div id="direccion">
-                <i class="fa-solid fa-location-dot"></i> <p>Maracaibo, venezuela</p>
+    <div class="contact-wrapper">
+        <h2>Contacto</h2>
+        <div class="contenedor contacto">
+            <div class="datos-contacto">
+                <div id="direccion">
+                    <i class="fa-solid fa-location-dot"></i> <p>Maracaibo, venezuela</p>
+                </div>
+                <div id="tel">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://w.app/SofiaBracho" target="_blank" tooltip="Escríbeme" tooltip-position="bottom">+58 0412-7222453</a>
+                </div>
+                <div id="email">
+                    <span class="mail-info">
+                        <i class="fas fa-envelope"></i>
+                        <p class="mail-text" tooltip="Click para copiar" tooltip-position="bottom">sofiabrachodev@gmail.com</p>
+                    </span>
+                </div>
             </div>
-            <div id="tel">
-                <i class="fas fa-phone-alt"></i> <p>+58 0412-7222453</p>
-            </div>
-            <div id="correo">
-                <i class="fas fa-envelope"></i> <p>sofiabrachodev@gmail.com</p>
-            </div>
+            <form id="form-contacto">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="correo" placeholder="Tu correo" required>
+                <textarea id="mensaje" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+    
+                <input type="submit" class="btn btn-submit">
+            </form>
         </div>
-        <form id="form-contacto">
-            <input type="text" id="nombre" placeholder="Tu nombre">
-            <input type="text" id="correo" placeholder="Tu correo">
-            <textarea id="mensaje" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
-
-            <input type="submit" class="btn btn-submit">
-        </form>
     </div>
 
 
     <footer id="footer">
-        <p id="copyright">Sofia Bracho 2023©</p>
+        <p id="copyright">Sofia Bracho 2024 ©</p>
         <div class="social">
-            <a href="https://www.facebook.com/SofiaBrach0" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <!-- <a href="https://www.facebook.com/SofiaBrach0" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
             <!-- <a href="https://twitter.com/Brachosofia1" target="_blank"><i class="fab fa-twitter"></i></a> -->
-            <a href="https://www.instagram.com/sofiabrach0/" target="_blank"><i class="fab fa-instagram"></i></i></a>
+            <!-- <a href="https://www.instagram.com/sofiabrach0/" target="_blank"><i class="fab fa-instagram"></i></i></a> -->
             <a href="https://github.com/sofiaBracho" target="_blank"><i class="fab fa-github"></i></i></a>
             <a href="https://ve.linkedin.com/in/sofiabrach0" target="_blank"><i class="fab fa-linkedin"></i></i></a>
         </div>
@@ -321,6 +549,8 @@
     </div>
     
     <script src="js/menu.js"></script>
+    <script src="js/proyectos.js"></script>
+    <script src="js/copy.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/form.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>

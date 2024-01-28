@@ -16,15 +16,27 @@
 
         xhr.open("post", "php/send-mail.php", true);
 
+
         xhr.onreadystatechange = (respuesta) => {
             if (xhr.readyState == 4) {
                if(xhr.status == 200){
-                respuesta=JSON.parse(xhr.responseText);
-                if(respuesta.resultado=="exito") {
-                    console.log("Enviado correctamente");
+                    respuesta=JSON.parse(xhr.responseText);
+                    if(respuesta.resultado=="exito") {
+                        Swal.fire({
+                            icon: "success",
+                            text: "El email ha sido enviado",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        text: "Ha ocurrido un error al enviar el email",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
-               }else
-                console.log("Error al enviar el mensaje");
             }
         }
 
