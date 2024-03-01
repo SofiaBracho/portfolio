@@ -87,6 +87,7 @@ body {
 #side-menu #profile #photo {
     /* padding: var(--padding); */
     margin: 0 auto;
+    object-fit: cover;
 }
 body.body-expanded #side-menu #profile #photo img {
     width: 120px;

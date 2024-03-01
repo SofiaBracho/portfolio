@@ -1190,6 +1190,7 @@ form#form-contacto {
     }
     #photo img {
         padding: .25rem;
+        object-fit: cover;
     }
     .contenedor-habilidades div small {
         display: block;

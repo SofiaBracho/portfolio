@@ -11,7 +11,7 @@
 
         <!-- PROFILE -->
         <div id="profile">
-            <div id="photo"><img src="img/photo.jpg" alt="Profile Photo"></div>
+            <div id="photo"><img src="img/foto.png" alt="Profile Photo"></div>
 
             <div id="name"><span>Sofia Bracho</span></div>
         </div>
@@ -104,7 +104,7 @@
                 <div class="datos">
                     <img src="" alt="" class="foto">
                     <!-- <p class=saludo>¡Hola!</p> -->
-                    <h1 class="title">Hi <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+                    <h1 class="title">Hi! <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
                         <br> 
                         I'm Sofia Bracho,
                         <br>
@@ -126,7 +126,7 @@
                     </p>
                 </div>
 
-                <img id="foto" src="img/foto.jpg" alt="Foto personal">
+                <img id="foto" src="img/foto.png" alt="Foto personal">
             </div>
 
         </div>
@@ -248,7 +248,22 @@
                                         <li>Bootstrap</li>
                                     </ul>
                                 </div>
-                                <a  href="#" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                                <a  href="https://certificates.cs50.io/cc0d7ec3-5b88-469f-8f21-dd18350667da.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                            </div>
+                        </div>
+
+                        
+                        <div class="curso">
+                            <img src="img/cs50cy.jpg" alt="CS50 Cyber Security Image">
+                            <div>
+                                <div>
+                                    <p><b>CS50 Introduction to Cybersecurity</b></p>
+                                    <ul>
+                                        <li>Securing Accounts, data, systems, and software</li>
+                                        <li>Preserving privacy online</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
                             </div>
                         </div>
 
@@ -263,7 +278,7 @@
                                         <li>Benchmarking</li>
                                     </ul>
                                 </div>
-                                <a  href="#" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                                <a  href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" class="btn bnt-ver-cert" target="_blank">View certificate</a>
                             </div>
                         </div>
 

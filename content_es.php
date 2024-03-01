@@ -11,7 +11,7 @@
 
         <!-- PROFILE -->
         <div id="profile">
-            <div id="photo"><img src="img/photo.jpg" alt="Profile Photo"></div>
+            <div id="photo"><img src="img/foto.png" alt="Profile Photo"></div>
 
             <div id="name"><span>Sofia Bracho</span></div>
         </div>
@@ -104,7 +104,7 @@
                 <div class="datos">
                     <img src="" alt="" class="foto">
                     <!-- <p class=saludo>¡Hola!</p> -->
-                    <h1 class="title">Hola <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+                    <h1 class="title">Hola! <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
                         <br> 
                         Soy Sofia Bracho,
                         <br>
@@ -126,7 +126,7 @@
                     </p>
                 </div>
 
-                <img id="foto" src="img/foto.jpg" alt="Foto personal">
+                <img id="foto" src="img/foto.png" alt="Foto personal">
             </div>
 
         </div>
