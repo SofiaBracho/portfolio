@@ -15,7 +15,7 @@
         selection.removeAllRanges();
 
         const mailId = copyText.textContent;
-        copyText.textContent = '¡Copiado!';
+        copyText.textContent = 'Copied!';
         copyText.classList.add('success');
 
         setTimeout(() => {
@@ -23,7 +23,7 @@
             copyText.classList.remove('success');
         }, 1000);
       } catch (e) {
-        copyText.textContent = '¡No se pudo copiar!, usa Ctrl+C';
+        copyText.textContent = 'Could not copy!, use Ctrl+C';
         copyText.classList.add('error');
 
         setTimeout(() => {

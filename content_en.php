@@ -541,156 +541,275 @@
         <!-- Agregar contenedor con sombras y margenes a los lados excepto en mobile -->
         <div class="contenedor-proyectos">
             <h2>Projects I have worked on</h2>
-                <ul class="lista-proyectos">
+            <ul class="lista-proyectos">
 
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/piensa.jpg" alt="Imagen del proyecto">
+                <li class='proyecto'>
+                    <div class="info-proyecto">
+                        <img src="img/trabajos/piensa.jpg" alt="Imagen del proyecto">
+                        <div>
                             <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Virtual Classroom "PIENSA"</h3>
+                                </div>
+                                <p>Educational system for the Territorial Polytechnic University of Maracaibo (UPTMA). It has sessions for students, teachers, coordinators and administrator. It offers functions such as publishing and evaluating activities, communication between teachers and students, planning classes, tracking grades, sharing documents and books, managing schedules, profiles, academic periods and automatic database backups.</p>
+                            </div>
+                            <div id="tecnologias">
+                                Technologies used:
                                 <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Virtual Classroom "PIENSA"</h3>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i></i>HTML5
                                     </div>
-                                    <p>Educational system for the Territorial Polytechnic University of Maracaibo (UPTMA). It has sessions for students, teachers, coordinators and administrator. It offers functions such as publishing and evaluating activities, communication between teachers and students, planning classes, tracking grades, sharing documents and books, managing schedules, profiles, academic periods and automatic database backups.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Technologies used:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia php">
-                                            <i class="fa-brands fa-php"></i>PHP
-                                        </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                    </div>
+                                    <div class="tecnologia javascript">
+                                        <i class="fa-brands fa-js"></i>JavaScript
+                                    </div>
+                                    <div class="tecnologia php">
+                                        <i class="fa-brands fa-php"></i>PHP
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cortina">
-                            <a class="disabled">
-                                <i class="fa-solid fa-x"></i>
-                                <p>Code not available</p>
-                                <br>
-                                <small>(The repository is private)</small>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Mini Diary web</h3>
-                                    </div>
-                                    <p>Personal diary application. It contains functionalities such as import and export of data in JSON format, creation of user accounts, pagination, and CRUD of daily entries. Its design is minimalist and responsive.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Technologies used:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia php">
-                                            <i class="fa-brands fa-php"></i>PHP
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                                <i class="fas fa-link"></i>
-                                <p>View code</p>
-                            </a>
-                        </div>
-                    </li>
-                    
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Weather app</h3>
-                                    </div>
-                                    <p>This application developed with React uses a geolocation API to obtain the user's location. It then shows the estimate of the weather at your location, with data such as temperature, wind chill, humidity, pressure and wind speed.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Technologies used:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                        </div>
-                                        <div class="tecnologia react">
-                                            <i class="fa-brands fa-react"></i>React
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
-                                <i class="fas fa-link"></i>
-                                <p>View code</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <div id="mas-proyectos">
-                        <!-- <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Aplicación del clima</h3>
-                                        </div>
-                                        <p>Esta aplicación desarrollada con React utiliza una API de geolocalización para obtener la ubicación del usuario. Posteriormente muestra la estimación del clima en tu ubicación, con datos como la temperatura, sensación térmica, humedad, presión y velocidad del viento.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Tecnologías utilizadas:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                            </div>
-                                            <div class="tecnologia react">
-                                                <i class="fa-brands fa-react"></i>React
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
-                                    <i class="fas fa-link"></i>
-                                    <p>Ver código</p>
-                                </a>
-                            </div>
-                        </li> -->
                     </div>
+                    <div class="cortina">
+                        <a class="disabled">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Code not available</p>
+                            <br>
+                            <small>(The repository is private)</small>
+                        </a>
+                    </div>
+                </li>
+
+                <li class='proyecto'>
+                    <div class="info-proyecto">
+                        <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
+                        <div>
+                            <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Mini Diary web</h3>
+                                </div>
+                                <p>Personal diary application. It contains functionalities such as import and export of data in JSON format, creation of user accounts, pagination, creating, editing and deleting journal entries. Its design is minimalist and responsive. Inspired in Mini Diary desktop app by Samuel Meuli</p>
+                            </div>
+                            <div id="tecnologias">
+                                Technologies used:
+                                <div>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                    </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                    </div>
+                                    <div class="tecnologia javascript">
+                                        <i class="fa-brands fa-js"></i>JavaScript
+                                    </div>
+                                    <div class="tecnologia php">
+                                        <i class="fa-brands fa-php"></i>PHP
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cortina">
+                        <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
+                            <i class="fas fa-link"></i>
+                            <p>View code</p>
+                        </a>
+                    </div>
+                </li>
+                
+                <li class='proyecto'>
+                    <div class="info-proyecto">
+                        <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
+                        <div>
+                            <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Weather app</h3>
+                                </div>
+                                <p>This application developed with React uses a geolocation API to obtain the user's location. It then shows the estimate of the weather at your location, with data such as temperature, wind chill, humidity, pressure and wind speed.</p>
+                            </div>
+                            <div id="tecnologias">
+                                Technologies used:
+                                <div>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                    </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                    </div>
+                                    <div class="tecnologia react">
+                                        <i class="fa-brands fa-react"></i>React
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cortina">
+                        <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
+                            <i class="fas fa-link"></i>
+                            <p>View code</p>
+                        </a>
+                    </div>
+                </li>
+
+                <div id="mas-proyectos">
+
+                    <li class='proyecto'>
+                        <div class="info-proyecto">
+                            <img src="img/trabajos/fashion.jpg" alt="Imagen del proyecto">
+                            <div>
+                                <div>
+                                    <div class="titulo-proyecto">
+                                        <h3>Bella exclusiva fashion budget</h3>
+                                    </div>
+                                    <p>Web based application that calculates a fair Budget for tailor-made clothing according to the difficulty of manufacturing (depends on garments, materials and size), considering variables like the cost per hour of work and a control variable.</p>
+                                </div>
+                                <div id="tecnologias">
+                                    Technologies used:
+                                    <div>
+                                        <div class="tecnologia html">
+                                            <i class="fa-brands fa-html5"></i>HTML5
+                                        </div>
+                                        <div class="tecnologia css">
+                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                        </div>
+                                        <div class="tecnologia javascript">
+                                            <i class="fa-brands fa-js"></i>JavaScript
+                                        </div>
+                                        <div class="tecnologia bootstrap">
+                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
+                                        </div>
+                                        <div class="tecnologia python">
+                                            <i class="fa-brands fa-python"></i>Python
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cortina">
+                            <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <p>View code</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class='proyecto'>
+                        <div class="info-proyecto">
+                            <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
+                            <div>
+                                <div>
+                                    <div class="titulo-proyecto">
+                                        <h3>Flashcards language learning App</h3>
+                                    </div>
+                                    <p>This Django application allows users to create and study flashcards, track their progress, and review learned words. It includes features such as proficiency tracking, statistics, and user authentication.</p>
+                                </div>
+                                <div id="tecnologias">
+                                    Technologies used:
+                                    <div>
+                                        <div class="tecnologia html">
+                                            <i class="fa-brands fa-html5"></i>HTML5
+                                        </div>
+                                        <div class="tecnologia css">
+                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                        </div>
+                                        <div class="tecnologia javascript">
+                                            <i class="fa-brands fa-js"></i>JavaScript
+                                        </div>
+                                        <div class="tecnologia python">
+                                            <i class="fa-brands fa-python"></i>Python
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cortina">
+                            <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <p>View code</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class='proyecto'>
+                        <div class="info-proyecto">
+                            <img src="img/trabajos/network.jpg" alt="Imagen del proyecto">
+                            <div>
+                                <div>
+                                    <div class="titulo-proyecto">
+                                        <h3>Social network</h3>
+                                    </div>
+                                    <p>This is a twitter-like social network built using Django and asyncronous JavaScript. It allows users to create accounts, follow other users, post messages, and like posts.</p>
+                                </div>
+                                <div id="tecnologias">
+                                    Technologies used:
+                                    <div>
+                                        <div class="tecnologia html">
+                                            <i class="fa-brands fa-html5"></i>HTML5
+                                        </div>
+                                        <div class="tecnologia css">
+                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                        </div>
+                                        <div class="tecnologia javascript">
+                                            <i class="fa-brands fa-js"></i>JavaScript
+                                        </div>
+                                        <div class="tecnologia python">
+                                            <i class="fa-brands fa-python"></i>Python
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cortina">
+                            <a href="https://github.com/SofiaBracho/social-network" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <p>View code</p>
+                            </a>
+                        </div>
+                    </li>
                     
-                    <a href="#" id="ver-mas">View more</a>
-                </ul>
+                    <li class='proyecto'>
+                        <div class="info-proyecto">
+                            <img src="img/trabajos/email.jpg" alt="Imagen del proyecto">
+                            <div>
+                                <div>
+                                    <div class="titulo-proyecto">
+                                        <h3>Email client simulation</h3>
+                                    </div>
+                                    <p>Email simulation single page app using Python, Django and asyncronous Javascript. Allows users to compose, send, archive, and reply to emails in a single page using JavaScript and python end-points in the back-end.</p>
+                                </div>
+                                <div id="tecnologias">
+                                    Technologies used:
+                                    <div>
+                                        <div class="tecnologia html">
+                                            <i class="fa-brands fa-html5"></i>HTML5
+                                        </div>
+                                        <div class="tecnologia css">
+                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                        </div>
+                                        <div class="tecnologia javascript">
+                                            <i class="fa-brands fa-js"></i>JavaScript
+                                        </div>
+                                        <div class="tecnologia python">
+                                            <i class="fa-brands fa-python"></i>Python
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cortina">
+                            <a href="https://github.com/SofiaBracho/email-app" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <p>View code</p>
+                            </a>
+                        </div>
+                    </li>
+
+                </div>
+                
+                <a href="#" id="ver-mas">Show more</a>
+            </ul>
         </div>
 
         <!-- SERVICIOS -->
@@ -717,7 +836,7 @@
                     </div>
                     <div id="tel">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://w.app/SofiaBracho" target="_blank" tooltip="Text me!" tooltip-position="bottom">+58 0412-7222453</a>
+                        <a href="https://wa.me/584127222453" target="_blank" tooltip="Text me!" tooltip-position="bottom">+58 0412-7222453</a>
                     </div>
                     <div id="email">
                         <span class="mail-info">
