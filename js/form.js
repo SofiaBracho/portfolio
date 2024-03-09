@@ -19,16 +19,15 @@
 
         xhr.onreadystatechange = (respuesta) => {
             if (xhr.readyState == 4) {
-               if(xhr.status == 200){
-                    respuesta=JSON.parse(xhr.responseText);
-                    if(respuesta.resultado=="exito") {
-                        Swal.fire({
-                            icon: "success",
-                            text: "El email ha sido enviado",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    }
+                respuesta=JSON.parse(xhr.responseText);
+
+                if(xhr.status == 200 && respuesta.resultado=="exito"){
+                    Swal.fire({
+                        icon: "success",
+                        text: "El email ha sido enviado",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 } else {
                     Swal.fire({
                         icon: "error",

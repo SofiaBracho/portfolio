@@ -599,7 +599,7 @@
                     </div>
                     <div class="cortina">
                         <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                            <i class="fas fa-link"></i>
+                            <i class="fa-solid fa-code"></i>
                             <p>Ver código</p>
                         </a>
                     </div>
@@ -633,7 +633,7 @@
                     </div>
                     <div class="cortina">
                         <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
-                            <i class="fas fa-link"></i>
+                            <i class="fa-solid fa-code"></i>
                             <p>Ver código</p>
                         </a>
                     </div>
@@ -675,7 +675,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
                             </a>
                         </div>
@@ -712,7 +712,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
                             </a>
                         </div>
@@ -749,7 +749,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/social-network" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
                             </a>
                         </div>
@@ -786,7 +786,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/email-app" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
                             </a>
                         </div>
@@ -821,7 +821,7 @@
                     </div>
                     <div id="tel">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://w.app/SofiaBracho" target="_blank" tooltip="Escríbeme" tooltip-position="bottom">+58 0412-7222453</a>
+                        <a href="https://wa.me/584127222453" target="_blank" tooltip="Escríbeme" tooltip-position="bottom">+58 0412-7222453</a>
                     </div>
                     <div id="email">
                         <span class="mail-info">

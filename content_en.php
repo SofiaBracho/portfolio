@@ -613,9 +613,13 @@
                     </div>
                     <div class="cortina">
                         <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                            <i class="fas fa-link"></i>
+                            <i class="fa-solid fa-code"></i>
                             <p>View code</p>
                         </a>
+                        <!-- <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
+                            <i class="fas fa-link"></i>
+                            <p>Visit App</p>
+                        </a> -->
                     </div>
                 </li>
                 
@@ -647,7 +651,7 @@
                     </div>
                     <div class="cortina">
                         <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
-                            <i class="fas fa-link"></i>
+                            <i class="fa-solid fa-code"></i>
                             <p>View code</p>
                         </a>
                     </div>
@@ -689,7 +693,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>View code</p>
                             </a>
                         </div>
@@ -726,7 +730,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>View code</p>
                             </a>
                         </div>
@@ -763,7 +767,7 @@
                         </div>
                         <div class="cortina">
                             <a href="https://github.com/SofiaBracho/social-network" target="_blank">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-code"></i>
                                 <p>View code</p>
                             </a>
                         </div>
