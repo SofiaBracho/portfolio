@@ -1166,6 +1166,12 @@ form#form-contacto {
 }
 
 @media only screen and (max-width: 780px) {
+    .proyecto {
+        max-height: max-content;
+    }
+    .info-proyecto {
+        max-height: max-content;
+    }
     .hero {
         height: 700px;
     }
@@ -1230,9 +1236,6 @@ form#form-contacto {
 }
 
 @media only screen and (max-width: 470px) {
-    .tecnologias h2::before {
-        padding: 2.5rem;
-    }
     h2 {
         white-space: normal;
     }

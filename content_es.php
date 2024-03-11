@@ -304,7 +304,7 @@
 
         <!-- TECNOLOGIAS -->
         <div class="tecnologias contenedor">
-            <h2>Tecnologías que manejo</h2>
+            <h2>Tecnologías que uso</h2>
             <!-- Carrousel con logos y nivel de progreso-->
             <div class="glide imagenes">
                 
@@ -526,7 +526,7 @@
         <!-- PROYECTOS -->
         <!-- Agregar contenedor con sombras y margenes a los lados excepto en mobile -->
         <div class="contenedor-proyectos">
-            <h2>Proyectos en los que he trabajado</h2>
+            <h2>Proyectos destacados</h2>
             <ul class="lista-proyectos">
 
                 <li class='proyecto'>
@@ -632,7 +632,7 @@
                         </div>
                     </div>
                     <div class="cortina">
-                        <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
+                        <a href="https://github.com/SofiaBracho/weather" target="_blank">
                             <i class="fa-solid fa-code"></i>
                             <p>Ver código</p>
                         </a>

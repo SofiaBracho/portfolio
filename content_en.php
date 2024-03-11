@@ -540,7 +540,7 @@
         <!-- PROYECTOS -->
         <!-- Agregar contenedor con sombras y margenes a los lados excepto en mobile -->
         <div class="contenedor-proyectos">
-            <h2>Projects I have worked on</h2>
+            <h2>Outstanding Projects</h2>
             <ul class="lista-proyectos">
 
                 <li class='proyecto'>
@@ -650,7 +650,7 @@
                         </div>
                     </div>
                     <div class="cortina">
-                        <a href="https://github.com/SofiaBracho/weather-react" target="_blank">
+                        <a href="https://github.com/SofiaBracho/weather" target="_blank">
                             <i class="fa-solid fa-code"></i>
                             <p>View code</p>
                         </a>
@@ -824,7 +824,7 @@
                     <h3>Developing the website of your dreams!</h3>
                     <p>Using modern technologies, with a unique design and adaptable to all devices so that you can make your online project a reality. </p>
                     <a href="files/cv.pdf"  target="_blank">
-                        <button class="btn btn-ghost">Descubre más</button>
+                        <button class="btn btn-ghost">Discover more</button>
                     </a>
                 </div>
             </div>
