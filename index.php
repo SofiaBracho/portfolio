@@ -18,7 +18,7 @@
     <title>Sofia Bracho | Web Developer</title>
     <!-- Social media cards -->
     <meta property="og:title" content="Sofia Bracho - Web Developer"/>
-    <meta property="og:description" content="Web development portfolio showcasing Sofia's projects and relevant information."/>
+    <meta property="og:description" content="Portfolio showcasing Sofia's web development projects and other relevant information."/>
     <meta property="og:url" content="https://sofiadevportfolio.000webhostapp.com/" />
     <meta property="og:image" content="https://sofiadevportfolio.000webhostapp.com/img/social-card.jpg" />
     <meta property="og:image:width" content="1200"/>
