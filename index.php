@@ -16,6 +16,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sofia Bracho | Web Developer</title>
+    <!-- Social media cards -->
+    <meta property="og:title" content="Sofia Bracho - Web Developer"/>
+    <meta property="og:description" content="Web development portfolio showcasing Sofia's projects and relevant information."/>
+    <meta property="og:url" content="https://sofiadevportfolio.000webhostapp.com/" />
+    <meta property="og:image" content="https://sofiadevportfolio.000webhostapp.com/img/social-card.jpg" />
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property=”og:type” content=website />
+    <meta property="og:site_name" content="Sofia Bracho" />
+    <!-- Stylesheets -->
     <script src="js/glide.min.js"></script>
     <link rel="stylesheet" href="css/glide.core.min.css"> 
     <link rel="stylesheet" href="css/normalize.css">
