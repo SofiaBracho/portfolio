@@ -148,7 +148,7 @@
                                 <img src="img/mega.jpg" alt="Distribuciones Mega">
                                 <div>
                                     <p><b>Graphic Designer</b></p>
-                                    <p>Distribuciones Mega (Mega Distributions)</p>
+                                    <p>Distribuciones Mega</p>
                                 </div>
                             </div>
                             <div>
@@ -172,7 +172,7 @@
                                 <img src="img/lugardeprovision.jpg" alt="Distribuciones Mega">
                                 <div>
                                     <p><b>Graphic designer & Social Media</b></p>
-                                    <p>Lugar de provisiones (Place of provisions)</p>
+                                    <p>Lugar de provisiones</p>
                                 </div>
                             </div>
                             <div>
@@ -203,7 +203,7 @@
                                 <img src="img/uptma.jpg" alt="Distribuciones Mega">
                                 <div>
                                     <p><b>Informatics Engineering</b></p>
-                                    <p>Territorial Polytechnic University of Maracaibo (UPTMA)</p>
+                                    <p>Universidad Politécnica Territorial de Maracaibo (UPTMA)</p>
                                 </div>
                             </div>
                             <div>
