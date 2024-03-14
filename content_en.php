@@ -11,7 +11,7 @@
 
         <!-- PROFILE -->
         <div id="profile">
-            <div id="photo"><img src="img/foto.png" alt="Profile Photo"></div>
+            <div id="photo"><img src="img/foto.jpg" alt="Profile Photo"></div>
 
             <div id="name"><span>Sofia Bracho</span></div>
         </div>
@@ -22,6 +22,27 @@
                 <a href="#"></a>
                     <div class="icon"> <i class="fa-solid fa-address-card"></i> </div>
                     <div class="title"> <span>About me</span> </div>
+                </a>
+            </div>
+
+            <div class="item" id="tecnologias">
+                <a href="#"></a>
+                    <div class="icon"> <i class="fas fa-code"></i> </div>
+                    <div class="title"> <span>Technologies</span> </div>
+                </a>
+            </div>
+
+            <div class="item" id="trabajos">
+                <a href="#"></a>
+                    <div class="icon"> <i class="fa-solid fa-file-code"></i> </div>
+                    <div class="title"> <span>Projects</span> </div>
+                </a>
+            </div>
+
+            <div class="item" id="habilidades">
+                <a href="#"></a>
+                    <div class="icon"> <i class="fas fa-palette"></i> </div>
+                    <div class="title"> <span>Skills</span> </div>
                 </a>
             </div>
 
@@ -39,28 +60,7 @@
                 </a>
             </div>
 
-            <div class="item" id="tecnologias">
-                <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-code"></i> </div>
-                    <div class="title"> <span>Technologies</span> </div>
-                </a>
-            </div>
-
             <div class="item-separator"></div>
-
-            <div class="item" id="habilidades">
-                <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-palette"></i> </div>
-                    <div class="title"> <span>Skills</span> </div>
-                </a>
-            </div>
-            
-            <div class="item" id="trabajos">
-                <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-file-code"></i> </div>
-                    <div class="title"> <span>Projects</span> </div>
-                </a>
-            </div>
 
             <div class="item" id="contacto">
                 <a href="#"></a>
@@ -126,199 +126,14 @@
                     </p>
                 </div>
 
-                <img id="foto" src="img/foto.png" alt="Foto personal">
+                <img id="foto" src="img/foto.jpg" alt="Foto personal">
             </div>
 
         </div>
-
-        <!-- EXPERIENCIA -->
-        <div class="contenedor experiencia">
-            <h2>Experience</h2>
-            <div>
-                <div>
-                    <h4><i class="fa-solid fa-code"></i>Development</h4>
-                    <p>
-                        Although I currently have no specific work experience in the industry, <b>I have developed personal and academic projects</b> using different technologies and frameworks, which <b>demonstrates my ability to build dynamic, responsive and efficient web applications</b>.
-                    </p>
-                    
-                    <h4><i class="fa-solid fa-pen-nib"></i>Design</h4>
-                    <div class="exp-laboral">
-                        <div class="exp-encabezado">
-                            <div>
-                                <img src="img/mega.jpg" alt="Distribuciones Mega">
-                                <div>
-                                    <p><b>Graphic Designer</b></p>
-                                    <p>Distribuciones Mega</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p><b>05/2022 - 03/2023</b></p>
-                                <p>Venezuela</p>
-                            </div>
-                        </div>
-                        <ul class="responsabilidades">
-                            <li>Create audiovisual content for social media</li>
-                            <li>Design commercials and promotional material</li>
-                            <li>Collaborate on brand design, taking into account corporate and stylistic colors</li>
-                            <li>Design packaging, containers and labels for physical products</li>
-                        </ul>
-                    </div>
-                    
-                    <br>
-
-                    <div class="exp-laboral">
-                        <div class="exp-encabezado">
-                            <div>
-                                <img src="img/lugardeprovision.jpg" alt="Distribuciones Mega">
-                                <div>
-                                    <p><b>Graphic designer & Social Media</b></p>
-                                    <p>Lugar de provisiones</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p><b>01/2022 - 03/2022</b></p>
-                                <p>Venezuela</p>
-                            </div>
-                        </div>
-                        <ul class="responsabilidades">
-                            <li>Designing content for social media</li>
-                            <li>Crafting content strategies and campaigns</li>
-                            <li>Publishing and monitoring social media platforms</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- EDUCACION -->
-        <div class="contenedor educacion">
-            <h2>Education</h2>
-            <div>
-                <div>
-                    <h4><i class="fa-solid fa-building-columns"></i>University</h4>
-                    <div class="titulacion">
-                        <div class="titulacion-encabezado">
-                            <div>
-                                <img src="img/uptma.jpg" alt="Distribuciones Mega">
-                                <div>
-                                    <p><b>Informatics Engineering</b></p>
-                                    <p>Universidad Politécnica Territorial de Maracaibo (UPTMA)</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p><b>2018 - 2024</b></p>
-                                <p>Venezuela</p>
-                            </div>
-                        </div>
-                        <ul class="logros">
-                            <li>Member of the investigation committee</li>
-                            <li>Preventive maintenance project for computers in Agri-Food and Geosciences PNF's</li>
-                            <li>Development of e-learning web application for the university as a final project</li>
-                            <li>GPA: 18/20</li>
-                        </ul>
-                    </div>
-
-                    <h4><i class="fa-solid fa-graduation-cap"></i>Certifications</h4>
-                    <div id="cursos">
-                        <div class="curso">
-                            <img src="img/cs50.png" alt="CS50 Imagen">
-                            <div>
-                                <div>
-                                    <p><b>CS50: Introduction to Computer Science</b></p>
-                                    <ul>
-                                        <li>Algorithms</li>
-                                        <li>Data structures</li>
-                                        <li>C, Python, SQL and JavaScript</li>
-                                    </ul>
-                                </div>
-                                <a  href="https://cs50.harvard.edu/certificates/5809ec72-9dec-46be-81c8-8f015cc20a24" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                            </div>
-                        </div>
-
-                        <div class="curso">
-                            <img src="img/cs50web.jpg" alt="CS50Web Imagen">
-                            <div>
-                                <div>
-                                    <p><b>CS50 Web Programming with Python and JavaScript</b></p>
-                                    <ul>
-                                        <li>Web Development</li>
-                                        <li>Python and Django</li>
-                                        <li>JavaScript and React</li>
-                                        <li>Bootstrap</li>
-                                    </ul>
-                                </div>
-                                <a  href="https://certificates.cs50.io/cc0d7ec3-5b88-469f-8f21-dd18350667da.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                            </div>
-                        </div>
-
-                        
-                        <div class="curso">
-                            <img src="img/cs50cy.jpg" alt="CS50 Cyber Security Image">
-                            <div>
-                                <div>
-                                    <p><b>CS50 Introduction to Cybersecurity</b></p>
-                                    <ul>
-                                        <li>Securing Accounts, data, systems, and software</li>
-                                        <li>Preserving privacy online</li>
-                                    </ul>
-                                </div>
-                                <a  href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                            </div>
-                        </div>
-
-                        <div class="curso">
-                            <img src="img/marketing.jpg" alt="Marketing Digital Imagen">
-                            <div>
-                                <div>
-                                    <p><b>Bases for creating a Digital Brand from Scratch</b></p>
-                                    <ul>
-                                        <li>Visual identity</li>
-                                        <li>Differentiation and Positioning</li>
-                                        <li>Benchmarking</li>
-                                    </ul>
-                                </div>
-                                <a  href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                            </div>
-                        </div>
-
-                        <div class="curso">
-                            <img src="img/ef-set.jpg" alt="EF-Set Imagen">
-                            <div>
-                                <div>
-                                    <p><b>EF SET Standard English Exam</b></p>
-                                    <ul>
-                                        <li>Understand written and spoken English with ease</li>
-                                        <li>Understand even an accelerated and native rhythm</li>
-                                        <li>Abstract complex texts</li>
-                                    </ul>
-                                </div>
-                                <a  href="https://www.efset.org/cert/LQ3Ryg" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                            </div>
-                        </div>
-
-                        <div class="curso cursando">
-                            <img src="img/meta.png" alt="Curso Meta Frontend Developer Imagen">
-                            <div>
-                                <div>
-                                    <p><b>Meta Front-End Developer Professional Certificate</b></p>
-                                    <ul>
-                                        <li>Fron-End Development with React</li>
-                                        <li>UX/UI Design</li>
-                                        <li>Version control</li>
-                                    </ul>
-                                </div>
-                                <a class="btn bnt-ver-cert btn-disabled">In progress...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
         <!-- TECNOLOGIAS -->
         <div class="tecnologias contenedor">
-            <h2>Technologies I use</h2>
+            <h2>Technologies</h2>
             <!-- Carrousel con logos y nivel de progreso-->
             <div class="glide imagenes">
                 
@@ -435,112 +250,10 @@
 
         </div>
 
-        <!-- HABILIDADES -->
-        <div id="bg-habilidades">
-            <div class="habilidades contenedor">
-                <h3>Skills</h3>
-                <p>My hard and soft skills</p>
-                <div class="contenedor-habilidades">
-
-                        <div>
-                            <small>Programming</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-80"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa fa-code"></i>
-                                    <p>Programming</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <small>Version control</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-40"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-code-merge"></i>
-                                    <p>Version control</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <small>Design</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-70"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-pen-nib"></i>
-                                    <p>Design</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Layout</small>        
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-60"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-table-cells-large"></i>
-                                    <p>Layout</p>
-                                </div>
-                            </div>
-                        </div>    
-
-                        <div>
-                            <small>Social Media Marketing</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-30"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-hashtag"></i>
-                                    <p>Social Media Marketing</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Problem Solving</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-60"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-gears"></i>
-                                    <p>Problem Solving</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Attention to detail</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-50"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <p>Attention to detail</p>
-                                </div>
-                            </div>
-                        </div>
-
-                </div>
-            </div>
-        </div>
-
         <!-- PROYECTOS -->
         <!-- Agregar contenedor con sombras y margenes a los lados excepto en mobile -->
         <div class="contenedor-proyectos">
-            <h2>Outstanding Projects</h2>
+            <h2>Projects</h2>
             <ul class="lista-proyectos">
 
                 <li class='proyecto'>
@@ -718,6 +431,9 @@
                                         <div class="tecnologia css">
                                             <i class="fa-brands fa-css3-alt"></i>CSS
                                         </div>
+                                        <div class="tecnologia bootstrap">
+                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
+                                        </div>
                                         <div class="tecnologia javascript">
                                             <i class="fa-brands fa-js"></i>JavaScript
                                         </div>
@@ -814,6 +530,293 @@
                 
                 <a href="#" id="ver-mas">Show more</a>
             </ul>
+        </div>
+
+        <!-- HABILIDADES -->
+        <div id="bg-habilidades">
+            <div class="habilidades contenedor">
+                <h3>Skills</h3>
+                <p>My hard and soft skills</p>
+                <div class="contenedor-habilidades">
+
+                        <div>
+                            <small>Programming</small>
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-80"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa fa-code"></i>
+                                    <p>Programming</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <small>Version control</small>
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-40"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa-solid fa-code-merge"></i>
+                                    <p>Version control</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <small>Design</small>
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-70"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                    <p>Design</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <small>Layout</small>        
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-60"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa-solid fa-table-cells-large"></i>
+                                    <p>Layout</p>
+                                </div>
+                            </div>
+                        </div>    
+
+                        <div>
+                            <small>Social Media Marketing</small>
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-30"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa-solid fa-hashtag"></i>
+                                    <p>Social Media Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <small>Problem Solving</small>
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-60"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa-solid fa-gears"></i>
+                                    <p>Problem Solving</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <small>Attention to detail</small>
+                            <div class="habilidad">
+                                <div class="barra">
+                                    <div class="h-50"></div>
+                                </div>
+                                <div class="descripcion">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <p>Attention to detail</p>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIENCIA -->
+        <div class="contenedor experiencia">
+            <h2>Experience</h2>
+            <div>
+                <div>
+                    <h4><i class="fa-solid fa-code"></i>Development</h4>
+                    <p>
+                        Although I currently have no specific work experience in the industry, <b>I have developed personal and academic projects</b> using different technologies and frameworks, which <b>demonstrates my ability to build dynamic, responsive and efficient web applications</b>.
+                    </p>
+                    
+                    <h4><i class="fa-solid fa-pen-nib"></i>Design</h4>
+                    <div class="exp-laboral">
+                        <div class="exp-encabezado">
+                            <div>
+                                <img src="img/mega.jpg" alt="Distribuciones Mega">
+                                <div>
+                                    <p><b>Graphic Designer</b></p>
+                                    <p>Distribuciones Mega</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><b>05/2022 - 03/2023</b></p>
+                                <p>Venezuela</p>
+                            </div>
+                        </div>
+                        <ul class="responsabilidades">
+                            <li>Create audiovisual content for social media</li>
+                            <li>Design commercials and promotional material</li>
+                            <li>Collaborate on brand design, taking into account corporate and stylistic colors</li>
+                            <li>Design packaging, containers and labels for physical products</li>
+                        </ul>
+                    </div>
+                    
+                    <br>
+
+                    <div class="exp-laboral">
+                        <div class="exp-encabezado">
+                            <div>
+                                <img src="img/lugardeprovision.jpg" alt="Distribuciones Mega">
+                                <div>
+                                    <p><b>Graphic designer & Social Media</b></p>
+                                    <p>Lugar de provisiones</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><b>01/2022 - 03/2022</b></p>
+                                <p>Venezuela</p>
+                            </div>
+                        </div>
+                        <ul class="responsabilidades">
+                            <li>Designing content for social media</li>
+                            <li>Crafting content strategies and campaigns</li>
+                            <li>Publishing and monitoring social media platforms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- EDUCACION -->
+        <div class="contenedor educacion">
+            <h2>Education</h2>
+            <div>
+                <div>
+                    <h4><i class="fa-solid fa-building-columns"></i>University</h4>
+                    <div class="titulacion">
+                        <div class="titulacion-encabezado">
+                            <div>
+                                <img src="img/uptma.jpg" alt="Distribuciones Mega">
+                                <div>
+                                    <p><b>Informatics Engineering</b></p>
+                                    <p>Universidad Politécnica Territorial de Maracaibo (UPTMA)</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><b>2018 - 2024</b></p>
+                                <p>Venezuela</p>
+                            </div>
+                        </div>
+                        <ul class="logros">
+                            <li>Member of the investigation committee</li>
+                            <li>Preventive maintenance project for computers in Agri-Food and Geosciences PNF's</li>
+                            <li>Development of e-learning web application for the university as a final project</li>
+                            <li>GPA: 18/20</li>
+                        </ul>
+                    </div>
+
+                    <h4><i class="fa-solid fa-graduation-cap"></i>Certifications</h4>
+                    <div id="cursos">
+                        <div class="curso">
+                            <img src="img/cs50.jpg" alt="CS50 Imagen">
+                            <div>
+                                <div>
+                                    <p><b>CS50: Introduction to Computer Science</b></p>
+                                    <ul>
+                                        <li>Algorithms</li>
+                                        <li>Data structures</li>
+                                        <li>C, Python, SQL and JavaScript</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://cs50.harvard.edu/certificates/5809ec72-9dec-46be-81c8-8f015cc20a24" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                            </div>
+                        </div>
+
+                        <div class="curso">
+                            <img src="img/cs50web.jpg" alt="CS50Web Imagen">
+                            <div>
+                                <div>
+                                    <p><b>CS50 Web Programming with Python and JavaScript</b></p>
+                                    <ul>
+                                        <li>Web Development</li>
+                                        <li>Python and Django</li>
+                                        <li>JavaScript and React</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://certificates.cs50.io/cc0d7ec3-5b88-469f-8f21-dd18350667da.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                            </div>
+                        </div>
+
+                        
+                        <div class="curso">
+                            <img src="img/cs50cy.jpg" alt="CS50 Cyber Security Image">
+                            <div>
+                                <div>
+                                    <p><b>CS50 Introduction to Cybersecurity</b></p>
+                                    <ul>
+                                        <li>Securing Accounts, data, systems, and software</li>
+                                        <li>Preserving privacy online</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                            </div>
+                        </div>
+
+                        <div class="curso">
+                            <img src="img/marketing.jpg" alt="Marketing Digital Imagen">
+                            <div>
+                                <div>
+                                    <p><b>Bases for creating a Digital Brand from Scratch</b></p>
+                                    <ul>
+                                        <li>Visual identity</li>
+                                        <li>Differentiation and Positioning</li>
+                                        <li>Benchmarking</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                            </div>
+                        </div>
+
+                        <div class="curso">
+                            <img src="img/ef-set.jpg" alt="EF-Set Imagen">
+                            <div>
+                                <div>
+                                    <p><b>EF SET Standard English Exam</b></p>
+                                    <ul>
+                                        <li>Understand written and spoken English with ease</li>
+                                        <li>Understand even an accelerated and native rhythm</li>
+                                        <li>Abstract complex texts</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://www.efset.org/cert/LQ3Ryg" class="btn bnt-ver-cert" target="_blank">View certificate</a>
+                            </div>
+                        </div>
+
+                        <div class="curso cursando">
+                            <img src="img/meta.jpg" alt="Curso Meta Frontend Developer Imagen">
+                            <div>
+                                <div>
+                                    <p><b>Meta Front-End Developer Professional Certificate</b></p>
+                                    <ul>
+                                        <li>Fron-End Development with React</li>
+                                        <li>UX/UI Design</li>
+                                        <li>Version control</li>
+                                    </ul>
+                                </div>
+                                <a class="btn bnt-ver-cert btn-disabled">In progress...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- SERVICIOS -->
