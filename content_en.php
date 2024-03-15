@@ -76,13 +76,13 @@
                 // Toggle current language, default english
                 if ($_COOKIE['lang'] == "es") { ?>
                     <a href="index.php?lang=en">
-                        <img src="img/language/us.svg" width="30" height="25">
+                        <img src="img/language/us.svg" width="30" height="25" alt="US Flag">
                         <p>EN</p>
                         <span>English</span>
                     </a>
             <?php } else { ?>
                     <a href="index.php?lang=es">
-                        <img src="img/language/es.svg" width="30" height="25">
+                        <img src="img/language/es.svg" width="30" height="25" alt="ES Flag">
                         <p>ES</p>
                         <span>Español</span>
                     </a>
@@ -102,7 +102,7 @@
                 </header>
 
                 <div class="datos">
-                    <img src="" alt="" class="foto">
+                    <img src="" alt="Sofia's picture" class="foto">
                     <!-- <p class=saludo>¡Hola!</p> -->
                     <h1 class="title">Hi! <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
                         <br> 
@@ -672,7 +672,7 @@
                     <div class="exp-laboral">
                         <div class="exp-encabezado">
                             <div>
-                                <img src="img/lugardeprovision.jpg" alt="Distribuciones Mega">
+                                <img src="img/lugardeprovision.jpg" alt="Lugar de provisiones">
                                 <div>
                                     <p><b>Graphic designer & Social Media</b></p>
                                     <p>Lugar de provisiones</p>
@@ -703,7 +703,7 @@
                     <div class="titulacion">
                         <div class="titulacion-encabezado">
                             <div>
-                                <img src="img/uptma.jpg" alt="Distribuciones Mega">
+                                <img src="img/uptma.jpg" alt="UPTMA">
                                 <div>
                                     <p><b>Informatics Engineering</b></p>
                                     <p>Universidad Politécnica Territorial de Maracaibo (UPTMA)</p>

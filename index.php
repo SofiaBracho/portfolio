@@ -15,7 +15,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta tags -->
     <title>Sofia Bracho | Web Developer</title>
+    <meta name="description" content="Web developer and graphic designer with focus on front-end. Developing experiences that make people's lives easier by means of web apps.">
+    <meta name=”robots” content=”index, follow”>
     <!-- Social media cards -->
     <meta property="og:title" content="Sofia Bracho - Web Developer"/>
     <meta property="og:description" content="Portfolio showcasing Sofia's web development projects and other relevant information."/>
