@@ -804,7 +804,7 @@
                 <div>
                     <h3>¡Desarrollo la web que soñaste!</h3>
                     <p>Utilizando tecnologías modernas, con un diseño único y adaptable a todos los dispositivos para que hagas realidad tu proyecto online. </p>
-                    <a href="files/cv.pdf"  target="_blank">
+                    <a href="files/cv_es.pdf"  target="_blank">
                         <button class="btn btn-ghost">Descubre más</button>
                     </a>
                 </div>
@@ -830,7 +830,7 @@
                         </span>
                     </div>
                     <div id="cv">
-                        <a href="files/cv.pdf" class="button gradient-animated-button on-hover" target="_blank">
+                        <a href="files/cv_es.pdf" class="button gradient-animated-button on-hover" target="_blank">
                             <i class="fa-solid fa-file"></i>
                             <span class="gradient"></span>Ver mi Currículum
                         </a>

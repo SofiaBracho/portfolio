@@ -826,7 +826,7 @@
                 <div>
                     <h3>Developing the website of your dreams!</h3>
                     <p>Using modern technologies, with a unique design and adaptable to all devices so that you can make your online project a reality. </p>
-                    <a href="files/cv.pdf"  target="_blank">
+                    <a href="files/cv_en.pdf"  target="_blank">
                         <button class="btn btn-ghost">Discover more</button>
                     </a>
                 </div>
@@ -852,7 +852,7 @@
                         </span>
                     </div>
                     <div id="cv">
-                        <a href="files/cv.pdf" class="button gradient-animated-button on-hover" target="_blank">
+                        <a href="files/cv_en.pdf" class="button gradient-animated-button on-hover" target="_blank">
                             <i class="fa-solid fa-file"></i>
                             <span class="gradient"></span>View my resume
                         </a>
