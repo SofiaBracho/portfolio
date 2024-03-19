@@ -286,11 +286,13 @@
                         </div>
                     </div>
                     <div class="cortina">
+                        <a href="https://aulavirtual-piensa.000webhostapp.com/login.php" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <p>Live demo</p>
+                        </a>
                         <a class="disabled">
                             <i class="fa-solid fa-x"></i>
-                            <p>Code not available</p>
-                            <br>
-                            <small>(The repository is private)</small>
+                            <p>Private repository</p>
                         </a>
                     </div>
                 </li>
