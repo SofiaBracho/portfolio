@@ -102,8 +102,6 @@
                 </header>
 
                 <div class="datos">
-                    <img src="" class="foto">
-                    <!-- <p class=saludo>¡Hola!</p> -->
                     <h1 class="title">Hola! <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
                         <br> 
                         Soy Sofia Bracho,
