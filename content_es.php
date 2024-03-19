@@ -296,79 +296,6 @@
                 </li>
 
                 <li class='proyecto'>
-                    <div class="info-proyecto">
-                        <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
-                        <div>
-                            <div>
-                                <div class="titulo-proyecto">
-                                    <h3>Mini Diary web</h3>
-                                </div>
-                                <p>Aplicación de diario personal. Contiene funcionalidades como importación y exportación de datos en formato JSON, creación de cuentas de usuario, paginación, y CRUD de entradas diarias. Su diseño es minimalista y responsive.</p>
-                            </div>
-                            <div id="tecnologias">
-                                Tecnologías utilizadas:
-                                <div>
-                                    <div class="tecnologia html">
-                                        <i class="fa-brands fa-html5"></i></i>HTML5
-                                    </div>
-                                    <div class="tecnologia css">
-                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                    </div>
-                                    <div class="tecnologia javascript">
-                                        <i class="fa-brands fa-js"></i>JavaScript
-                                    </div>
-                                    <div class="tecnologia php">
-                                        <i class="fa-brands fa-php"></i>PHP
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cortina">
-                        <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                            <i class="fa-solid fa-code"></i>
-                            <p>Ver código</p>
-                        </a>
-                    </div>
-                </li>
-                
-                <li class='proyecto'>
-                    <div class="info-proyecto">
-                        <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
-                        <div>
-                            <div>
-                                <div class="titulo-proyecto">
-                                    <h3>Aplicación del clima</h3>
-                                </div>
-                                <p>Esta aplicación desarrollada con React utiliza una API de geolocalización para obtener la ubicación del usuario. Posteriormente muestra la estimación del clima en tu ubicación, con datos como la temperatura, sensación térmica, humedad, presión y velocidad del viento.</p>
-                            </div>
-                            <div id="tecnologias">
-                                Tecnologías utilizadas:
-                                <div>
-                                    <div class="tecnologia html">
-                                        <i class="fa-brands fa-html5"></i></i>HTML5
-                                    </div>
-                                    <div class="tecnologia css">
-                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                    </div>
-                                    <div class="tecnologia react">
-                                        <i class="fa-brands fa-react"></i>React
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cortina">
-                        <a href="https://github.com/SofiaBracho/weather" target="_blank">
-                            <i class="fa-solid fa-code"></i>
-                            <p>Ver código</p>
-                        </a>
-                    </div>
-                </li>
-
-                <div id="mas-proyectos">
-                    
-                    <li class='proyecto'>
                         <div class="info-proyecto">
                             <img src="img/trabajos/fashion.jpg" alt="Imagen del proyecto">
                             <div>
@@ -401,44 +328,129 @@
                             </div>
                         </div>
                         <div class="cortina">
+                            <a href="https://fashion-budget-production.up.railway.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Demo en vivo</p>
+                            </a>
                             <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
                             </a>
                         </div>
-                    </li>
+                </li>
+
+                <li class='proyecto'>
+                    <div class="info-proyecto">
+                        <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
+                        <div>
+                            <div>
+                                <div class="titulo-proyecto">
+                                    <h3>Aplicación Tarjetas didácticas para aprendizaje de idiomas</h3>
+                                </div>
+                                <p>Esta aplicación de Django permite a los usuarios crear y estudiar tarjetas didácticas, realizar un seguimiento de su progreso y revisar las palabras aprendidas. Incluye funciones como seguimiento de competencia, estadísticas y autenticación de usuarios.</p>
+                            </div>
+                            <div id="tecnologias">
+                                Tecnologías utilizadas:
+                                <div>
+                                    <div class="tecnologia html">
+                                        <i class="fa-brands fa-html5"></i>HTML5
+                                    </div>
+                                    <div class="tecnologia css">
+                                        <i class="fa-brands fa-css3-alt"></i>CSS
+                                    </div>
+                                    <div class="tecnologia javascript">
+                                        <i class="fa-brands fa-js"></i>JavaScript
+                                    </div>
+                                    <div class="tecnologia python">
+                                        <i class="fa-brands fa-python"></i>Python
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cortina">
+                        <a href="https://flashcards.up.railway.app/" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <p>Demo en vivo</p>
+                        </a>    
+                        <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
+                            <i class="fa-solid fa-code"></i>
+                            <p>Ver código</p>
+                        </a>
+                    </div>
+                </li>
+
+                <div id="mas-proyectos">
 
                     <li class='proyecto'>
                         <div class="info-proyecto">
-                            <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
+                            <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
                             <div>
                                 <div>
                                     <div class="titulo-proyecto">
-                                        <h3>Aplicación Tarjetas didácticas para aprendizaje de idiomas</h3>
+                                        <h3>Mini Diary web</h3>
                                     </div>
-                                    <p>Esta aplicación de Django permite a los usuarios crear y estudiar tarjetas didácticas, realizar un seguimiento de su progreso y revisar las palabras aprendidas. Incluye funciones como seguimiento de competencia, estadísticas y autenticación de usuarios.</p>
+                                    <p>Aplicación de diario personal. Contiene funcionalidades como importación y exportación de datos en formato JSON, creación de cuentas de usuario, paginación, y CRUD de entradas diarias. Su diseño es minimalista y responsive.</p>
                                 </div>
                                 <div id="tecnologias">
                                     Tecnologías utilizadas:
                                     <div>
                                         <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
+                                            <i class="fa-brands fa-html5"></i></i>HTML5
                                         </div>
                                         <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
                                         </div>
                                         <div class="tecnologia javascript">
                                             <i class="fa-brands fa-js"></i>JavaScript
                                         </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
+                                        <div class="tecnologia php">
+                                            <i class="fa-brands fa-php"></i>PHP
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="cortina">
-                            <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
+                            <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
+                                <i class="fa-solid fa-code"></i>
+                                <p>Ver código</p>
+                            </a>
+                        </div>
+                    </li>
+                
+                    <li class='proyecto'>
+                        <div class="info-proyecto">
+                            <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
+                            <div>
+                                <div>
+                                    <div class="titulo-proyecto">
+                                        <h3>Aplicación del clima</h3>
+                                    </div>
+                                    <p>Esta aplicación desarrollada con React utiliza una API de geolocalización para obtener la ubicación del usuario. Posteriormente muestra la estimación del clima en tu ubicación, con datos como la temperatura, sensación térmica, humedad, presión y velocidad del viento.</p>
+                                </div>
+                                <div id="tecnologias">
+                                    Tecnologías utilizadas:
+                                    <div>
+                                        <div class="tecnologia html">
+                                            <i class="fa-brands fa-html5"></i></i>HTML5
+                                        </div>
+                                        <div class="tecnologia css">
+                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                        </div>
+                                        <div class="tecnologia react">
+                                            <i class="fa-brands fa-react"></i>React
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cortina">
+                            <a href="https://sofiabracho.github.io/weather/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Demo en vivo</p>
+                            </a>
+                            <a href="https://github.com/SofiaBracho/weather" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
                             </a>
@@ -475,6 +487,10 @@
                             </div>
                         </div>
                         <div class="cortina">
+                            <a href="https://social-network-production-4b10.up.railway.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Demo en vivo</p>
+                            </a>
                             <a href="https://github.com/SofiaBracho/social-network" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
@@ -512,6 +528,10 @@
                             </div>
                         </div>
                         <div class="cortina">
+                            <a href="https://email-app-production.up.railway.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Demo en vivo</p>
+                            </a>
                             <a href="https://github.com/SofiaBracho/email-app" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>

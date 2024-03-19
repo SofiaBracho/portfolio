@@ -297,73 +297,86 @@
 
                 <li class='proyecto'>
                     <div class="info-proyecto">
-                        <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
+                        <img src="img/trabajos/fashion.jpg" alt="Imagen del proyecto">
                         <div>
                             <div>
                                 <div class="titulo-proyecto">
-                                    <h3>Mini Diary web</h3>
+                                    <h3>Bella exclusiva fashion budget</h3>
                                 </div>
-                                <p>Personal diary application. It contains functionalities such as import and export of data in JSON format, creation of user accounts, pagination, creating, editing and deleting journal entries. Its design is minimalist and responsive. Inspired in Mini Diary desktop app by Samuel Meuli</p>
+                                <p>Web based application that calculates a fair Budget for tailor-made clothing according to the difficulty of manufacturing (depends on garments, materials and size), considering variables like the cost per hour of work and a control variable.</p>
                             </div>
                             <div id="tecnologias">
                                 Technologies used:
                                 <div>
                                     <div class="tecnologia html">
-                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                        <i class="fa-brands fa-html5"></i>HTML5
                                     </div>
                                     <div class="tecnologia css">
-                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                        <i class="fa-brands fa-css3-alt"></i>CSS
                                     </div>
                                     <div class="tecnologia javascript">
                                         <i class="fa-brands fa-js"></i>JavaScript
                                     </div>
-                                    <div class="tecnologia php">
-                                        <i class="fa-brands fa-php"></i>PHP
+                                    <div class="tecnologia bootstrap">
+                                        <i class="fa-brands fa-bootstrap"></i>Bootstrap
+                                    </div>
+                                    <div class="tecnologia python">
+                                        <i class="fa-brands fa-python"></i>Python
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="cortina">
-                        <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
+                        <a href="https://fashion-budget-production.up.railway.app/" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <p>Live demo</p>
+                        </a>
+                        <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
                             <i class="fa-solid fa-code"></i>
                             <p>View code</p>
                         </a>
-                        <!-- <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                            <i class="fas fa-link"></i>
-                            <p>Visit App</p>
-                        </a> -->
                     </div>
                 </li>
-                
+
                 <li class='proyecto'>
                     <div class="info-proyecto">
-                        <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
+                        <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
                         <div>
                             <div>
                                 <div class="titulo-proyecto">
-                                    <h3>Weather app</h3>
+                                    <h3>Flashcards language learning App</h3>
                                 </div>
-                                <p>This application developed with React uses a geolocation API to obtain the user's location. It then shows the estimate of the weather at your location, with data such as temperature, wind chill, humidity, pressure and wind speed.</p>
+                                <p>This Django application allows users to create and study flashcards, track their progress, and review learned words. It includes features such as proficiency tracking, statistics, and user authentication.</p>
                             </div>
                             <div id="tecnologias">
                                 Technologies used:
                                 <div>
                                     <div class="tecnologia html">
-                                        <i class="fa-brands fa-html5"></i></i>HTML5
+                                        <i class="fa-brands fa-html5"></i>HTML5
                                     </div>
                                     <div class="tecnologia css">
-                                        <i class="fa-brands fa-css3-alt"></i></i>CSS
+                                        <i class="fa-brands fa-css3-alt"></i>CSS
                                     </div>
-                                    <div class="tecnologia react">
-                                        <i class="fa-brands fa-react"></i>React
+                                    <div class="tecnologia bootstrap">
+                                        <i class="fa-brands fa-bootstrap"></i>Bootstrap
+                                    </div>
+                                    <div class="tecnologia javascript">
+                                        <i class="fa-brands fa-js"></i>JavaScript
+                                    </div>
+                                    <div class="tecnologia python">
+                                        <i class="fa-brands fa-python"></i>Python
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="cortina">
-                        <a href="https://github.com/SofiaBracho/weather" target="_blank">
+                        <a href="https://flashcards.up.railway.app/" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <p>Live demo</p>
+                        </a>
+                        <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
                             <i class="fa-solid fa-code"></i>
                             <p>View code</p>
                         </a>
@@ -374,78 +387,77 @@
 
                     <li class='proyecto'>
                         <div class="info-proyecto">
-                            <img src="img/trabajos/fashion.jpg" alt="Imagen del proyecto">
+                            <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
                             <div>
                                 <div>
                                     <div class="titulo-proyecto">
-                                        <h3>Bella exclusiva fashion budget</h3>
+                                        <h3>Mini Diary web</h3>
                                     </div>
-                                    <p>Web based application that calculates a fair Budget for tailor-made clothing according to the difficulty of manufacturing (depends on garments, materials and size), considering variables like the cost per hour of work and a control variable.</p>
+                                    <p>Personal diary application. It contains functionalities such as import and export of data in JSON format, creation of user accounts, pagination, creating, editing and deleting journal entries. Its design is minimalist and responsive. Inspired in Mini Diary desktop app by Samuel Meuli</p>
                                 </div>
                                 <div id="tecnologias">
                                     Technologies used:
                                     <div>
                                         <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
+                                            <i class="fa-brands fa-html5"></i></i>HTML5
                                         </div>
                                         <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
                                         </div>
                                         <div class="tecnologia javascript">
                                             <i class="fa-brands fa-js"></i>JavaScript
                                         </div>
-                                        <div class="tecnologia bootstrap">
-                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
-                                        </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
+                                        <div class="tecnologia php">
+                                            <i class="fa-brands fa-php"></i>PHP
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="cortina">
-                            <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
+                            <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>View code</p>
                             </a>
+                            <!-- <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <p>Visit App</p>
+                            </a> -->
                         </div>
                     </li>
-
+                
                     <li class='proyecto'>
                         <div class="info-proyecto">
-                            <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
+                            <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
                             <div>
                                 <div>
                                     <div class="titulo-proyecto">
-                                        <h3>Flashcards language learning App</h3>
+                                        <h3>Weather app</h3>
                                     </div>
-                                    <p>This Django application allows users to create and study flashcards, track their progress, and review learned words. It includes features such as proficiency tracking, statistics, and user authentication.</p>
+                                    <p>This application developed with React uses a geolocation API to obtain the user's location. It then shows the estimate of the weather at your location, with data such as temperature, wind chill, humidity, pressure and wind speed.</p>
                                 </div>
                                 <div id="tecnologias">
                                     Technologies used:
                                     <div>
                                         <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
+                                            <i class="fa-brands fa-html5"></i></i>HTML5
                                         </div>
                                         <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
+                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
                                         </div>
-                                        <div class="tecnologia bootstrap">
-                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
+                                        <div class="tecnologia react">
+                                            <i class="fa-brands fa-react"></i>React
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="cortina">
-                            <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
+                            <a href="https://sofiabracho.github.io/weather/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Live demo</p>
+                            </a>
+                            <a href="https://github.com/SofiaBracho/weather" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>View code</p>
                             </a>
@@ -482,6 +494,10 @@
                             </div>
                         </div>
                         <div class="cortina">
+                            <a href="https://social-network-production-4b10.up.railway.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Live demo</p>
+                            </a>
                             <a href="https://github.com/SofiaBracho/social-network" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>View code</p>
@@ -519,6 +535,10 @@
                             </div>
                         </div>
                         <div class="cortina">
+                            <a href="https://email-app-production.up.railway.app/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Live demo</p>
+                            </a>
                             <a href="https://github.com/SofiaBracho/email-app" target="_blank">
                                 <i class="fas fa-link"></i>
                                 <p>View code</p>
