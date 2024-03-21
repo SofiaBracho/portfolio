@@ -412,6 +412,10 @@
                             </div>
                         </div>
                         <div class="cortina">
+                            <a href="https://minidiaryweb.000webhostapp.com/" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <p>Demo en vivo</p>
+                            </a>
                             <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
                                 <i class="fa-solid fa-code"></i>
                                 <p>Ver código</p>
