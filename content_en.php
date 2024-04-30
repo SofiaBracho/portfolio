@@ -775,7 +775,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="curso">
                             <img src="img/cs50cy.jpg" alt="CS50 Cyber Security Image">
                             <div>
@@ -820,7 +820,7 @@
                             </div>
                         </div>
 
-                        <div class="curso cursando">
+                        <div class="curso">
                             <img src="img/meta.jpg" alt="Curso Meta Frontend Developer Imagen">
                             <div>
                                 <div>
@@ -828,10 +828,11 @@
                                     <ul>
                                         <li>Fron-End Development with React</li>
                                         <li>UX/UI Design</li>
+                                        <li>Accesibility and Usability</li>
                                         <li>Version control</li>
                                     </ul>
                                 </div>
-                                <a class="btn bnt-ver-cert btn-disabled">In progress...</a>
+                                <a class="btn bnt-ver-cert" target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DJEYUYB9DVH6">View certificate</a>
                             </div>
                         </div>
                     </div>

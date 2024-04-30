@@ -773,6 +773,20 @@
                         </div>
 
                         <div class="curso">
+                            <img src="img/cs50cy.jpg" alt="Imagen de CS50 Ciberseguridad">
+                            <div>
+                                <div>
+                                    <p><b>CS50 Introducción a la ciberseguridad</b></p>
+                                    <ul>
+                                        <li>Asegurar cuentas, datos, sistemas y software</li>
+                                        <li>Preservar la privacidad online</li>
+                                    </ul>
+                                </div>
+                                <a  href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
+                            </div>
+                        </div>
+
+                        <div class="curso">
                             <img src="img/marketing.jpg" alt="Marketing Digital Imagen">
                             <div>
                                 <div>
@@ -783,7 +797,7 @@
                                         <li>Benchmarking</li>
                                     </ul>
                                 </div>
-                                <a  href="#" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
+                                <a  href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
                             </div>
                         </div>
 
@@ -802,7 +816,7 @@
                             </div>
                         </div>
 
-                        <div class="curso cursando">
+                        <div class="curso">
                             <img src="img/meta.jpg" alt="Curso Meta Frontend Developer Imagen">
                             <div>
                                 <div>
@@ -813,7 +827,7 @@
                                         <li>Control de versiones</li>
                                     </ul>
                                 </div>
-                                <a class="btn bnt-ver-cert btn-disabled">Cursando...</a>
+                                <a class="btn bnt-ver-cert" target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DJEYUYB9DVH6">Ver certificado</a>
                             </div>
                         </div>
                     </div>
