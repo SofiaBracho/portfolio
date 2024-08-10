@@ -491,7 +491,7 @@
                             </div>
                         </div>
                         <div class="cortina">
-                            <a href="https://social-network-production-4b10.up.railway.app/" target="_blank">
+                            <a href="https://social-network-production.up.railway.app/" target="_blank">
                                 <i class="fa-solid fa-link"></i>
                                 <p>Demo en vivo</p>
                             </a>
