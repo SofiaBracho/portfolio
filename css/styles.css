@@ -4,6 +4,8 @@
     --secundario: #4b3994;
     --complementario: #ffd000;
     --complementario-brillante: yellow;
+    --bgcolor: #164073;
+    --hovercolor: #092856;
 }
 
 html {
@@ -617,21 +619,51 @@ form#form-contacto {
     margin-right: 1rem;
     display: inline-block;
 }
-#cv .button {
-    display: block;
-    box-sizing: border-box;
-    color: #000;
-    text-decoration: none;
-    font-size: 17px;
-    padding: .5rem 1.5rem;
-    width: max-content;
-    border-radius: 7px;
+.resume {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+}
+.resume > div {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-#cv i {
-    margin-right: 1rem;
+#cv {
+    background: #ebebeb;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 125px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
+#cv p {
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    color: gray;
+}
+#cv div {
+    background: #c2c2c2;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+#cv a {
+    text-decoration: none;
+}
+#cv a i {
+    color: var(--primario);
+    font-size: 1.25rem;
+    transition: all .3s ease;
+}
+#cv a i:hover {
+    color: var(--bgcolor);
+}
+
 .gradient-animated-button {
     position: relative;
     overflow: hidden;

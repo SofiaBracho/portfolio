@@ -16,12 +16,14 @@ html {
 
 body {
     margin-right: var(--widthcollapsed);
-    transition: .5s;
+    position: relative; /* Add this */
 }
 
-/* .body-expanded {
-    margin-right: var(--width);
-} */
+.body-expanded {
+    /* margin-right: var(--width); */
+    margin-right: 0;
+}
+
 #main-container {
     color: #fff;
 }
@@ -154,6 +156,7 @@ body.body-expanded #side-menu #profile #photo img {
 .menu-expanded {
     width: var(--width)!important;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* margin-right: 0; */
 }
 
 .menu-expanded #header #title {
@@ -177,6 +180,7 @@ body.body-expanded #side-menu #profile #photo img {
 
 .menu-collapsed {
     width: var(--widthcollapsed)!important;
+    /* margin-right: 0; */
 }
 .menu-collapsed #menu-header #title {
     width: 0;
