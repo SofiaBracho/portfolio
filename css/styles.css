@@ -418,70 +418,50 @@ h3 {
     height: 2rem;
     width: 0%;
 }
-.glide__slide--active #html .barra .progreso {
-    animation-name: ochenta;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
+.glide__slide--active #html .barra .progreso,
 .glide__slide--active #css .barra .progreso,
 .glide__slide--active #javascript .barra .progreso,
 .glide__slide--active #mysql .barra .progreso {
-    animation-name: setenta;
-    animation-duration: 1.5s;
+    animation-name: noventa;
+    animation-duration: 1s
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 .glide__slide--active #git .barra .progreso,
-.glide__slide--active #github .barra .progreso,
-.glide__slide--active #bootstrap .barra .progreso {
-    animation-name: sesenta;
-    animation-duration: 1.5s;
+.glide__slide--active #angular .barra .progreso {
+    animation-name: ochenta;
+    animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.glide__slide--active #php .barra .progreso  {
-    animation-name: cincuenta;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-}
-.glide__slide--active #python .barra .progreso,
 .glide__slide--active #react .barra .progreso {
+    animation-name: sesenta;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #typescript .barra .progreso,
+.glide__slide--active #aws .barra .progreso,
+.glide__slide--active #node .barra .progreso {
+    animation-name: cincuenta;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.glide__slide--active #figma .barra .progreso {
     animation-name: treinta;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-/* .glide__slide--active #cplusplus .barra .progreso {
-    animation-name: veinte;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-} */
 
-@keyframes veinte {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 20%;
-    }
-}
+
 @keyframes treinta {
     from {
         width: 0%;
     }
     to {
         width: 30%;
-    }
-}
-@keyframes cuarenta {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 40%;
     }
 }
 @keyframes cincuenta {
@@ -500,20 +480,20 @@ h3 {
         width: 60%;
     }
 }
-@keyframes setenta {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 70%;
-    }
-}
 @keyframes ochenta {
     from {
         width: 0%;
     }
     to {
         width: 80%;
+    }
+}
+@keyframes noventa {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
     }
 }
 .glide__slide {

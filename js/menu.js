@@ -74,6 +74,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const url = new URL(window.location.href);
         url.searchParams.set("lang", lang);
         window.history.pushState({}, "", url);
+
+        // Dispatch languageChanged event
+        const languageChangedEvent = new CustomEvent('languageChanged', {
+            detail: { language: lang }
+        });
+        document.dispatchEvent(languageChangedEvent);
     }
 
     // Handle language toggle
