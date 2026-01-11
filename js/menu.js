@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update toggle buttons
     function updateToggleButtons(lang) {
         langFlags.forEach((flag) => {
-            flag.src = lang === "es" ? "img/language/us.svg" : "img/language/es.svg";
+            flag.src = lang === "es" ? "img/language/us.png" : "img/language/es.png";
             flag.alt = lang === "es" ? "US Flag" : "ES Flag";
         });
 
