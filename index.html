@@ -1,1832 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta tags -->
-    <title>Sofia Bracho | Web Developer</title>
-    <meta name="description" content="Web developer and graphic designer with focus on front-end. Developing experiences that make people's lives easier by means of web apps.">
-    <meta name=”robots” content=”index, follow”>
-    <!-- Social media cards -->
-    <meta property="og:title" content="Sofia Bracho - Web Developer" />
-    <meta property="og:description" content="Portfolio showcasing Sofia's web development projects and other relevant information." />
-    <meta property="og:url" content="https://sofiadevportfolio.000webhostapp.com/" />
-    <meta property="og:image" content="https://sofiadevportfolio.000webhostapp.com/img/social-card.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property=”og:type” content=website />
-    <meta property="og:site_name" content="Sofia Bracho" />
-    <!-- Stylesheets -->
-    <script src="js/glide.min.js"></script>
-    <link rel="stylesheet" href="css/glide.core.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/side-menu.css">
-    <script src="https://kit.fontawesome.com/72df3b1037.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Alertas -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Emojis https://emoji-css.afeld.me/ -->
-    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sofia Bracho | Product Engineer</title>
+<meta name="description" content="Product and UI/UX engineer and full-stack developer, working remotely. I build polished, interactive products from pixel to cloud.">
+<meta name="robots" content="index, follow">
+<!-- Social cards -->
+<meta property="og:title" content="Sofia Bracho | Product Engineer">
+<meta property="og:description" content="Product and UI/UX engineer and full-stack developer, working remotely.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<!-- 3D animated avatar (custom Three.js: walk-in, wave, idle, pointer head-tracking). Model: 3d/avatar_web.glb -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<link rel="stylesheet" href="css/neon.css">
+<script src="js/neon.js" defer></script>
 </head>
-
 <body>
+<div class="field"></div>
+<div class="scan"></div>
 
-    <!-- English Content Container -->
-    <div id="content-en" class="language-content">
-        <!-- MENU -->
-        <div id="side-menu" class="menu-collapsed">
-
-            <!-- HEADER -->
-            <div id="menu-header">
-                <div id="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div id="title"><span>My portfolio</span></div>
-            </div>
-
-            <!-- PROFILE -->
-            <div id="profile">
-                <div id="photo"><img src="img/foto.jpg" alt="Profile Photo"></div>
-
-                <div id="name"><span>Sofia Bracho</span></div>
-            </div>
-
-            <!-- ITEMS -->
-            <div id="menu-items">
-                <div class="item" id="sobre-mi">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-address-card"></i> </div>
-                    <div class="title"> <span>About me</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="tecnologias">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-code"></i> </div>
-                    <div class="title"> <span>Technologies</span> </div>
-                    </a>
-                </div>
-
-                
-                <div class="item" id="experiencia">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-briefcase"></i> </div>
-                    <div class="title"> <span>Experience</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="trabajos">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-file-code"></i> </div>
-                    <div class="title"> <span>Projects</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="habilidades">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-palette"></i> </div>
-                    <div class="title"> <span>Skills</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="educacion">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-graduation-cap"></i> </div>
-                    <div class="title"> <span>Education</span> </div>
-                    </a>
-                </div>
-
-                <div class="item-separator"></div>
-
-                <div class="item" id="contacto">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-phone-alt"></i> </div>
-                    <div class="title"> <span>Contact</span> </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- TOGGLE LANG -->
-            <div id="toggle-lang">
-                <a href="#" id="language-toggle">
-                    <img id="lang-flag" src="img/language/es.png" width="30" height="25" alt="ES Flag">
-                    <p id="lang-code">ES</p>
-                    <span id="lang-text">Español</span>
-                </a>
-            </div>
+<!-- NAV -->
+<nav>
+  <a class="brand" href="#top"><img class="glyph" src="img/logo.png" alt="Sofia Bracho logo">Sofia Bracho</a>
+  <div class="nav-links">
+    <a href="#work" data-i18n="nav_work">Work</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#journey" data-i18n="nav_journey">Journey</a>
+    <div class="ctl skip">
+      <div class="lang-dd" id="langDd">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+          <span class="flag">🇺🇸</span>
+          <span class="lang-code">English</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" role="listbox" aria-label="Language">
+          <button class="lang-opt" type="button" role="option" data-l="en"><span class="flag">🇺🇸</span><span class="lbl">English</span><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button>
+          <button class="lang-opt" type="button" role="option" data-l="es"><span class="flag">🇪🇸</span><span class="lbl">Español</span><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button>
         </div>
+      </div>
+      <button class="theme-toggle" id="themeBtn" type="button" aria-label="Toggle theme">
+        <span class="knob">
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3.25" fill="currentColor"/><g stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 2.5v2.5"/><path d="M12 19v2.5"/><path d="M4.22 4.22l1.77 1.77"/><path d="M18.01 18.01l1.77 1.77"/><path d="M2.5 12h2.5"/><path d="M19 12h2.5"/><path d="M4.22 19.78l1.77-1.77"/><path d="M18.01 5.99l1.77-1.77"/></g></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>
 
-        <!-- MAIN -->
-        <div class="cuerpo">
-            <!-- HEADER -->
-            <div class="hero"></div>
-            <div class="contenedor-hero">
-                <div class="contenedor">
-                    <header class="header">
-                        <img src="img/logo.png" alt="Logo" class="logo">
-                    </header>
-
-                    <div class="datos">
-                        <h1 class="title">Hi! <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
-                            <br>
-                            I'm Sofia Bracho,
-                            <br>
-                            Full Stack Web Developer
-                        </h1>
-                        <p class="resumen">I design and develop web experiences that are not only user-friendly but also scalable and efficient. Combining aesthetics with functionality to create products that truly make a difference.</p>
-                        <button class="btn btn-contact">Contact me</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SOBRE MI -->
-            <div class="contenedor sobre-mi">
-                <h2>About me</h2>
-                <div>
-                    <div class="descripcion">
-                        <p>
-                            I’m a <b>Full Stack Web Developer</b> with previous experience as a graphic designer. Fluent in both <b>English and Spanish</b>. I’m passionate about tech and art, and I love combining creativity with coding to build interactive and impactful digital solutions. From UI design to cloud deployment, I enjoy every part of the development lifecycle.
-                        </p>
-                    </div>
-
-                    <img id="foto" src="img/foto.jpg" alt="Foto personal">
-                </div>
-
-            </div>
-
-            <!-- TECNOLOGIAS -->
-            <div class="tecnologias contenedor">
-                <h2>Technologies</h2>
-                <!-- Carrousel con logos y nivel de progreso-->
-                <div class="glide imagenes glide-en">
-
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide">
-                                <div id="html">
-                                    <img src="img/logos/html.png" alt="HTML5">
-                                    <p>HTML5</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="css" class="big">
-                                    <img src="img/logos/css.png" alt="CSS3">
-                                    <p>CSS3</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="javascript" class="big">
-                                    <img src="img/logos/javascript.png" alt="JavaScript">
-                                    <p>JavaScript</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="typescript" class="big">
-                                    <img src="img/logos/typescript.png" alt="TypeScript">
-                                    <p>TypeScript</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="mysql">
-                                    <img src="img/logos/mysql.png" alt="MySQL">
-                                    <p>MySQL</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="git">
-                                    <img src="img/logos/git.png" alt="GIT">
-                                    <p>GIT</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="react">
-                                    <img src="img/logos/react.png" alt="React">
-                                    <p>React</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="angular">
-                                    <img src="img/logos/angular.png" alt="Angular">
-                                    <p>Angular</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="aws">
-                                    <img src="img/logos/aws.png" alt="AWS">
-                                    <p>AWS</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="figma">
-                                    <img src="img/logos/figma.png" alt="Figma">
-                                    <p>Figma</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="node">
-                                    <img src="img/logos/node.png" alt="Node">
-                                    <p>Node</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- EXPERIENCIA -->
-            <div class="contenedor experiencia">
-                <h2>Experience</h2>
-                <div>
-                    <div>
-                        <h4><i class="fa-solid fa-code"></i>Development</h4>
-                        <div class="exp-laboral">
-                            <div class="exp-encabezado">
-                                <div>
-                                    <img src="img/inimble.jpeg" alt="Inimble">
-                                    <div>
-                                        <p><b>Full Stack Developer</b></p>
-                                        <p>Inimble</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p><b>08/2024 - present</b></p>
-                                    <p>Hybrid, Venezuela</p>
-                                </div>
-                            </div>
-                            <ul class="responsabilidades">
-                                <li>Built and maintained full-stack features with Angular, Node.js, and MariaDB</li>
-                                <li>Customized WordPress sites and improved platform usability with Bootstrap</li>
-                                <li>Resolved production issues, contributed to cloud deployments with AWS</li>
-                                <li>Collaborated in agile teams and enhanced development workflows</li>
-                                <li>Worked on a B2B music streaming platform using PHP/Symfony and Angular</li>
-                            </ul>
-                        </div>
-
-                        <h4><i class="fa-solid fa-pen-nib"></i>Design</h4>
-                        <div class="exp-laboral">
-                            <div class="exp-encabezado">
-                                <div>
-                                    <img src="img/mega.jpg" alt="Distribuciones Mega">
-                                    <div>
-                                        <p><b>Graphic Designer</b></p>
-                                        <p>Distribuciones Mega</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p><b>05/2022 - 03/2023</b></p>
-                                    <p>Venezuela</p>
-                                </div>
-                            </div>
-                            <ul class="responsabilidades">
-                                <li>Designed promotional materials and audiovisual content for social media</li>
-                                <li>Supported brand identity through packaging, labels, and digital graphics</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- PROYECTOS -->
-            <!-- Agregar contenedor con sombras y margenes a los lados excepto en mobile -->
-            <div class="contenedor-proyectos">
-                <h2>Projects</h2>
-                <ul class="lista-proyectos">
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/piensa.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Virtual Classroom "PIENSA"</h3>
-                                    </div>
-                                    <p>Educational system for the Territorial Polytechnic University of Maracaibo (UPTMA). It has sessions for students, teachers, coordinators and administrator. It offers functions such as publishing and evaluating activities, communication between teachers and students, planning classes, tracking grades, sharing documents and books, managing schedules, profiles, academic periods and automatic database backups.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Technologies used:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia php">
-                                            <i class="fa-brands fa-php"></i>PHP
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://piensa-uptma.000webhostapp.com/login.php" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                                <p>Live demo</p>
-                            </a>
-                            <a class="disabled">
-                                <i class="fa-solid fa-x"></i>
-                                <p>Private repository</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/fashion.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Bella exclusiva fashion budget</h3>
-                                    </div>
-                                    <p>Web based application that calculates a fair Budget for tailor-made clothing according to the difficulty of manufacturing (depends on garments, materials and size), considering variables like the cost per hour of work and a control variable.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Technologies used:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia bootstrap">
-                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
-                                        </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://fashion-budget-production.up.railway.app/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                                <p>Live demo</p>
-                            </a>
-                            <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
-                                <i class="fa-solid fa-code"></i>
-                                <p>View code</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Flashcards language learning App</h3>
-                                    </div>
-                                    <p>This Django application allows users to create and study flashcards, track their progress, and review learned words. It includes features such as proficiency tracking, statistics, and user authentication.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Technologies used:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
-                                        </div>
-                                        <div class="tecnologia bootstrap">
-                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://flashcards.up.railway.app/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                                <p>Live demo</p>
-                            </a>
-                            <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
-                                <i class="fa-solid fa-code"></i>
-                                <p>View code</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <div id="mas-proyectos">
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Mini Diary web</h3>
-                                        </div>
-                                        <p>Personal diary application. It contains functionalities such as import and export of data in JSON format, creation of user accounts, pagination, creating, editing and deleting journal entries. Its design is minimalist and responsive. Inspired in Mini Diary desktop app by Samuel Meuli</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Technologies used:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                            </div>
-                                            <div class="tecnologia javascript">
-                                                <i class="fa-brands fa-js"></i>JavaScript
-                                            </div>
-                                            <div class="tecnologia php">
-                                                <i class="fa-brands fa-php"></i>PHP
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://minidiaryweb.000webhostapp.com/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Live demo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>View code</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Weather app</h3>
-                                        </div>
-                                        <p>This application developed with React uses a geolocation API to obtain the user's location. It then shows the estimate of the weather at your location, with data such as temperature, wind chill, humidity, pressure and wind speed.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Technologies used:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                            </div>
-                                            <div class="tecnologia react">
-                                                <i class="fa-brands fa-react"></i>React
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://sofiabracho.github.io/weather/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Live demo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/weather" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>View code</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/network.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Social network</h3>
-                                        </div>
-                                        <p>This is a twitter-like social network built using Django and asyncronous JavaScript. It allows users to create accounts, follow other users, post messages, and like posts.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Technologies used:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i>CSS
-                                            </div>
-                                            <div class="tecnologia javascript">
-                                                <i class="fa-brands fa-js"></i>JavaScript
-                                            </div>
-                                            <div class="tecnologia python">
-                                                <i class="fa-brands fa-python"></i>Python
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://social-network-production.up.railway.app/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Live demo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/social-network" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>View code</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/email.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Email client simulation</h3>
-                                        </div>
-                                        <p>Email simulation single page app using Python, Django and asyncronous Javascript. Allows users to compose, send, archive, and reply to emails in a single page using JavaScript and python end-points in the back-end.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Technologies used:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i>CSS
-                                            </div>
-                                            <div class="tecnologia javascript">
-                                                <i class="fa-brands fa-js"></i>JavaScript
-                                            </div>
-                                            <div class="tecnologia python">
-                                                <i class="fa-brands fa-python"></i>Python
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://email-app-production.up.railway.app/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Live demo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/email-app" target="_blank">
-                                    <i class="fas fa-link"></i>
-                                    <p>View code</p>
-                                </a>
-                            </div>
-                        </li>
-
-                    </div>
-
-                    <a href="#" id="ver-mas">Show more</a>
-                </ul>
-            </div>
-
-            <!-- HABILIDADES -->
-            <div id="bg-habilidades">
-                <div class="habilidades contenedor">
-                    <h3>Skills</h3>
-                    <p>My hard and soft skills</p>
-                    <div class="contenedor-habilidades">
-
-                        <div>
-                            <small>Programming</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-80"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa fa-code"></i>
-                                    <p>Programming</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Version control</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-40"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-code-merge"></i>
-                                    <p>Version control</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Design</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-70"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-pen-nib"></i>
-                                    <p>Design</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Layout</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-60"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-table-cells-large"></i>
-                                    <p>Layout</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Social Media Marketing</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-30"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-hashtag"></i>
-                                    <p>Social Media Marketing</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Problem Solving</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-60"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-gears"></i>
-                                    <p>Problem Solving</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Attention to detail</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-50"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <p>Attention to detail</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- EDUCACION -->
-            <div class="contenedor educacion">
-                <h2>Education</h2>
-                <div>
-                    <div>
-                        <h4><i class="fa-solid fa-building-columns"></i>University</h4>
-                        <div class="titulacion">
-                            <div class="titulacion-encabezado">
-                                <div>
-                                    <img src="img/uptma.jpg" alt="UPTMA">
-                                    <div>
-                                        <p><b>Informatics Engineering</b></p>
-                                        <p>Universidad Politécnica Territorial de Maracaibo (UPTMA)</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p><b>2018 - 2024</b></p>
-                                    <p>Venezuela</p>
-                                </div>
-                            </div>
-                            <ul class="logros">
-                                <li>Final Project: E-learning web platform for hybrid education</li>
-                                <li>Led a preventive maintenance project for academic departments</li>
-                                <li>GPA: 4.0</li>
-                            </ul>
-                        </div>
-
-                        <h4><i class="fa-solid fa-graduation-cap"></i>Certifications</h4>
-                        <div id="cursos">
-                            <div class="curso">
-                                <img src="img/cs50.jpg" alt="CS50 Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>CS50: Introduction to Computer Science</b></p>
-                                        <ul>
-                                            <li>Algorithms</li>
-                                            <li>Data structures</li>
-                                            <li>C, Python, SQL and JavaScript</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://cs50.harvard.edu/certificates/5809ec72-9dec-46be-81c8-8f015cc20a24" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/cs50web.jpg" alt="CS50Web Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>CS50 Web Programming with Python and JavaScript</b></p>
-                                        <ul>
-                                            <li>Web Development</li>
-                                            <li>Python and Django</li>
-                                            <li>JavaScript and React</li>
-                                            <li>Bootstrap</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://certificates.cs50.io/cc0d7ec3-5b88-469f-8f21-dd18350667da.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                                </div>
-                            </div>
-
-
-                            <div class="curso">
-                                <img src="img/cs50cy.jpg" alt="CS50 Cyber Security Image">
-                                <div>
-                                    <div>
-                                        <p><b>CS50 Introduction to Cybersecurity</b></p>
-                                        <ul>
-                                            <li>Securing Accounts, data, systems, and software</li>
-                                            <li>Preserving privacy online</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/marketing.jpg" alt="Marketing Digital Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>Bases for creating a Digital Brand from Scratch</b></p>
-                                        <ul>
-                                            <li>Visual identity</li>
-                                            <li>Differentiation and Positioning</li>
-                                            <li>Benchmarking</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/ef-set.jpg" alt="EF-Set Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>EF SET Standard English Exam</b></p>
-                                        <ul>
-                                            <li>Understand written and spoken English with ease</li>
-                                            <li>Understand even an accelerated and native rhythm</li>
-                                            <li>Abstract complex texts</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://www.efset.org/cert/LQ3Ryg" class="btn bnt-ver-cert" target="_blank">View certificate</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/meta.jpg" alt="Curso Meta Frontend Developer Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>Meta Front-End Developer Professional Certificate</b></p>
-                                        <ul>
-                                            <li>Fron-End Development with React</li>
-                                            <li>UX/UI Design</li>
-                                            <li>Accesibility and Usability</li>
-                                            <li>Version control</li>
-                                        </ul>
-                                    </div>
-                                    <a class="btn bnt-ver-cert" target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DJEYUYB9DVH6">View certificate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SERVICIOS -->
-            <div class="servicios">
-                <img src="img/servicio.jpg" alt="Servicios" class="responsive">
-                <div class="texto">
-                    <div>
-                        <h3>Let’s Build Something Great Together</h3>
-                        <p>Need a custom website or web application? I use modern technologies and responsive design principles to bring your ideas to life.</p>
-                        <a href="files/cv_en.pdf" target="_blank">
-                            <button class="btn btn-ghost">Discover more</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CONTACTO -->
-            <div class="contact-wrapper">
-                <h2>Get in touch</h2>
-                <div class="contenedor contacto">
-                    <div class="datos-contacto">
-                        <div id="direccion">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p>Maracaibo, venezuela</p>
-                        </div>
-                        <div id="tel">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <a href="https://wa.me/584127222453" target="_blank" tooltip="Text me!" tooltip-position="bottom">+58 0412-7222453</a>
-                        </div>
-                        <div id="email">
-                            <span class="mail-info">
-                                <i class="fas fa-envelope"></i>
-                                <p class="mail-text" tooltip="Click to copy!" tooltip-position="bottom">sofiabrachodev@gmail.com</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="resume">
-                        <div>
-                            <h4>Check my resume!</h4>
-                            <div id="cv">
-                                <p>CV.pdf</p>
-                                <div>
-                                    <a href="files/cv_en.pdf" target="_blank">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="files/cv_en.pdf" download="cv.pdf" target="_blank">
-                                        <i class="fa-solid fa-circle-down"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOOTER -->
-            <footer id="footer">
-                <p id="copyright">Sofia Bracho 2024 ©</p>
-                <div class="social">
-                    <!-- <a href="https://www.facebook.com/SofiaBrach0" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
-                    <!-- <a href="https://twitter.com/Brachosofia1" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                    <!-- <a href="https://www.instagram.com/sofiabrach0/" target="_blank"><i class="fab fa-instagram"></i></i></a> -->
-                    <a href="https://github.com/sofiaBracho" target="_blank"><i class="fab fa-github"></i></i></a>
-                    <a href="https://ve.linkedin.com/in/sofiabrach0" target="_blank"><i class="fab fa-linkedin"></i></i></a>
-                </div>
-            </footer>
-
+<!-- HERO -->
+<header class="hero" id="top">
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="floor" aria-hidden="true"><i></i></div>
+  <div id="hero-av" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span><span data-i18n="hero_badge">Available for new work</span></span>
+        <h1 class="title">
+          <span class="name">Sofia Bracho</span>
+          <span class="statement"><span data-i18n="hero_s1">I engineer interfaces that feel</span> <em data-i18n="hero_s2">alive</em>.</span>
+        </h1>
+        <p class="sub" data-i18n="hero_sub">Product and UI/UX engineer and full-stack developer, working remotely. I build polished, interactive products from pixel to cloud.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact" data-i18n="hero_cta">Get in touch</a>
+          <a class="btn-link" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
         </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="row">
+    <span>React <b>◆</b> TypeScript <b>◆</b> Node <b>◆</b> Angular <b>◆</b> AWS <b>◆</b> Stripe <b>◆</b> Self-hosted AI <b>◆</b> Figma <b>◆</b> Web Crypto <b>◆</b> Supabase <b>◆</b> UI/UX <b>◆</b> Product <b>◆</b></span>
+    <span>React <b>◆</b> TypeScript <b>◆</b> Node <b>◆</b> Angular <b>◆</b> AWS <b>◆</b> Stripe <b>◆</b> Self-hosted AI <b>◆</b> Figma <b>◆</b> Web Crypto <b>◆</b> Supabase <b>◆</b> UI/UX <b>◆</b> Product <b>◆</b></span>
+  </div>
+</div>
+
+<!-- WORK -->
+<section id="work" class="sec-pad">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 data-i18n="work_title">Selected work</h2>
     </div>
 
-    <!-- Spanish Content Container -->
-    <div id="content-es" class="language-content" style="display:none">
-        <!-- MENU -->
-        <div id="side-menu" class="menu-collapsed">
-
-            <!-- HEADER -->
-            <div id="menu-header">
-                <div id="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div id="title"><span>Mi portafolio</span></div>
-            </div>
-
-            <!-- PROFILE -->
-            <div id="profile">
-                <div id="photo"><img src="img/foto.jpg" alt="Profile Photo"></div>
-
-                <div id="name"><span>Sofia Bracho</span></div>
-            </div>
-
-            <!-- ITEMS -->
-            <div id="menu-items">
-                <div class="item" id="sobre-mi">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-address-card"></i> </div>
-                    <div class="title"> <span>Sobre mí</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="tecnologias">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-code"></i> </div>
-                    <div class="title"> <span>Tecnologías</span> </div>
-                    </a>
-                </div>
-                
-                <div class="item" id="experiencia">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-briefcase"></i> </div>
-                    <div class="title"> <span>Experiencia</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="trabajos">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-file-code"></i> </div>
-                    <div class="title"> <span>Proyectos</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="habilidades">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-palette"></i> </div>
-                    <div class="title"> <span>Habilidades</span> </div>
-                    </a>
-                </div>
-
-                <div class="item" id="educacion">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fa-solid fa-graduation-cap"></i> </div>
-                    <div class="title"> <span>Educación</span> </div>
-                    </a>
-                </div>
-
-                <div class="item-separator"></div>
-
-                <div class="item" id="contacto">
-                    <a href="#"></a>
-                    <div class="icon"> <i class="fas fa-phone-alt"></i> </div>
-                    <div class="title"> <span>Contacto</span> </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- TOGGLE LANG -->
-            <div id="toggle-lang">
-                <a href="#" id="language-toggle">
-                    <img id="lang-flag" src="img/language/us.png" width="30" height="25" alt="US Flag">
-                    <p id="lang-code">EN</p>
-                    <span id="lang-text">English</span>
-                </a>
-            </div>
+    <!-- NEXUS feature -->
+    <article class="card feature" data-reveal>
+      <div class="card-body">
+        <span class="tag">AI · diagnostics</span>
+        <h3>Nexus</h3>
+        <p data-i18n="p_nexus">An AI auto-diagnosis tool that turns raw scanner output (DTC codes and freeze-frame data) into cited, manufacturer-specific repair reports. Built on a moody industrial cyber-workshop design system.</p>
+        <div class="stack"><span>React 19</span><span>TypeScript</span><span>Tailwind</span><span>Supabase</span></div>
+        <div class="links">
+          <a class="live" href="https://nexus.sofiabracho.com" target="_blank" data-i18n="cta_live">Live site →</a>
+          <a class="src" href="https://github.com/SofiaBracho/auto-diagnosis" target="_blank" data-i18n="cta_code">Source</a>
         </div>
-
-        <!-- MAIN -->
-        <div class="cuerpo">
-            <!-- HEADER -->
-            <div class="hero"></div>
-            <div class="contenedor-hero">
-                <div class="contenedor">
-                    <header class="header">
-                        <img src="img/logo.png" alt="Logo" class="logo">
-                    </header>
-
-                    <div class="datos">
-                        <h1 class="title">Hola! <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
-                            <br>
-                            Soy Sofia Bracho,
-                            <br>
-                            Desarrolladora Web Full Stack
-                        </h1>
-                        <p class="resumen">Diseño y desarrollo experiencias web que combinan funcionalidad y estética, enfocándome en soluciones eficientes, escalables y centradas en el usuario.</p>
-                        <button class="btn btn-contact">Contáctame</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SOBRE MI -->
-            <div class="contenedor sobre-mi">
-                <h2>Sobre mi</h2>
-                <div>
-                    <div class="descripcion">
-                        <p>
-                            Soy <b>Desarrolladora Web Full Stack</b> con estudios en Ingeniería Informática y experiencia previa como diseñadora gráfica. Hablo <b>inglés y español</b> con fluidez. Me apasiona la tecnología y el arte, y disfruto fusionar ambas disciplinas para crear soluciones digitales creativas y funcionales, desde el diseño de interfaces hasta el despliegue en la nube.
-                        </p>
-                    </div>
-
-                    <img id="foto" src="img/foto.jpg" alt="Foto personal">
-                </div>
-
-            </div>
-
-            <!-- TECNOLOGIAS -->
-            <div class="tecnologias contenedor">
-                <h2>Tecnologías</h2>
-                <!-- Carrousel con logos y nivel de progreso-->
-                <div class="glide imagenes glide-es">
-
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide">
-                                <div id="html">
-                                    <img src="img/logos/html.png" alt="HTML5">
-                                    <p>HTML5</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="css" class="big">
-                                    <img src="img/logos/css.png" alt="CSS3">
-                                    <p>CSS3</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="javascript" class="big">
-                                    <img src="img/logos/javascript.png" alt="JavaScript">
-                                    <p>JavaScript</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="typescript" class="big">
-                                    <img src="img/logos/typescript.png" alt="TypeScript">
-                                    <p>TypeScript</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="mysql">
-                                    <img src="img/logos/mysql.png" alt="MySQL">
-                                    <p>MySQL</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="git">
-                                    <img src="img/logos/git.png" alt="GIT">
-                                    <p>GIT</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="react">
-                                    <img src="img/logos/react.png" alt="React">
-                                    <p>React</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="angular">
-                                    <img src="img/logos/angular.png" alt="Angular">
-                                    <p>Angular</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="aws">
-                                    <img src="img/logos/aws.png" alt="AWS">
-                                    <p>AWS</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="figma">
-                                    <img src="img/logos/figma.png" alt="Figma">
-                                    <p>Figma</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div id="node">
-                                    <img src="img/logos/node.png" alt="Node">
-                                    <p>Node</p>
-                                    <div class="barra">
-                                        <div class="progreso"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- EXPERIENCIA -->
-            <div class="contenedor experiencia">
-                <h2>Experiencia</h2>
-                <div>
-                    <div>
-                        <h4><i class="fa-solid fa-code"></i>Desarrollo</h4>
-                        <div class="exp-laboral">
-                            <div class="exp-encabezado">
-                                <div>
-                                    <img src="img/inimble.jpeg" alt="Inimble">
-                                    <div>
-                                        <p><b>Desarrolladora Full Stack</b></p>
-                                        <p>Inimble</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p><b>08/2024 - presente</b></p>
-                                    <p>Híbrido, Venezuela</p>
-                                </div>
-                            </div>
-                            <ul class="responsabilidades">
-                                <li>Desarrollo de funcionalidades full-stack con Angular, Node.js y MariaDB</li>
-                                <li>Personalización de sitios WordPress y mejora de plataformas con Bootstrap</li>
-                                <li>Soporte en despliegues con AWS y resolución de incidencias de producción</li>
-                                <li>Colaboración en equipos ágiles y mejora de flujos de trabajo</li>
-                                <li>Desarrollo para plataforma de streaming B2B con PHP/Symfony y Angular</li>
-                            </ul>
-                        </div>
-
-                        <h4><i class="fa-solid fa-pen-nib"></i>Diseño</h4>
-                        <div class="exp-laboral">
-                            <div class="exp-encabezado">
-                                <div>
-                                    <img src="img/mega.jpg" alt="Distribuciones Mega">
-                                    <div>
-                                        <p><b>Diseñadora gráfica</b></p>
-                                        <p>Distribuciones Mega</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p><b>05/2022 - 03/2023</b></p>
-                                    <p>Venezuela</p>
-                                </div>
-                            </div>
-                            <ul class="responsabilidades">
-                                <li>Crear contenido audiovisual para las redes sociales</li>
-                                <li>Diseñar anuncios publicitarios y material promocional</li>
-                                <li>Colaborar en el diseño de la marca, teniendo en cuenta los colores corporativos y estilísticos</li>
-                                <li>Diseño de empaquetados, envases y etiquetas para productos físicos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- PROYECTOS -->
-            <!-- Agregar contenedor con sombras y margenes a los lados excepto en mobile -->
-            <div class="contenedor-proyectos">
-                <h2>Proyectos</h2>
-                <ul class="lista-proyectos">
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/piensa.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Aula Virtual "PIENSA"</h3>
-                                    </div>
-                                    <p>Sistema educativo para la Universidad Politécnica Territorial de Maracaibo. Tiene sesiones para estudiantes, profesores, coordinadores y administrador. Ofrece funciones como publicar y evaluar actividades, comunicación entre profesores y estudiantes, planificar clases, dar seguimiento a calificaciones, compartir documentos y libros, manejar horarios, perfiles, periodos académicos y respaldos automáticos de la base de datos.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Tecnologías utilizadas:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia php">
-                                            <i class="fa-brands fa-php"></i>PHP
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://piensa-uptma.000webhostapp.com/login.php" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                                <p>Demo en vivo</p>
-                            </a>
-                            <a class="disabled">
-                                <i class="fa-solid fa-x"></i>
-                                <p>Repositorio privado</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/fashion.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Bella exclusiva presupuestos de moda</h3>
-                                    </div>
-                                    <p>Aplicación web que calcula un Presupuesto justo de ropa a la medida según la dificultad de confección (depende de prendas, materiales y talla), considerando variables como el costo por hora de trabajo y una variable de control manejada por el administrador.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Tecnologías utilizadas:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia bootstrap">
-                                            <i class="fa-brands fa-bootstrap"></i>Bootstrap
-                                        </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://fashion-budget-production.up.railway.app/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                                <p>Demo en vivo</p>
-                            </a>
-                            <a href="https://github.com/SofiaBracho/fashion-budget" target="_blank">
-                                <i class="fa-solid fa-code"></i>
-                                <p>Ver código</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class='proyecto'>
-                        <div class="info-proyecto">
-                            <img src="img/trabajos/flashcards.jpg" alt="Imagen del proyecto">
-                            <div>
-                                <div>
-                                    <div class="titulo-proyecto">
-                                        <h3>Aplicación Tarjetas didácticas para aprendizaje de idiomas</h3>
-                                    </div>
-                                    <p>Esta aplicación de Django permite a los usuarios crear y estudiar tarjetas didácticas, realizar un seguimiento de su progreso y revisar las palabras aprendidas. Incluye funciones como seguimiento de competencia, estadísticas y autenticación de usuarios.</p>
-                                </div>
-                                <div id="tecnologias">
-                                    Tecnologías utilizadas:
-                                    <div>
-                                        <div class="tecnologia html">
-                                            <i class="fa-brands fa-html5"></i>HTML5
-                                        </div>
-                                        <div class="tecnologia css">
-                                            <i class="fa-brands fa-css3-alt"></i>CSS
-                                        </div>
-                                        <div class="tecnologia javascript">
-                                            <i class="fa-brands fa-js"></i>JavaScript
-                                        </div>
-                                        <div class="tecnologia python">
-                                            <i class="fa-brands fa-python"></i>Python
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cortina">
-                            <a href="https://flashcards.up.railway.app/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                                <p>Demo en vivo</p>
-                            </a>
-                            <a href="https://github.com/SofiaBracho/flashcards" target="_blank">
-                                <i class="fa-solid fa-code"></i>
-                                <p>Ver código</p>
-                            </a>
-                        </div>
-                    </li>
-
-                    <div id="mas-proyectos">
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/mini-diary.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Mini Diary web</h3>
-                                        </div>
-                                        <p>Aplicación de diario personal. Contiene funcionalidades como importación y exportación de datos en formato JSON, creación de cuentas de usuario, paginación, y CRUD de entradas diarias. Su diseño es minimalista y responsive.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Tecnologías utilizadas:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                            </div>
-                                            <div class="tecnologia javascript">
-                                                <i class="fa-brands fa-js"></i>JavaScript
-                                            </div>
-                                            <div class="tecnologia php">
-                                                <i class="fa-brands fa-php"></i>PHP
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://minidiaryweb.000webhostapp.com/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Demo en vivo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/diary-web" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>Ver código</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/clima.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Aplicación del clima</h3>
-                                        </div>
-                                        <p>Esta aplicación desarrollada con React utiliza una API de geolocalización para obtener la ubicación del usuario. Posteriormente muestra la estimación del clima en tu ubicación, con datos como la temperatura, sensación térmica, humedad, presión y velocidad del viento.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Tecnologías utilizadas:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i></i>CSS
-                                            </div>
-                                            <div class="tecnologia react">
-                                                <i class="fa-brands fa-react"></i>React
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://sofiabracho.github.io/weather/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Demo en vivo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/weather" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>Ver código</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/network.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Red social</h3>
-                                        </div>
-                                        <p>Esta es una red social similar a Twitter creada con Django y JavaScript asíncrono. Permite a los usuarios crear cuentas, seguir a otros usuarios, publicar mensajes y dar me gusta a las publicaciones.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Tecnologías usadas:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i>CSS
-                                            </div>
-                                            <div class="tecnologia javascript">
-                                                <i class="fa-brands fa-js"></i>JavaScript
-                                            </div>
-                                            <div class="tecnologia python">
-                                                <i class="fa-brands fa-python"></i>Python
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://social-network-production.up.railway.app/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Demo en vivo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/social-network" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>Ver código</p>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class='proyecto'>
-                            <div class="info-proyecto">
-                                <img src="img/trabajos/email.jpg" alt="Imagen del proyecto">
-                                <div>
-                                    <div>
-                                        <div class="titulo-proyecto">
-                                            <h3>Simulación de cliente de correo electrónico</h3>
-                                        </div>
-                                        <p>Aplicación de simulación de correo electrónico de una sola página que utiliza Python, Django y Javascript asíncrono. Permite a los usuarios redactar, enviar, archivar y responder correos electrónicos en una sola página utilizando JavaScript y puntos finales de Python en el back-end.</p>
-                                    </div>
-                                    <div id="tecnologias">
-                                        Tecnologías usadas:
-                                        <div>
-                                            <div class="tecnologia html">
-                                                <i class="fa-brands fa-html5"></i>HTML5
-                                            </div>
-                                            <div class="tecnologia css">
-                                                <i class="fa-brands fa-css3-alt"></i>CSS
-                                            </div>
-                                            <div class="tecnologia javascript">
-                                                <i class="fa-brands fa-js"></i>JavaScript
-                                            </div>
-                                            <div class="tecnologia python">
-                                                <i class="fa-brands fa-python"></i>Python
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cortina">
-                                <a href="https://email-app-production.up.railway.app/" target="_blank">
-                                    <i class="fa-solid fa-link"></i>
-                                    <p>Demo en vivo</p>
-                                </a>
-                                <a href="https://github.com/SofiaBracho/email-app" target="_blank">
-                                    <i class="fa-solid fa-code"></i>
-                                    <p>Ver código</p>
-                                </a>
-                            </div>
-                        </li>
-                    </div>
-
-                    <a href="#" id="ver-mas">Ver más</a>
-                </ul>
-            </div>
-
-            <!-- HABILIDADES -->
-            <div id="bg-habilidades">
-                <div class="habilidades contenedor">
-                    <h3>Habilidades</h3>
-                    <p>Mis habilidades técnicas y blandas</p>
-                    <div class="contenedor-habilidades">
-
-                        <div>
-                            <small>Programación</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-80"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa fa-code"></i>
-                                    <p>Programación</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Control de versiones</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-40"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-code-merge"></i>
-                                    <p>Control de versiones</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Diseño</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-70"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-pen-nib"></i>
-                                    <p>Diseño</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Maquetación</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-60"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-table-cells-large"></i>
-                                    <p>Maquetación</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Marketing en RRSS</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-30"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-hashtag"></i>
-                                    <p>Marketing en RRSS</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Resolución de problemas</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-60"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-gears"></i>
-                                    <p>Resolución de problemas</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <small>Atención al detalle</small>
-                            <div class="habilidad">
-                                <div class="barra">
-                                    <div class="h-50"></div>
-                                </div>
-                                <div class="descripcion">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <p>Atención al detalle</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- EDUCACION -->
-            <div class="contenedor educacion">
-                <h2>Educación</h2>
-                <div>
-                    <div>
-                        <h4><i class="fa-solid fa-building-columns"></i>Universidad</h4>
-                        <div class="titulacion">
-                            <div class="titulacion-encabezado">
-                                <div>
-                                    <img src="img/uptma.jpg" alt="UPTMA">
-                                    <div>
-                                        <p><b>Ingeniería Informática</b></p>
-                                        <p>Universidad Politécnica Territorial de Maracaibo</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p><b>2018 - 2024</b></p>
-                                    <p>Venezuela</p>
-                                </div>
-                            </div>
-                            <ul class="logros">
-                                <li>Miembro del comité de investigación</li>
-                                <li>Proyecto de mantenimiento preventivo a los equipos del PNF en Agroalimentación y Geociencias</li>
-                                <li>Desarrollo de aplicación web de educación en línea para la universidad</li>
-                                <li>Rendimiento: 18/20</li>
-                            </ul>
-                        </div>
-
-                        <h4><i class="fa-solid fa-graduation-cap"></i>Certificaciones</h4>
-                        <div id="cursos">
-                            <div class="curso">
-                                <img src="img/cs50.jpg" alt="CS50 Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>CS50: Introducción a las Ciencias de la Computación</b></p>
-                                        <ul>
-                                            <li>Algoritmos</li>
-                                            <li>Estructuras de datos</li>
-                                            <li>C, Python, SQL y JavaScript</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://cs50.harvard.edu/certificates/5809ec72-9dec-46be-81c8-8f015cc20a24" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/cs50web.jpg" alt="CS50Web Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>CS50 Programación Web con Python y JavaScript</b></p>
-                                        <ul>
-                                            <li>Desarrollo Web</li>
-                                            <li>Python y Django</li>
-                                            <li>JavaScript y React</li>
-                                            <li>Bootstrap</li>
-                                        </ul>
-                                    </div>
-                                    <a href="#" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/cs50cy.jpg" alt="Imagen de CS50 Ciberseguridad">
-                                <div>
-                                    <div>
-                                        <p><b>CS50 Introducción a la ciberseguridad</b></p>
-                                        <ul>
-                                            <li>Asegurar cuentas, datos, sistemas y software</li>
-                                            <li>Preservar la privacidad online</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/marketing.jpg" alt="Marketing Digital Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>Bases para crear una Marca Digital desde Cero</b></p>
-                                        <ul>
-                                            <li>Identidad visual</li>
-                                            <li>Diferenciación y Posicionamiento</li>
-                                            <li>Benchmarking</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/ef-set.jpg" alt="EF-Set Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>Examen de Inglés Estándar de EF SET</b></p>
-                                        <ul>
-                                            <li>Entender con facilidad inglés escrito y hablado</li>
-                                            <li>Comprender inclusive un ritmo acelerado y nativo</li>
-                                            <li>Abtraer textos complejos</li>
-                                        </ul>
-                                    </div>
-                                    <a href="https://www.efset.org/cert/LQ3Ryg" class="btn bnt-ver-cert" target="_blank">Ver certificado</a>
-                                </div>
-                            </div>
-
-                            <div class="curso">
-                                <img src="img/meta.jpg" alt="Curso Meta Frontend Developer Imagen">
-                                <div>
-                                    <div>
-                                        <p><b>Certificado Profesional de Desarrollador Meta Front-End</b></p>
-                                        <ul>
-                                            <li>Desarrollo Fron-End con React</li>
-                                            <li>Diseño UX/UI</li>
-                                            <li>Control de versiones</li>
-                                        </ul>
-                                    </div>
-                                    <a class="btn bnt-ver-cert" target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DJEYUYB9DVH6">Ver certificado</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SERVICIOS -->
-            <div class="servicios">
-                <img src="img/servicio.jpg" alt="Servicios" class="responsive">
-                <div class="texto">
-                    <div>
-                        <h3>Hagamos realidad tu proyecto web</h3>
-                        <p>Utilizando tecnologías modernas y diseño adaptativo, puedo ayudarte a crear una presencia online única, funcional y optimizada para todos los dispositivos.</p>
-                        <a href="files/cv_es.pdf" target="_blank">
-                            <button class="btn btn-ghost">Descubre más</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CONTACTO -->
-            <div class="contact-wrapper">
-                <h2>Contacto</h2>
-                <div class="contenedor contacto">
-                    <div class="datos-contacto">
-                        <div id="direccion">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p>Maracaibo, venezuela</p>
-                        </div>
-                        <div id="tel">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <a href="https://wa.me/584127222453" target="_blank" tooltip="Escríbeme" tooltip-position="bottom">+58 0412-7222453</a>
-                        </div>
-                        <div id="email">
-                            <span class="mail-info">
-                                <i class="fas fa-envelope"></i>
-                                <p class="mail-text" tooltip="Click para copiar" tooltip-position="bottom">sofiabrachodev@gmail.com</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="resume">
-                        <div>
-                            <h4>Mira mi currículum!</h4>
-                            <div id="cv">
-                                <p>CV.pdf</p>
-                                <div>
-                                    <a href="files/cv_en.pdf" target="_blank">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="files/cv_en.pdf" download="cv.pdf" target="_blank">
-                                        <i class="fa-solid fa-circle-down"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOOTER -->
-            <footer id="footer">
-                <p id="copyright">Sofia Bracho 2024 ©</p>
-                <div class="social">
-                    <!-- <a href="https://www.facebook.com/SofiaBrach0" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
-                    <!-- <a href="https://twitter.com/Brachosofia1" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                    <!-- <a href="https://www.instagram.com/sofiabrach0/" target="_blank"><i class="fab fa-instagram"></i></i></a> -->
-                    <a href="https://github.com/sofiaBracho" target="_blank"><i class="fab fa-github"></i></i></a>
-                    <a href="https://ve.linkedin.com/in/sofiabrach0" target="_blank"><i class="fab fa-linkedin"></i></i></a>
-                </div>
-            </footer>
+      </div>
+      <div class="viz">
+        <div class="vgrid"></div><div class="sweep"></div>
+        <div class="dtc">
+          <div class="lbl">DTC NEXUS</div>
+          <div class="code">P0301</div>
+          <div class="meta">CONFIDENCE <b>82%</b> · GROUNDED <b>●</b></div>
         </div>
+      </div>
+    </article>
+
+    <!-- NEST + PIENSA grid -->
+    <div class="grid-2">
+      <article class="card vcard" data-reveal>
+        <div class="viz">
+          <div class="vgrid"></div>
+          <div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="vlabel">SEALED · AES-256</div>
+        </div>
+        <div class="card-body">
+          <span class="tag">privacy · 3D</span>
+          <h3>Nest</h3>
+          <p data-i18n="p_nest">A private, local-first journal rendered as one animated 3D scene: a cognac-leather ring-bound book on a walnut desk. Touch the plate, type a passphrase, and the book swings open with the whole app on the paper.</p>
+          <div class="stack"><span>React</span><span>Web Crypto</span><span>IndexedDB</span><span>WebGL</span></div>
+          <div class="links">
+            <a class="live" href="https://journal.sofiabracho.com" target="_blank" data-i18n="cta_live2">Live site →</a>
+            <a class="src" href="https://github.com/SofiaBracho/journal" target="_blank" data-i18n="cta_code2">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card vcard" data-reveal>
+        <div class="viz">
+          <div class="vgrid"></div>
+          <div class="nodes"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="vlabel">4 ROLES · 1 PLATFORM</div>
+        </div>
+        <div class="card-body">
+          <span class="tag">edtech · platform</span>
+          <h3>PIENSA</h3>
+          <p data-i18n="p_piensa">A virtual-classroom platform for the Territorial Polytechnic University of Maracaibo: four roles, activity grading, class planning, schedules, shared documents, academic periods, and automated backups. My final degree project.</p>
+          <div class="stack"><span>PHP</span><span>JavaScript</span><span>MySQL</span><span>HTML/CSS</span></div>
+          <div class="links">
+            <a class="live" href="https://piensa.sofiabracho.com" target="_blank" data-i18n="cta_live3">Live site →</a>
+          </div>
+        </div>
+      </article>
     </div>
+  </div>
+</section>
 
-    <script src="js/menu.js"></script>
-    <script src="js/proyectos.js"></script>
-    <script src="js/copy.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/jquery-1.12.0.min.js"></script>
+<!-- ABOUT -->
+<section id="about" class="sec-pad">
+  <div class="wrap about-grid">
+    <div data-reveal class="portrait-slot">
+      <div class="portrait" style="aspect-ratio:1">
+        <img class="pshot" src="img/portrait.png" alt="Sofia Bracho">
+        <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
+      </div>
+    </div>
+    <div data-reveal>
+      <div class="lead" data-i18n="about_lead">About</div>
+      <h2 data-i18n="about_h">Design taught me to care. Engineering taught me to ship.</h2>
+      <p data-i18n="about_p1">I am a full-stack web developer with a past life as a graphic designer, bilingual in English and Spanish. I love the overlap of art and code: building interactive, polished products from UI design all the way to cloud deployment.</p>
+      <p data-i18n="about_p2">Today I build across the stack at Inimble, fussing over the tiny interactions that make software feel sharp and considered.</p>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="sec-pad">
+  <div class="wrap jcols">
+    <div>
+      <h2 data-reveal data-i18n="exp_title">Where I've been</h2>
+      <div class="timeline">
+        <div class="tl-row" data-reveal>
+          <div class="item">
+            <div class="ihead">
+              <img class="logo" src="img/inimble.jpeg" alt="Inimble logo">
+              <div><div class="when">08/2024 - now · remote</div><h3>Full-Stack Developer · Inimble</h3></div>
+            </div>
+            <p data-i18n="exp_inimble">Built a legaltech app powered by self-hosted AI models and integrated Stripe billing. Shipped full-stack features in Angular, Node.js and MariaDB, with AWS deployments, WordPress builds and production fixes in agile teams, plus a B2B music-streaming platform on PHP/Symfony and Angular.</p>
+          </div>
+        </div>
+        <div class="tl-row" data-reveal>
+          <div class="item">
+            <div class="ihead">
+              <img class="logo" src="img/mega.jpg" alt="Distribuciones Mega logo">
+              <div><div class="when">05/2022 - 03/2023</div><h3>Graphic Designer · Distribuciones Mega</h3></div>
+            </div>
+            <p data-i18n="exp_mega">Promotional materials and audiovisual social content; brand identity across packaging, labels and digital graphics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 data-reveal data-i18n="edu_title">What I've learned</h2>
+      <div class="item" data-reveal>
+        <div class="ihead">
+          <img class="logo" src="img/uptma.jpg" alt="UPTMA logo">
+          <div><div class="when">2018 - 2024 · GPA 4.0 · 2nd in class</div><h3>B.Eng Informatics · UPTMA</h3></div>
+        </div>
+        <p data-i18n="edu_uni">Graduated 2nd in my class. Final project: an e-learning platform for hybrid education (PIENSA). Led a preventive-maintenance project for academic departments.</p>
+      </div>
+      <div class="chips" data-reveal>
+        <a href="https://verify.skilljar.com/c/77irkpz5ax8i" target="_blank" rel="noopener" title="Anthropic Education">AI Fluency</a>
+        <a href="https://verify.skilljar.com/c/d6c3o7batzfh" target="_blank" rel="noopener" title="Anthropic Education">Claude 101</a>
+        <a href="https://cs50.harvard.edu/certificates/5809ec72-9dec-46be-81c8-8f015cc20a24" target="_blank" rel="noopener">CS50</a>
+        <a href="https://certificates.cs50.io/cc0d7ec3-5b88-469f-8f21-dd18350667da.pdf?size=letter" target="_blank" rel="noopener">CS50 Web</a>
+        <a href="https://certificates.cs50.io/a4769cd3-4733-42c3-9777-421fd9b4817a.pdf?size=letter" target="_blank" rel="noopener">CS50 Cybersec</a>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/DJEYUYB9DVH6" target="_blank" rel="noopener">Meta Front-End</a>
+        <a href="https://drive.google.com/file/d/1gV35NSX8CzEVSv8AoA7tV_2l8X9eLJoO/view?usp=drive_link" target="_blank" rel="noopener">HIPAA Compliance</a>
+        <a href="https://www.efset.org/cert/LQ3Ryg" target="_blank" rel="noopener">EF SET</a>
+        <a href="https://drive.google.com/file/d/11j-Q4UyegNCuuufIRJPASRwfTaRBCd-N/view?usp=sharing" target="_blank" rel="noopener">Digital Brand</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD STRIPS (crossed construction tape divider into contact) -->
+<div class="build-strips" aria-hidden="true">
+  <div class="build-strip bs-back">
+    <div class="bs-track">
+      <span>UNDER CONSTRUCTION <i>//</i> ALWAYS SHIPPING <i>//</i> UNDER CONSTRUCTION <i>//</i> ALWAYS SHIPPING <i>//</i> </span>
+      <span>UNDER CONSTRUCTION <i>//</i> ALWAYS SHIPPING <i>//</i> UNDER CONSTRUCTION <i>//</i> ALWAYS SHIPPING <i>//</i> </span>
+    </div>
+  </div>
+  <div class="build-strip bs-front">
+    <div class="bs-track">
+      <span>LET'S BUILD <i>//</i> AT THE EDGE <i>//</i> SHIP IT <i>//</i> PIXEL TO CLOUD <i>//</i> </span>
+      <span>LET'S BUILD <i>//</i> AT THE EDGE <i>//</i> SHIP IT <i>//</i> PIXEL TO CLOUD <i>//</i> </span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="sec-pad">
+  <div class="wrap">
+    <div class="ck" data-reveal data-i18n="contact_kicker">Let's build something at the edge.</div>
+    <a class="email" data-reveal href="mailto:sofiabrachodev@gmail.com">sofiabrachodev@gmail.com</a>
+    <div class="contact-btns" data-reveal>
+      <a class="btn btn-primary" href="https://wa.me/584127222453" target="_blank">WhatsApp</a>
+      <a class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="files/cv_en.pdf" target="_blank" data-i18n="cv_en">Résumé (EN)</a>
+      <a class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="files/cv_es.pdf" target="_blank" data-i18n="cv_es">CV (ES)</a>
+    </div>
+    <div class="loc" data-reveal>Remote-first · EN / ES</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="cr">Sofia Bracho · 2026</span>
+    <div class="soc">
+      <a href="https://github.com/SofiaBracho" target="_blank" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12 11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a href="https://ve.linkedin.com/in/sofiabrach0" target="_blank" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33 0-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- init 3D hero avatar -->
+<script type="module">
+  import { createHeroAvatar } from './3d/hero-avatar.js';
+  const mount = document.getElementById('hero-av');
+  if (mount) {
+    window.hero = createHeroAvatar(mount, { modelUrl: './3d/avatar_web.glb' });
+  }
+</script>
 </body>
-
 </html>
