@@ -12,6 +12,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const CFG = {
   // camera
@@ -43,8 +44,8 @@ const CFG = {
   phoneClip: 'texting',
   // phone is parented to the hand bone, so these are LOCAL to that hand.
   // tune if it sits off: pos in metres [x,y,z], rot in radians [x,y,z].
-  phoneLocalPos: [0.0, 0.08, 0.02], // along the bone toward the fingers/palm
-  phoneLocalEuler: [Math.PI / 2, 0, 0], // lay the screen flat in the palm
+  phoneLocalPos: [0.030, 0.116, 0.068], // tuned in-hand (metric)
+  phoneLocalEuler: [0.848, 0.318, -1.572], // tuned in-hand
 
   // idle-breakers
   breakers: ['thinking', 'texting'],
@@ -106,6 +107,16 @@ export function createHeroAvatar(container, opts = {}) {
   let nextBreakerAt = rand(cfg.breakerEveryMin, cfg.breakerEveryMax);
   const pointer = new THREE.Vector2(0, 0); // -1..1
   let disposed = false;
+  let phoneTuning = false;
+  let controls = null;
+  const handScale = new THREE.Vector3(1, 1, 1);
+
+  // metric pos -> local bone units (divide out the bone's tiny world scale)
+  function setPhonePose(pos, euler) {
+    if (!phone) return;
+    phone.position.set(pos[0] / handScale.x, pos[1] / handScale.y, pos[2] / handScale.z);
+    phone.rotation.set(euler[0], euler[1], euler[2]);
+  }
 
   // ---- load ----
   const draco = new DRACOLoader();
@@ -142,17 +153,18 @@ export function createHeroAvatar(container, opts = {}) {
       phone.visible = false;
       if (handBone) {
         // parent to the hand so the phone is truly held; compensate the bone's
-        // world scale so the phone keeps its real-world (metric) size.
-        const _ws = new THREE.Vector3();
+        // world scale so the phone keeps its real-world (metric) size AND so the
+        // local offset behaves in metres (bone scale is tiny on Mixamo rigs).
         handBone.updateWorldMatrix(true, false);
-        handBone.getWorldScale(_ws);
-        phone.scale.set(1 / _ws.x, 1 / _ws.y, 1 / _ws.z);
-        phone.position.set(...cfg.phoneLocalPos);
-        phone.rotation.set(...cfg.phoneLocalEuler);
+        handBone.getWorldScale(handScale);
+        phone.scale.set(1 / handScale.x, 1 / handScale.y, 1 / handScale.z);
+        setPhonePose(cfg.phoneLocalPos, cfg.phoneLocalEuler);
         handBone.add(phone);
       } else {
         scene.add(phone);
       }
+
+      setupPhoneTuner();
 
       mixer = new THREE.AnimationMixer(model);
       for (const clip of gltf.animations) {
@@ -187,13 +199,91 @@ export function createHeroAvatar(container, opts = {}) {
     return g;
   }
 
+  // Live tuner: open the page with ?phonetune to drag the phone into place.
+  // Forces the texting clip + phone visible, shows 6 sliders, prints CFG values.
+  function setupPhoneTuner() {
+    if (!phone || !/[?&]phonetune\b/.test(location.search)) return;
+    phoneTuning = true;
+    phone.visible = true;
+    const panel = document.createElement('div');
+    panel.style.cssText =
+      'position:fixed;top:12px;left:12px;z-index:99999;background:#0b0e16ee;color:#cfe;' +
+      'font:12px/1.5 monospace;padding:12px 14px;border:1px solid #22d3ee;border-radius:8px;width:230px';
+    const rows = [
+      ['posX', cfg.phoneLocalPos[0], -0.3, 0.3, 0.002],
+      ['posY', cfg.phoneLocalPos[1], -0.3, 0.3, 0.002],
+      ['posZ', cfg.phoneLocalPos[2], -0.3, 0.3, 0.002],
+      ['rotX', cfg.phoneLocalEuler[0], -Math.PI, Math.PI, 0.01],
+      ['rotY', cfg.phoneLocalEuler[1], -Math.PI, Math.PI, 0.01],
+      ['rotZ', cfg.phoneLocalEuler[2], -Math.PI, Math.PI, 0.01],
+    ];
+    const out = document.createElement('pre');
+    out.style.cssText = 'margin:8px 0 0;white-space:pre-wrap;color:#ffce1f';
+    const vals = {};
+    function apply() {
+      setPhonePose([vals.posX, vals.posY, vals.posZ], [vals.rotX, vals.rotY, vals.rotZ]);
+      out.textContent =
+        'phoneLocalPos: [' + [vals.posX, vals.posY, vals.posZ].map((v) => v.toFixed(3)).join(', ') + '],\n' +
+        'phoneLocalEuler: [' + [vals.rotX, vals.rotY, vals.rotZ].map((v) => v.toFixed(3)).join(', ') + '],';
+    }
+    rows.forEach(([name, init, min, max, step]) => {
+      vals[name] = init;
+      const wrap = document.createElement('label');
+      wrap.style.cssText = 'display:flex;align-items:center;gap:6px;margin:2px 0';
+      const tag = document.createElement('span');
+      tag.textContent = name;
+      tag.style.width = '34px';
+      const inp = document.createElement('input');
+      inp.type = 'range';
+      inp.min = min; inp.max = max; inp.step = step; inp.value = init;
+      inp.style.flex = '1';
+      inp.addEventListener('input', () => { vals[name] = parseFloat(inp.value); apply(); });
+      wrap.append(tag, inp);
+      panel.appendChild(wrap);
+    });
+    panel.appendChild(out);
+
+    // orbit camera so you can inspect the hold from any angle; prints CFG cam values
+    controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(...cfg.lookAt);
+    controls.enableDamping = true;
+    controls.update();
+    const camOut = document.createElement('pre');
+    camOut.style.cssText = 'margin:8px 0 0;white-space:pre-wrap;color:#22d3ee';
+    function camReport() {
+      const p = camera.position, t = controls.target;
+      camOut.textContent =
+        'cameraPos: [' + [p.x, p.y, p.z].map((v) => v.toFixed(3)).join(', ') + '],\n' +
+        'lookAt: [' + [t.x, t.y, t.z].map((v) => v.toFixed(3)).join(', ') + '],';
+    }
+    controls.addEventListener('change', camReport);
+    camReport();
+    panel.appendChild(camOut);
+
+    document.body.appendChild(panel);
+    apply();
+  }
+
   // phone is parented to the hand bone, so it follows automatically; just toggle it.
   function updatePhone() {
-    if (!phone) return;
+    if (!phone || phoneTuning) return;
     phone.visible = currentName === cfg.phoneClip && !!handBone;
   }
 
   function startSequence() {
+    if (phoneTuning) {
+      // hold a FROZEN texting pose so the hand is dead still while you place the phone
+      model.position.set(cfg.walkToX, 0, 0);
+      model.rotation.y = cfg.faceYaw;
+      phase = 'frozen';
+      const a = play(cfg.phoneClip, { loop: false, fade: 0 });
+      if (a) {
+        a.time = a.getClip().duration * 0.5; // mid-text pose
+        a.paused = true;
+      }
+      mixer.update(0); // apply the frozen pose once
+      return;
+    }
     // 1) walk in
     phase = 'walking';
     walkT = 0;
@@ -329,6 +419,7 @@ export function createHeroAvatar(container, opts = {}) {
     if (phase === 'idle' || phase === 'breaker' || phase === 'waving') applyHeadTracking();
 
     updatePhone();
+    if (controls) controls.update();
 
     renderer.render(scene, camera);
   }
@@ -358,6 +449,7 @@ export function createHeroAvatar(container, opts = {}) {
     },
     dispose() {
       disposed = true;
+      if (controls) controls.dispose();
       ro.disconnect();
       window.removeEventListener('pointermove', onPointerMove);
       container.removeEventListener('pointerleave', onPointerLeave);
