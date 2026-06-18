@@ -68,7 +68,6 @@
 <!-- HERO -->
 <header class="hero" id="top">
   <canvas id="matrix" aria-hidden="true"></canvas>
-  <div class="floor" aria-hidden="true"><i></i></div>
   <div id="hero-av" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-grid">
@@ -81,7 +80,7 @@
         <p class="sub" data-i18n="hero_sub">Product and UI/UX engineer and full-stack developer, working remotely. I build polished, interactive products from pixel to cloud.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact" data-i18n="hero_cta">Get in touch</a>
-          <a class="btn-link" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
+          <a id="cvLink" class="btn-link" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
         </div>
       </div>
     </div>
@@ -256,8 +255,7 @@
     <a class="email" data-reveal href="mailto:sofiabrachodev@gmail.com">sofiabrachodev@gmail.com</a>
     <div class="contact-btns" data-reveal>
       <a class="btn btn-primary" href="https://wa.me/584127222453" target="_blank">WhatsApp</a>
-      <a class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="files/cv_en.pdf" target="_blank" data-i18n="cv_en">Résumé (EN)</a>
-      <a class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="files/cv_es.pdf" target="_blank" data-i18n="cv_es">CV (ES)</a>
+      <a id="cvLinkCta" class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
     </div>
     <div class="loc" data-reveal>Remote-first · EN / ES</div>
   </div>

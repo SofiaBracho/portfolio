@@ -37,6 +37,9 @@
       el.innerHTML = (lang === 'es' && ES[k]) ? ES[k] : el.__en;
     });
     var meta = { en:{ f:'🇺🇸', l:'English' }, es:{ f:'🇪🇸', l:'Español' } }[lang] || { f:'🇺🇸', l:'English' };
+    var cvHref = lang === 'es' ? 'files/cv_es.pdf' : 'files/cv_en.pdf';
+    var cv = document.getElementById('cvLink'); if (cv) cv.href = cvHref;
+    var cvc = document.getElementById('cvLinkCta'); if (cvc) cvc.href = cvHref;
     var lc = document.querySelector('#langBtn .lang-code'); if (lc) lc.textContent = meta.l;
     var lf = document.querySelector('#langBtn .flag'); if (lf) lf.textContent = meta.f;
     document.querySelectorAll('.lang-opt').forEach(function(o){
