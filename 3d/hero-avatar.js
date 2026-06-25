@@ -133,17 +133,27 @@ export function createHeroAvatar(container, opts = {}) {
       const headKey = clean(cfg.headBone);
       const neckKey = clean(cfg.neckBone);
       const handKey = clean(cfg.phoneHandBone);
+      const bones = {}; // cleaned-name -> bone, for robust fallback resolution
       model.traverse((o) => {
         if (o.isMesh) {
           o.frustumCulled = false;
           o.castShadow = false;
         }
         if (o.isBone) {
+          bones[clean(o.name)] = o;
           if (clean(o.name) === headKey) headBone = o;
           if (clean(o.name) === neckKey) neckBone = o;
           if (clean(o.name) === handKey) handBone = o;
         }
       });
+      // hand bone fallback chain so the phone always rides a real hand bone
+      // (configured right hand -> left hand -> any bone whose name contains "hand").
+      if (!handBone) {
+        handBone = bones[clean('mixamorigLeftHand')] ||
+          Object.keys(bones).find((k) => /hand/.test(k)) && bones[Object.keys(bones).find((k) => /hand/.test(k))] ||
+          null;
+        if (handBone) console.warn('[hero-avatar] right-hand bone missing — using fallback hand bone for phone');
+      }
       if (!headBone) console.warn('[hero-avatar] head bone not found — head tracking off');
       model.position.set(cfg.walkFromX, 0, 0);
       model.rotation.y = cfg.walkFaceYaw;
@@ -152,17 +162,18 @@ export function createHeroAvatar(container, opts = {}) {
       phone = makePhone();
       phone.visible = false;
       if (handBone) {
-        // parent to the hand so the phone is truly held; compensate the bone's
-        // world scale so the phone keeps its real-world (metric) size AND so the
-        // local offset behaves in metres (bone scale is tiny on Mixamo rigs).
+        // parent to the hand so the phone is truly held and rides every hand
+        // transform of the clip; compensate the bone's world scale so the phone
+        // keeps its real-world (metric) size AND so the local offset behaves in
+        // metres (bone scale is tiny on Mixamo rigs).
         handBone.updateWorldMatrix(true, false);
         handBone.getWorldScale(handScale);
         phone.scale.set(1 / handScale.x, 1 / handScale.y, 1 / handScale.z);
         setPhonePose(cfg.phoneLocalPos, cfg.phoneLocalEuler);
         handBone.add(phone);
-      } else {
-        scene.add(phone);
       }
+      // no hand bone -> leave the phone unparented and hidden (updatePhone gates
+      // visibility on a real hand bone) so it never floats detached at the origin.
 
       setupPhoneTuner();
 
@@ -189,8 +200,8 @@ export function createHeroAvatar(container, opts = {}) {
       new THREE.PlaneGeometry(0.062, 0.132),
       new THREE.MeshStandardMaterial({
         color: 0x0a0a0f,
-        emissive: 0x3a6ad0,
-        emissiveIntensity: 0.6,
+        emissive: 0x4f86ff,
+        emissiveIntensity: 1.15, // brighter so the held phone clearly reads during texting
         roughness: 0.25,
       })
     );

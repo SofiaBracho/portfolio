@@ -2,3 +2,6 @@ portfolio.zip
 /css/glide.core.min.css
 /css/normalize.css
 /php/login-data.php
+/scripts/node_modules/
+/scripts/.rec-tmp/
+/scripts/package-lock.json

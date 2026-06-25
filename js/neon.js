@@ -5,10 +5,12 @@
   /* ---------- i18n ---------- */
   var ES = {
     nav_work:'Trabajo', nav_about:'Sobre mí', nav_journey:'Trayecto',
-    hero_badge:'Disponible para nuevo trabajo',
+    hero_badge:'Ingeniera de Producto · Desarrolladora Full-Stack',
     hero_s1:'Diseño interfaces que se sienten', hero_s2:'vivas',
-    hero_sub:'Ingeniera de producto y UI/UX, y desarrolladora full-stack, trabajando en remoto. Construyo productos pulidos e interactivos, del pixel a la nube.',
+    hero_sub:'Ingeniera de producto y desarrolladora full-stack. Diseño y entrego productos interactivos de punta a punta, de la interfaz a la nube.',
     hero_cta:'Hablemos', hero_cv:'Currículum', ph2:'foto de perfil', id_role:'INGENIERA DE PRODUCTO', av_hint:'te sigue el cursor',
+    tech_also:'También trabajo con',
+    tech_c_ts:'De punta a punta', tech_c_node:'Backend', tech_c_ng:'Apps web', tech_c_pg:'Datos',
     work_title:'Trabajo seleccionado',
     p_nexus:'Una herramienta de auto-diagnóstico con IA que convierte la salida cruda del escáner (códigos DTC y datos freeze-frame) en informes de reparación citados y específicos por fabricante. Sobre un sistema de diseño industrial cyber-workshop.',
     p_nest:'Un diario privado y local-first renderizado como una escena 3D animada: un libro de anillas de cuero coñac sobre un escritorio de nogal. Tocas la placa, escribes una contraseña y el libro se abre con la app sobre el papel.',
@@ -16,7 +18,7 @@
     cta_live:'Sitio en vivo →', cta_code:'Código', cta_live2:'Sitio en vivo →', cta_code2:'Código', cta_live3:'Sitio en vivo →',
     about_lead:'Sobre mí',
     about_h:'El diseño me enseñó a cuidar. La ingeniería, a entregar.',
-    about_p1:'Soy desarrolladora web full-stack con un pasado como diseñadora gráfica, bilingüe en inglés y español. Me encanta el cruce entre arte y código: crear productos interactivos y pulidos, desde el diseño de UI hasta el despliegue en la nube.',
+    about_p1:'Soy ingeniera de producto y desarrolladora full-stack con un pasado como diseñadora gráfica, bilingüe en inglés y español. Trabajo en todo el producto: diseño de interfaz, front-end, back-end y nube, llevando funcionalidades desde el primer boceto hasta producción.',
     about_p2:'Hoy construyo a lo largo del stack en Inimble, cuidando las pequeñas interacciones que hacen que el software se sienta nítido y considerado.',
     exp_title:'Dónde he estado', edu_title:'Lo que he aprendido',
     exp_inimble:'Construí una app legaltech con modelos de IA autoalojados e integré cobros con Stripe. Desarrollé funcionalidades full-stack en Angular, Node.js y MariaDB, con despliegues en AWS, sitios WordPress y correcciones en producción en equipos ágiles, además de una plataforma B2B de streaming en PHP/Symfony y Angular.',
@@ -208,5 +210,60 @@
         card.style.transform = '';
       });
     });
+  }
+
+  // Project demo videos: show the poster by default; play the clip on hover
+  // (pointer devices) or while on screen (touch, no hover). The video is only
+  // revealed once it is FULLY loaded (canplaythrough) — until then the cover
+  // image stays, even if the user hovers early. Reduced-motion: never play.
+  var demos = document.querySelectorAll('.viz-media');
+  if (demos.length) {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+
+    // Fully buffered = the buffered range spans the whole clip (not just
+    // readyState 4, which only means "enough to start"). This is what stops the
+    // play-1s / flash-cover / play-again flicker from mid-clip stalls.
+    var fullyLoaded = function(v){
+      if (!v.duration || !isFinite(v.duration)) return false;
+      for (var i = 0; i < v.buffered.length; i++) {
+        if (v.buffered.start(i) <= 0.15 && v.buffered.end(i) >= v.duration - 0.3) return true;
+      }
+      return false;
+    };
+    // Reveal only when fully loaded AND the user still wants it active. Once
+    // revealed it stays revealed (no hiding on transient buffering).
+    var reveal = function(v){
+      if (v._ready && v._active) { var p = v.play(); if (p && p.catch) p.catch(function(){}); v.classList.add('is-playing'); }
+    };
+    var setActive = function(v, on){
+      v._active = on;
+      if (on) { reveal(v); }            // shows only if already fully loaded
+      else { v.pause(); try { v.currentTime = 0; } catch(e){} v.classList.remove('is-playing'); }
+    };
+
+    demos.forEach(function(v){
+      var markIfLoaded = function(){ if (!v._ready && fullyLoaded(v)) { v._ready = true; reveal(v); } };
+      v._ready = false;
+      v.addEventListener('progress', markIfLoaded);
+      v.addEventListener('canplaythrough', markIfLoaded);
+      v.addEventListener('loadeddata', markIfLoaded);
+      markIfLoaded(); // already buffered (e.g. cached)
+    });
+
+    if (reduce) {
+      demos.forEach(function(v){ v.pause(); });
+    } else if (canHover) {
+      demos.forEach(function(v){
+        var card = v.closest('.card') || v;
+        card.addEventListener('pointerenter', function(){ setActive(v, true); });
+        card.addEventListener('pointerleave', function(){ setActive(v, false); });
+      });
+    } else if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ setActive(e.target, e.isIntersecting); });
+      }, { threshold: 0.4 });
+      demos.forEach(function(v){ io.observe(v); });
+    }
   }
 })();

@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sofia Bracho | Product Engineer</title>
-<meta name="description" content="Product and UI/UX engineer and full-stack developer, working remotely. I build polished, interactive products from pixel to cloud.">
+<title>Sofia Bracho · Product Engineer &amp; Full-Stack Developer</title>
+<meta name="description" content="Product engineer and full-stack developer. I design and ship interactive products end to end: React and TypeScript front ends, Node and PHP back ends, AWS and self-hosted AI.">
 <meta name="robots" content="index, follow">
+<meta name="author" content="Sofia Bracho">
+<link rel="canonical" href="https://sofiabracho.com/">
 <!-- Social cards -->
-<meta property="og:title" content="Sofia Bracho | Product Engineer">
-<meta property="og:description" content="Product and UI/UX engineer and full-stack developer, working remotely.">
+<meta property="og:title" content="Sofia Bracho · Product Engineer &amp; Full-Stack Developer">
+<meta property="og:description" content="I design and ship interactive products end to end, from interface to cloud. React, TypeScript, Node, PHP, AWS, self-hosted AI.">
+<meta property="og:url" content="https://sofiabracho.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/social-card.jpg">
 <meta property="og:image:width" content="1200">
@@ -16,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-<!-- Fonts -->
+<!-- Fonts --> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
@@ -31,6 +34,22 @@
 </script>
 <link rel="stylesheet" href="css/neon.css">
 <script src="js/neon.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sofia Bracho",
+  "url": "https://sofiabracho.com/",
+  "jobTitle": "Product Engineer & Full-Stack Developer",
+  "description": "Product engineer and full-stack developer. Designs and ships interactive products end to end.",
+  "knowsLanguage": ["en", "es"],
+  "sameAs": [
+    "https://github.com/SofiaBracho",
+    "https://ve.linkedin.com/in/sofiabrach0"
+  ],
+  "knowsAbout": ["React", "TypeScript", "Node.js", "PHP", "Angular", "AWS", "UI/UX Design", "Self-hosted AI", "Product Engineering"]
+}
+</script>
 </head>
 <body>
 <div class="field"></div>
@@ -38,7 +57,11 @@
 
 <!-- NAV -->
 <nav>
-  <a class="brand" href="#top"><img class="glyph" src="img/logo.png" alt="Sofia Bracho logo">Sofia Bracho</a>
+  <a class="brand" href="#top">
+    <img class="glyph glyph-dark" src="img/logo.png" alt="Sofia Bracho logo">
+    <img class="glyph glyph-light" src="img/logo-light-split.png" alt="" aria-hidden="true">
+    <span class="brand-name">Sofia Bracho</span>
+  </a>
   <div class="nav-links">
     <a href="#work" data-i18n="nav_work">Work</a>
     <a href="#about" data-i18n="nav_about">About</a>
@@ -72,12 +95,12 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="dot"></span><span data-i18n="hero_badge">Available for new work</span></span>
+        <span class="eyebrow"><span data-i18n="hero_badge">Product Engineer · Full-Stack Developer</span></span>
         <h1 class="title">
           <span class="name">Sofia Bracho</span>
           <span class="statement"><span data-i18n="hero_s1">I engineer interfaces that feel</span> <em data-i18n="hero_s2">alive</em>.</span>
         </h1>
-        <p class="sub" data-i18n="hero_sub">Product and UI/UX engineer and full-stack developer, working remotely. I build polished, interactive products from pixel to cloud.</p>
+        <p class="sub" data-i18n="hero_sub">Product engineer and full-stack developer. I design and ship interactive products end to end, from the interface to the cloud.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact" data-i18n="hero_cta">Get in touch</a>
           <a id="cvLink" class="btn-link" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
@@ -87,13 +110,53 @@
   </div>
 </header>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="row">
-    <span>React <b>◆</b> TypeScript <b>◆</b> Node <b>◆</b> Angular <b>◆</b> AWS <b>◆</b> Stripe <b>◆</b> Self-hosted AI <b>◆</b> Figma <b>◆</b> Web Crypto <b>◆</b> Supabase <b>◆</b> UI/UX <b>◆</b> Product <b>◆</b></span>
-    <span>React <b>◆</b> TypeScript <b>◆</b> Node <b>◆</b> Angular <b>◆</b> AWS <b>◆</b> Stripe <b>◆</b> Self-hosted AI <b>◆</b> Figma <b>◆</b> Web Crypto <b>◆</b> Supabase <b>◆</b> UI/UX <b>◆</b> Product <b>◆</b></span>
+<!-- TECH STACK -->
+<section id="stack" class="stack-sec" aria-label="Technologies I work with">
+  <div class="wrap">
+    <div class="tech-featured">
+      <div class="tech-tile" data-reveal>
+        <img src="img/tech/angular.svg" alt="" aria-hidden="true">
+        <div><b>Angular</b><span data-i18n="tech_c_ng">Web apps</span></div>
+      </div>
+      <div class="tech-tile" data-reveal>
+        <img src="img/tech/typescript.svg" alt="" aria-hidden="true">
+        <div><b>TypeScript</b><span data-i18n="tech_c_ts">End to end</span></div>
+      </div>
+      <div class="tech-tile" data-reveal>
+        <img src="img/tech/nodejs.svg" alt="" aria-hidden="true">
+        <div><b>Node.js</b><span data-i18n="tech_c_node">Back end</span></div>
+      </div>
+      <div class="tech-tile" data-reveal>
+        <img src="img/tech/postgresql.svg" alt="" aria-hidden="true">
+        <div><b>PostgreSQL</b><span data-i18n="tech_c_pg">Data</span></div>
+      </div>
+    </div>
+    <div class="tech-rest" data-reveal>
+      <span class="tech-rest-label" data-i18n="tech_also">Also working with</span>
+      <ul class="tech-list">
+        <li><img src="img/tech/react.svg" alt="" aria-hidden="true"><span>React</span></li>
+        <li><img src="img/tech/javascript.svg" alt="" aria-hidden="true"><span>JavaScript</span></li>
+        <li><img src="img/tech/python.svg" alt="" aria-hidden="true"><span>Python</span></li>
+        <li><img src="img/tech/php.svg" alt="" aria-hidden="true"><span>PHP</span></li>
+        <li><img src="img/tech/mysql.svg" alt="" aria-hidden="true"><span>MySQL</span></li>
+        <li><img src="img/tech/supabase.svg" alt="" aria-hidden="true"><span>Supabase</span></li>
+        <li><img src="img/tech/ollama.svg" alt="" aria-hidden="true"><span>Ollama</span></li>
+        <li><img src="img/tech/aws.svg" alt="" aria-hidden="true"><span>AWS</span></li>
+        <li><img src="img/tech/tailwindcss.svg" alt="" aria-hidden="true"><span>Tailwind</span></li>
+        <li><img src="img/tech/bootstrap.svg" alt="" aria-hidden="true"><span>Bootstrap</span></li>
+        <li><img src="img/tech/html5.svg" alt="" aria-hidden="true"><span>HTML5</span></li>
+        <li><img src="img/tech/css3.svg" alt="" aria-hidden="true"><span>CSS3</span></li>
+        <li><img src="img/tech/wordpress.svg" alt="" aria-hidden="true"><span>WordPress</span></li>
+        <li><img src="img/tech/gohighlevel.svg" alt="" aria-hidden="true"><span>GoHighLevel</span></li>
+        <li><img src="img/tech/figma.svg" alt="" aria-hidden="true"><span>Figma</span></li>
+        <li><img src="img/tech/photoshop.svg" alt="" aria-hidden="true"><span>Photoshop</span></li>
+        <li><img src="img/tech/illustrator.svg" alt="" aria-hidden="true"><span>Illustrator</span></li>
+        <li><img src="img/tech/github.svg" alt="" aria-hidden="true"><span>GitHub</span></li>
+        <li><img src="img/tech/gitlab.svg" alt="" aria-hidden="true"><span>GitLab</span></li>
+      </ul>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- WORK -->
 <section id="work" class="sec-pad">
@@ -114,23 +177,24 @@
           <a class="src" href="https://github.com/SofiaBracho/auto-diagnosis" target="_blank" data-i18n="cta_code">Source</a>
         </div>
       </div>
-      <div class="viz">
-        <div class="vgrid"></div><div class="sweep"></div>
-        <div class="dtc">
-          <div class="lbl">DTC NEXUS</div>
-          <div class="code">P0301</div>
-          <div class="meta">CONFIDENCE <b>82%</b> · GROUNDED <b>●</b></div>
-        </div>
+      <div class="viz viz-img">
+        <img class="viz-poster" src="img/projects/nexus.png" alt="Nexus diagnosis report for a BMW 328i, showing DTC P0300 misfire with grounded, manufacturer-cited repair steps" loading="lazy">
+        <video class="viz-media" muted loop playsinline preload="auto"
+          aria-label="Nexus demo: logging in and running a vehicle diagnosis that renders a grounded report">
+          <source src="img/projects/nexus.mp4" type="video/mp4">
+        </video>
       </div>
     </article>
 
     <!-- NEST + PIENSA grid -->
     <div class="grid-2">
       <article class="card vcard" data-reveal>
-        <div class="viz">
-          <div class="vgrid"></div>
-          <div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="vlabel">SEALED · AES-256</div>
+        <div class="viz viz-img">
+          <img class="viz-poster" src="img/projects/nest.jpg" alt="Nest encrypted journal rendered as a 3D cognac-leather ring-bound book on a wooden desk" loading="lazy">
+          <video class="viz-media" muted loop playsinline preload="auto"
+            aria-label="Nest demo: unlocking the diary, writing an entry, and browsing the views">
+            <source src="img/projects/nest.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="card-body">
           <span class="tag">privacy · 3D</span>
@@ -145,16 +209,18 @@
       </article>
 
       <article class="card vcard" data-reveal>
-        <div class="viz">
-          <div class="vgrid"></div>
-          <div class="nodes"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="vlabel">4 ROLES · 1 PLATFORM</div>
+        <div class="viz viz-img">
+          <img class="viz-poster viz-top" src="img/projects/piensa.png" alt="PIENSA virtual-classroom platform" loading="lazy">
+          <video class="viz-media viz-top" muted loop playsinline preload="auto"
+            aria-label="PIENSA demo: logging in as a student and joining a live class">
+            <source src="img/projects/piensa.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="card-body">
           <span class="tag">edtech · platform</span>
           <h3>PIENSA</h3>
           <p data-i18n="p_piensa">A virtual-classroom platform for the Territorial Polytechnic University of Maracaibo: four roles, activity grading, class planning, schedules, shared documents, academic periods, and automated backups. My final degree project.</p>
-          <div class="stack"><span>PHP</span><span>JavaScript</span><span>MySQL</span><span>HTML/CSS</span></div>
+          <div class="stack"><span>Angular</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span></div>
           <div class="links">
             <a class="live" href="https://piensa.sofiabracho.com" target="_blank" data-i18n="cta_live3">Live site →</a>
           </div>
@@ -176,8 +242,8 @@
     <div data-reveal>
       <div class="lead" data-i18n="about_lead">About</div>
       <h2 data-i18n="about_h">Design taught me to care. Engineering taught me to ship.</h2>
-      <p data-i18n="about_p1">I am a full-stack web developer with a past life as a graphic designer, bilingual in English and Spanish. I love the overlap of art and code: building interactive, polished products from UI design all the way to cloud deployment.</p>
-      <p data-i18n="about_p2">Today I build across the stack at Inimble, fussing over the tiny interactions that make software feel sharp and considered.</p>
+      <p data-i18n="about_p1">I'm a product engineer and full-stack developer with a past life as a graphic designer, bilingual in English and Spanish. I work across the whole product: interface design, front end, back end, and cloud, owning features from first sketch to production.</p>
+      <p data-i18n="about_p2">Today I build across the stack at Inimble, fussing over the small interactions that make software feel sharp and considered.</p>
     </div>
   </div>
 </section>

@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-demo-recorder",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Assisted screen recorder that produces optimized demo GIFs for the portfolio work cards.",
+  "scripts": {
+    "rec:nest": "node record-demo.mjs nest",
+    "rec:piensa": "node record-demo.mjs piensa",
+    "rec:nexus": "node record-demo.mjs nexus",
+    "shot": "node screenshot.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
