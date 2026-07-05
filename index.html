@@ -103,7 +103,7 @@
         <p class="sub" data-i18n="hero_sub">Product engineer and full-stack developer. I design and ship interactive products end to end, from the interface to the cloud.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact" data-i18n="hero_cta">Get in touch</a>
-          <a id="cvLink" class="btn-link" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
+          <a id="cvLink" class="btn-link" href="https://drive.google.com/file/d/1MpYET5DmpGmRF44TWKZEnXo3S-BH1j42/view?usp=sharing" target="_blank" data-i18n="hero_cv">Résumé</a>
         </div>
       </div>
     </div>
@@ -165,16 +165,32 @@
       <h2 data-i18n="work_title">Selected work</h2>
     </div>
 
+    <!-- NEHEMIAS feature -->
+    <article class="card feature" data-reveal>
+      <div class="card-body">
+        <span class="tag">crisis response · devops</span>
+        <h3>Proyecto Nehemías 2026</h3>
+        <p data-i18n="p_nehemias">After Venezuela's 2026 earthquakes, communities off the institutional relief map needed a radically transparent way to receive and audit aid. Brought in to take an existing MVP to production, I hardened a bare Ubuntu VPS (UFW, disabled root SSH, Docker, automated backups), shipped CSRF and admin-verification middleware, fixed a Google Sheets sync integrity bug, and wired a Vitest/Playwright suite into GitHub Actions CI. Live in under 48 hours, the fund has since raised over $17,000 USD, every bolívar auditable in real time.</p>
+        <div class="stack"><span>Next.js 15</span><span>Express</span><span>PostgreSQL</span><span>Docker</span></div>
+        <div class="links">
+          <a class="live" href="https://nehemias2026.com" target="_blank" data-i18n="cta_live_nehemias">Live site →</a>
+          <a class="src" href="https://github.com/omarapp19/nehemias2026" target="_blank" data-i18n="cta_code_nehemias">Source</a>
+        </div>
+      </div>
+      <div class="viz viz-img">
+        <img class="viz-poster viz-gif" src="img/projects/nehemias.gif" alt="Nehemías 2026 demo: browsing the real-time transparency dashboard and audited donation entries" loading="lazy">
+      </div>
+    </article>
+
     <!-- NEXUS feature -->
     <article class="card feature" data-reveal>
       <div class="card-body">
         <span class="tag">AI · diagnostics</span>
         <h3>Nexus</h3>
-        <p data-i18n="p_nexus">An AI auto-diagnosis tool that turns raw scanner output (DTC codes and freeze-frame data) into cited, manufacturer-specific repair reports. Built on a moody industrial cyber-workshop design system.</p>
+        <p data-i18n="p_nexus">Mechanics reading a raw scanner dump often guess at fixes with no manufacturer-specific grounding. I built Nexus to turn DTC codes and freeze-frame data into cited, manufacturer-specific repair reports, designing and shipping the full moody industrial cyber-workshop interface end to end on React 19, TypeScript, and Supabase.</p>
         <div class="stack"><span>React 19</span><span>TypeScript</span><span>Tailwind</span><span>Supabase</span></div>
         <div class="links">
           <a class="live" href="https://nexus.sofiabracho.com" target="_blank" data-i18n="cta_live">Live site →</a>
-          <a class="src" href="https://github.com/SofiaBracho/auto-diagnosis" target="_blank" data-i18n="cta_code">Source</a>
         </div>
       </div>
       <div class="viz viz-img">
@@ -186,8 +202,49 @@
       </div>
     </article>
 
-    <!-- NEST + PIENSA grid -->
-    <div class="grid-2">
+    <!-- PIENSA feature -->
+    <article class="card feature" data-reveal>
+      <div class="card-body">
+        <span class="tag">edtech · multi-role platform</span>
+        <h3>PIENSA</h3>
+        <p data-i18n="p_piensa">The Territorial Polytechnic University of Maracaibo needed one platform to run hybrid classes across student, professor, and coordinator roles instead of scattered tools. As my final degree project, I designed and built the whole system solo: activity grading, class planning, schedules, shared documents, academic periods, and automated backups. It went into real use at the university and helped me graduate 2nd in my class.</p>
+        <div class="stack"><span>Angular</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span></div>
+        <div class="links">
+          <a class="live" href="https://piensa.sofiabracho.com" target="_blank" data-i18n="cta_live3">Live site →</a>
+        </div>
+      </div>
+      <div class="viz viz-img">
+        <img class="viz-poster viz-top" src="img/projects/piensa.png" alt="PIENSA virtual-classroom platform" loading="lazy">
+        <video class="viz-media viz-top" muted loop playsinline preload="auto"
+          aria-label="PIENSA demo: logging in as a student and joining a live class">
+          <source src="img/projects/piensa.mp4" type="video/mp4">
+        </video>
+      </div>
+    </article>
+
+    <button type="button" class="more-toggle" id="moreProjectsBtn" aria-expanded="false" aria-controls="moreProjects">
+      <span class="more-toggle-label" data-i18n="work_more">Show more projects</span>
+      <svg class="more-toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <!-- UNIDOS + NEST grid (hidden by default) -->
+    <div class="grid-2 more-projects" id="moreProjects" hidden>
+      <article class="card vcard" data-reveal>
+        <div class="viz viz-img">
+          <img class="viz-poster viz-gif" src="img/projects/unidos.gif" alt="Unidos demo: searching for a nearby donation center and viewing its inventory on a map" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="tag">crisis response · geo</span>
+          <h3>Unidos</h3>
+          <p data-i18n="p_unidos">Venezuela's 2026 earthquake emergency needed a fast way to find open donation centers before misinformation spread. As one of 5 developers shipping the MVP in a single day, I owned the mobile-first UI for degraded 3G/Edge connections, the geolocated search flow, and admin inventory panels, plus Supabase/PostgreSQL spatial indexing and edge caching. The platform held a 100% success rate (0 errors) through a traffic spike past 500 users in the first 36 hours.</p>
+          <div class="stack"><span>React</span><span>Supabase</span><span>PostgreSQL</span><span>Edge Caching</span></div>
+          <div class="links">
+            <a class="live" href="https://centrodeacopiovenezuela.com" target="_blank" data-i18n="cta_live_unidos">Live site →</a>
+            <a class="src" href="https://github.com/omarapp19/unidos" target="_blank" data-i18n="cta_code_unidos">Source</a>
+          </div>
+        </div>
+      </article>
+
       <article class="card vcard" data-reveal>
         <div class="viz viz-img">
           <img class="viz-poster" src="img/projects/nest.jpg" alt="Nest encrypted journal rendered as a 3D cognac-leather ring-bound book on a wooden desk" loading="lazy">
@@ -199,30 +256,11 @@
         <div class="card-body">
           <span class="tag">privacy · 3D</span>
           <h3>Nest</h3>
-          <p data-i18n="p_nest">A private, local-first journal rendered as one animated 3D scene: a cognac-leather ring-bound book on a walnut desk. Touch the plate, type a passphrase, and the book swings open with the whole app on the paper.</p>
+          <p data-i18n="p_nest">Journaling apps rarely offer both real privacy and a considered interface. Nest is a local-first, encrypted journal rendered as one animated 3D scene: touch the plate, type a passphrase, and a cognac-leather ring-bound book swings open with the whole app on the paper.</p>
           <div class="stack"><span>React</span><span>Web Crypto</span><span>IndexedDB</span><span>WebGL</span></div>
           <div class="links">
             <a class="live" href="https://journal.sofiabracho.com" target="_blank" data-i18n="cta_live2">Live site →</a>
             <a class="src" href="https://github.com/SofiaBracho/journal" target="_blank" data-i18n="cta_code2">Source</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card vcard" data-reveal>
-        <div class="viz viz-img">
-          <img class="viz-poster viz-top" src="img/projects/piensa.png" alt="PIENSA virtual-classroom platform" loading="lazy">
-          <video class="viz-media viz-top" muted loop playsinline preload="auto"
-            aria-label="PIENSA demo: logging in as a student and joining a live class">
-            <source src="img/projects/piensa.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="card-body">
-          <span class="tag">edtech · platform</span>
-          <h3>PIENSA</h3>
-          <p data-i18n="p_piensa">A virtual-classroom platform for the Territorial Polytechnic University of Maracaibo: four roles, activity grading, class planning, schedules, shared documents, academic periods, and automated backups. My final degree project.</p>
-          <div class="stack"><span>Angular</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span></div>
-          <div class="links">
-            <a class="live" href="https://piensa.sofiabracho.com" target="_blank" data-i18n="cta_live3">Live site →</a>
           </div>
         </div>
       </article>
@@ -235,7 +273,7 @@
   <div class="wrap about-grid">
     <div data-reveal class="portrait-slot">
       <div class="portrait" style="aspect-ratio:1">
-        <img class="pshot" src="img/portrait.png" alt="Sofia Bracho">
+        <img class="pshot" src="img/portrait.jpg" alt="Sofia Bracho">
         <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
       </div>
     </div>
@@ -321,7 +359,7 @@
     <a class="email" data-reveal href="mailto:sofiabrachodev@gmail.com">sofiabrachodev@gmail.com</a>
     <div class="contact-btns" data-reveal>
       <a class="btn btn-primary" href="https://wa.me/584127222453" target="_blank">WhatsApp</a>
-      <a id="cvLinkCta" class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="files/cv_en.pdf" target="_blank" data-i18n="hero_cv">Résumé</a>
+      <a id="cvLinkCta" class="btn btn-ghost-sm" style="padding:13px 22px;font-size:14px" href="https://drive.google.com/file/d/1MpYET5DmpGmRF44TWKZEnXo3S-BH1j42/view?usp=sharing" target="_blank" data-i18n="hero_cv">Résumé</a>
     </div>
     <div class="loc" data-reveal>Remote-first · EN / ES</div>
   </div>

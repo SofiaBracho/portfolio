@@ -133,6 +133,16 @@ h1.title .glitch{position:relative}
 .btn-primary:active{transform:translateY(0) scale(.98)}
 .btn-link{font-family:'Space Mono',monospace;font-size:14px;color:var(--ink);border-bottom:2px solid var(--acc);padding-bottom:3px}
 .btn-link:hover{color:var(--acc)}
+.more-toggle{display:flex;align-items:center;gap:7px;margin:0 auto 30px;
+  background:none;border:none;outline:none;appearance:none;padding:4px 0;cursor:pointer;
+  font-family:'Space Mono',monospace;font-size:14px;color:var(--acc)}
+.more-toggle-label{position:relative}
+.more-toggle-label::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:2px;background:var(--acc);
+  transition:right .25s ease}
+.more-toggle:hover .more-toggle-label::after,.more-toggle:focus-visible .more-toggle-label::after{right:0}
+.more-toggle-chevron{transition:transform .25s ease}
+.more-toggle[aria-expanded="true"] .more-toggle-chevron{transform:rotate(180deg)}
+.more-projects[hidden]{display:none}
 
 /* portrait */
 .portrait-slot{position:relative;justify-self:center}
@@ -254,6 +264,7 @@ section{position:relative;z-index:2}
 /* real project screenshots */
 .viz-img{padding:0;background:var(--panel2)}
 .viz-img img,.viz-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.viz-img .viz-gif{object-position:left top}
 .vcard .viz-img img,.vcard .viz-img video{object-position:center}
 .viz-img::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px var(--line);
   background:linear-gradient(180deg,transparent 70%,rgba(4,7,15,.28))}

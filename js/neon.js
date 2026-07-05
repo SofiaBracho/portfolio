@@ -12,9 +12,14 @@
     tech_also:'También trabajo con',
     tech_c_ts:'De punta a punta', tech_c_node:'Backend', tech_c_ng:'Apps web', tech_c_pg:'Datos',
     work_title:'Trabajo seleccionado',
-    p_nexus:'Una herramienta de auto-diagnóstico con IA que convierte la salida cruda del escáner (códigos DTC y datos freeze-frame) en informes de reparación citados y específicos por fabricante. Sobre un sistema de diseño industrial cyber-workshop.',
-    p_nest:'Un diario privado y local-first renderizado como una escena 3D animada: un libro de anillas de cuero coñac sobre un escritorio de nogal. Tocas la placa, escribes una contraseña y el libro se abre con la app sobre el papel.',
-    p_piensa:'Una plataforma de aula virtual para la Universidad Politécnica Territorial de Maracaibo: cuatro roles, evaluación de actividades, planificación, horarios, documentos compartidos, períodos académicos y respaldos automáticos. Mi proyecto de grado.',
+    p_nehemias:'Tras los terremotos de 2026 en Venezuela, comunidades fuera del radar institucional necesitaban una forma radicalmente transparente de recibir y auditar ayuda. Me sumé para llevar un MVP existente a producción: endurecí un VPS Ubuntu virgen (UFW, SSH root deshabilitado, Docker, respaldos automáticos), implementé middleware de CSRF y verificación de administradores, corregí un bug de integridad en la sincronización con Google Sheets, y integré una suite de Vitest/Playwright en CI con GitHub Actions. En producción en menos de 48 horas, el fondo ya superó los $17,000 USD recaudados, con cada bolívar auditable en tiempo real.',
+    cta_live_nehemias:'Sitio en vivo →', cta_code_nehemias:'Código',
+    p_unidos:'La emergencia sísmica de 2026 en Venezuela necesitaba una forma rápida de encontrar centros de acopio activos antes de que se propagara la desinformación. Como una de 5 desarrolladoras que sacaron el MVP en un solo día, lideré la interfaz mobile-first para conexiones degradadas 3G/Edge, el flujo de búsqueda geolocalizada y los paneles de inventario para administradores, además de la indexación espacial en Supabase/PostgreSQL y el edge caching. La plataforma sostuvo 100% de éxito (0 errores) ante un pico de tráfico que superó los 500 usuarios en las primeras 36 horas.',
+    cta_live_unidos:'Sitio en vivo →', cta_code_unidos:'Código',
+    work_more:'Ver más proyectos', work_less:'Ver menos proyectos',
+    p_nexus:'Los mecánicos que leen un volcado crudo del escáner suelen adivinar reparaciones sin respaldo específico del fabricante. Construí Nexus para convertir códigos DTC y datos freeze-frame en informes de reparación citados y específicos por fabricante, diseñando y construyendo de punta a punta la interfaz industrial cyber-workshop sobre React 19, TypeScript y Supabase.',
+    p_nest:'Los diarios digitales rara vez ofrecen privacidad real y una interfaz cuidada a la vez. Nest es un diario cifrado y local-first renderizado como una escena 3D animada: tocas la placa, escribes una contraseña y un libro de anillas de cuero coñac se abre con toda la app sobre el papel.',
+    p_piensa:'La Universidad Politécnica Territorial de Maracaibo necesitaba una sola plataforma para dar clases híbridas entre roles de estudiante, profesor y coordinador, en lugar de herramientas dispersas. Como proyecto de grado, diseñé y construí sola todo el sistema: evaluación de actividades, planificación de clases, horarios, documentos compartidos, períodos académicos y respaldos automáticos. Entró en uso real en la universidad y me ayudó a graduarme 2ª de mi promoción.',
     cta_live:'Sitio en vivo →', cta_code:'Código', cta_live2:'Sitio en vivo →', cta_code2:'Código', cta_live3:'Sitio en vivo →',
     about_lead:'Sobre mí',
     about_h:'El diseño me enseñó a cuidar. La ingeniería, a entregar.',
@@ -39,7 +44,9 @@
       el.innerHTML = (lang === 'es' && ES[k]) ? ES[k] : el.__en;
     });
     var meta = { en:{ f:'🇺🇸', l:'English' }, es:{ f:'🇪🇸', l:'Español' } }[lang] || { f:'🇺🇸', l:'English' };
-    var cvHref = lang === 'es' ? 'files/cv_es.pdf' : 'files/cv_en.pdf';
+    var cvHref = lang === 'es'
+      ? 'https://drive.google.com/file/d/1RWSKXAZzaUWrQ_F3BrZ4ViP7R9HjTZpx/view?usp=sharing'
+      : 'https://drive.google.com/file/d/1MpYET5DmpGmRF44TWKZEnXo3S-BH1j42/view?usp=sharing';
     var cv = document.getElementById('cvLink'); if (cv) cv.href = cvHref;
     var cvc = document.getElementById('cvLinkCta'); if (cvc) cvc.href = cvHref;
     var lc = document.querySelector('#langBtn .lang-code'); if (lc) lc.textContent = meta.l;
@@ -66,6 +73,20 @@
   document.addEventListener('click', function(e){ if (langDd.classList.contains('open') && !langDd.contains(e.target)) closeLang(); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLang(); });
   applyLang();
+
+  /* ---------- more projects toggle ---------- */
+  var moreBtn = document.getElementById('moreProjectsBtn');
+  var morePanel = document.getElementById('moreProjects');
+  var moreLabel = moreBtn && moreBtn.querySelector('.more-toggle-label');
+  if (moreBtn && morePanel && moreLabel) {
+    var moreLabels = { en:{ more:'Show more projects', less:'Show fewer projects' }, es:{ more:ES.work_more, less:ES.work_less } };
+    moreBtn.addEventListener('click', function(){
+      var open = morePanel.hasAttribute('hidden');
+      if (open) morePanel.removeAttribute('hidden'); else morePanel.setAttribute('hidden','');
+      moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      moreLabel.textContent = moreLabels[lang][open ? 'less' : 'more'];
+    });
+  }
 
   /* ---------- theme ---------- */
   var theme = localStorage.getItem('neon-theme') || 'dark';
