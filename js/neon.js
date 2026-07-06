@@ -5,14 +5,13 @@
   /* ---------- i18n ---------- */
   var ES = {
     nav_work:'Trabajo', nav_about:'Sobre mí', nav_journey:'Trayecto',
-    hero_badge:'Ingeniera de Producto · Desarrolladora Full-Stack',
+    hero_badge:'Ingeniera Full-Stack · Diseñadora de Producto',
     hero_s1:'Diseño interfaces que se sienten', hero_s2:'vivas',
     hero_sub:'Ingeniera de producto y desarrolladora full-stack. Diseño y entrego productos interactivos de punta a punta, de la interfaz a la nube.',
     hero_cta:'Hablemos', hero_cv:'Currículum', ph2:'foto de perfil', id_role:'INGENIERA DE PRODUCTO', av_hint:'te sigue el cursor',
-    tech_also:'También trabajo con',
     tech_c_ts:'De punta a punta', tech_c_node:'Backend', tech_c_ng:'Apps web', tech_c_pg:'Datos',
     work_title:'Trabajo seleccionado',
-    p_nehemias:'Tras los terremotos de 2026 en Venezuela, comunidades fuera del radar institucional necesitaban una forma radicalmente transparente de recibir y auditar ayuda. Me sumé para llevar un MVP existente a producción: endurecí un VPS Ubuntu virgen (UFW, SSH root deshabilitado, Docker, respaldos automáticos), implementé middleware de CSRF y verificación de administradores, corregí un bug de integridad en la sincronización con Google Sheets, y integré una suite de Vitest/Playwright en CI con GitHub Actions. En producción en menos de 48 horas, el fondo ya superó los $17,000 USD recaudados, con cada bolívar auditable en tiempo real.',
+    p_nehemias:'Tras los terremotos de 2026 en Venezuela, comunidades fuera del radar institucional necesitaban una forma radicalmente transparente de recibir y auditar ayuda. Me sumé para llevar un MVP existente a producción: endurecí un VPS Ubuntu virgen (UFW, SSH root deshabilitado, Docker, respaldos automáticos), implementé middleware de CSRF y verificación de administradores, corregí un bug de integridad en la sincronización con Google Sheets, y integré una suite de Vitest/Playwright en CI con GitHub Actions. En producción en menos de 48 horas, el fondo ha aumentado $5,000 USD hasta un total de $17,000, con cada bolívar auditable en tiempo real.',
     cta_live_nehemias:'Sitio en vivo →', cta_code_nehemias:'Código',
     p_unidos:'La emergencia sísmica de 2026 en Venezuela necesitaba una forma rápida de encontrar centros de acopio activos antes de que se propagara la desinformación. Como una de 5 desarrolladoras que sacaron el MVP en un solo día, lideré la interfaz mobile-first para conexiones degradadas 3G/Edge, el flujo de búsqueda geolocalizada y los paneles de inventario para administradores, además de la indexación espacial en Supabase/PostgreSQL y el edge caching. La plataforma sostuvo 100% de éxito (0 errores) ante un pico de tráfico que superó los 500 usuarios en las primeras 36 horas.',
     cta_live_unidos:'Sitio en vivo →', cta_code_unidos:'Código',
@@ -86,6 +85,36 @@
       moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
       moreLabel.textContent = moreLabels[lang][open ? 'less' : 'more'];
     });
+  }
+
+  /* ---------- tech list: hover-edges to scroll ---------- */
+  var techViewport = document.getElementById('techViewport');
+  var techList = document.getElementById('techList');
+  if (techViewport && techList && !reduce) {
+    var techOffset = 0, techMouseX = 0, techHovering = false, techRaf = null;
+    var techZone = .22, techMaxSpeed = 5.5;
+    function techMaxScroll(){ return Math.max(0, techList.scrollWidth - techViewport.clientWidth); }
+    function techFrame(){
+      if (!techHovering) { techRaf = null; return; }
+      var rect = techViewport.getBoundingClientRect();
+      var relX = techMouseX - rect.left;
+      var edge = rect.width * techZone;
+      if (relX < edge) {
+        var tL = 1 - Math.max(0, relX) / edge;
+        techOffset = Math.min(0, techOffset + tL * techMaxSpeed);
+      } else if (relX > rect.width - edge) {
+        var tR = 1 - Math.max(0, rect.width - relX) / edge;
+        techOffset = Math.max(-techMaxScroll(), techOffset - tR * techMaxSpeed);
+      }
+      techList.style.transform = 'translateX(' + techOffset + 'px)';
+      techRaf = requestAnimationFrame(techFrame);
+    }
+    techViewport.addEventListener('mousemove', function(e){
+      techMouseX = e.clientX;
+      techHovering = true;
+      if (!techRaf) techRaf = requestAnimationFrame(techFrame);
+    });
+    techViewport.addEventListener('mouseleave', function(){ techHovering = false; });
   }
 
   /* ---------- theme ---------- */
