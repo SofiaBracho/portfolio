@@ -58,8 +58,8 @@
 <!-- NAV -->
 <nav>
   <a class="brand" href="#top">
-    <img class="glyph glyph-dark" src="img/logo.png" alt="Sofia Bracho logo">
-    <img class="glyph glyph-light" src="img/logo-light-split.png" alt="" aria-hidden="true">
+    <img class="glyph glyph-dark" src="img/logo.png" alt="Sofia Bracho logo" width="80" height="80">
+    <img class="glyph glyph-light" src="img/logo-light-split.png" alt="" aria-hidden="true" width="80" height="80">
     <span class="brand-name">Sofia Bracho</span>
   </a>
   <div class="nav-links">
@@ -179,7 +179,7 @@
         </div>
       </div>
       <div class="viz viz-img">
-        <img class="viz-poster viz-gif" src="img/projects/nehemias.gif" alt="Nehemías 2026 demo: browsing the real-time transparency dashboard and audited donation entries" loading="lazy">
+        <img class="viz-poster viz-gif" src="img/projects/nehemias.webp" data-demo-src="img/projects/nehemias-demo.webp" alt="Nehemías 2026 demo: browsing the real-time transparency dashboard and audited donation entries" width="1200" height="738" loading="lazy" decoding="async">
       </div>
     </article>
 
@@ -195,10 +195,10 @@
         </div>
       </div>
       <div class="viz viz-img">
-        <img class="viz-poster" src="img/projects/nexus.png" alt="Nexus diagnosis report for a BMW 328i, showing DTC P0300 misfire with grounded, manufacturer-cited repair steps" loading="lazy">
-        <video class="viz-media" muted loop playsinline preload="auto"
+        <img class="viz-poster" src="img/projects/nexus.webp" alt="Nexus diagnosis report for a BMW 328i, showing DTC P0300 misfire with grounded, manufacturer-cited repair steps" width="1200" height="750" loading="lazy" decoding="async">
+        <video class="viz-media" muted loop playsinline preload="none"
           aria-label="Nexus demo: logging in and running a vehicle diagnosis that renders a grounded report">
-          <source src="img/projects/nexus.mp4" type="video/mp4">
+          <source data-src="img/projects/nexus.mp4" type="video/mp4">
         </video>
       </div>
     </article>
@@ -215,10 +215,10 @@
         </div>
       </div>
       <div class="viz viz-img">
-        <img class="viz-poster viz-top" src="img/projects/piensa.png" alt="PIENSA virtual-classroom platform" loading="lazy">
-        <video class="viz-media viz-top" muted loop playsinline preload="auto"
+        <img class="viz-poster viz-top" src="img/projects/piensa.webp" alt="PIENSA virtual-classroom platform" width="1200" height="768" loading="lazy" decoding="async">
+        <video class="viz-media viz-top" muted loop playsinline preload="none"
           aria-label="PIENSA demo: logging in as a student and joining a live class">
-          <source src="img/projects/piensa.mp4" type="video/mp4">
+          <source data-src="img/projects/piensa.mp4" type="video/mp4">
         </video>
       </div>
     </article>
@@ -232,7 +232,7 @@
     <div class="grid-2 more-projects" id="moreProjects" hidden>
       <article class="card vcard" data-reveal>
         <div class="viz viz-img">
-          <img class="viz-poster viz-gif" src="img/projects/unidos.gif" alt="Unidos demo: searching for a nearby donation center and viewing its inventory on a map" loading="lazy">
+          <img class="viz-poster viz-gif" src="img/projects/unidos.webp" data-demo-src="img/projects/unidos-demo.webp" alt="Unidos demo: searching for a nearby donation center and viewing its inventory on a map" width="1200" height="778" loading="lazy" decoding="async">
         </div>
         <div class="card-body">
           <span class="tag">crisis response · geo</span>
@@ -248,10 +248,10 @@
 
       <article class="card vcard" data-reveal>
         <div class="viz viz-img">
-          <img class="viz-poster" src="img/projects/nest.jpg" alt="Nest encrypted journal rendered as a 3D cognac-leather ring-bound book on a wooden desk" loading="lazy">
-          <video class="viz-media" muted loop playsinline preload="auto"
+          <img class="viz-poster" src="img/projects/nest.webp" alt="Nest encrypted journal rendered as a 3D cognac-leather ring-bound book on a wooden desk" width="1200" height="784" loading="lazy" decoding="async">
+          <video class="viz-media" muted loop playsinline preload="none"
             aria-label="Nest demo: unlocking the diary, writing an entry, and browsing the views">
-            <source src="img/projects/nest.mp4" type="video/mp4">
+            <source data-src="img/projects/nest.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-body">
@@ -274,7 +274,7 @@
   <div class="wrap about-grid">
     <div data-reveal class="portrait-slot">
       <div class="portrait" style="aspect-ratio:1">
-        <img class="pshot" src="img/portrait.jpg" alt="Sofia Bracho">
+        <img class="pshot" src="img/portrait.webp" alt="Sofia Bracho" width="600" height="600" loading="lazy" decoding="async">
         <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
       </div>
     </div>
@@ -380,13 +380,32 @@
   </div>
 </footer>
 
-<!-- init 3D hero avatar -->
+<!-- Load the desktop-only 3D hero after critical content is ready. -->
 <script type="module">
-  import { createHeroAvatar } from './3d/hero-avatar.js';
   const mount = document.getElementById('hero-av');
-  if (mount) {
-    window.hero = createHeroAvatar(mount, { modelUrl: './3d/avatar_web.glb' });
+  const desktop = window.matchMedia('(min-width: 881px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let avatarStarted = false;
+
+  async function startAvatar() {
+    if (avatarStarted || !mount || !desktop.matches || reducedMotion.matches) return;
+    avatarStarted = true;
+    try {
+      const { createHeroAvatar } = await import('./3d/hero-avatar.js');
+      window.hero = createHeroAvatar(mount, { modelUrl: './3d/avatar_web.glb' });
+    } catch (error) {
+      avatarStarted = false;
+      console.warn('3D hero could not be loaded.', error);
+    }
   }
+
+  const queueAvatar = () => {
+    if ('requestIdleCallback' in window) requestIdleCallback(startAvatar, { timeout: 1500 });
+    else setTimeout(startAvatar, 500);
+  };
+
+  queueAvatar();
+  desktop.addEventListener('change', queueAvatar);
 </script>
 </body>
 </html>

@@ -90,7 +90,7 @@
   /* ---------- tech list: hover-edges to scroll ---------- */
   var techViewport = document.getElementById('techViewport');
   var techList = document.getElementById('techList');
-  if (techViewport && techList && !reduce) {
+  if (techViewport && techList && !reduce && window.matchMedia('(hover: hover)').matches) {
     var techOffset = 0, techMouseX = 0, techHovering = false, techRaf = null;
     var techZone = .22, techMaxSpeed = 5.5;
     function techMaxScroll(){ return Math.max(0, techList.scrollWidth - techViewport.clientWidth); }
@@ -262,6 +262,38 @@
     });
   }
 
+  /* ---------- animated project images ---------- */
+  // Keep the lightweight still visible while the animated WebP downloads and
+  // decodes. Start ahead of the viewport, or immediately when pointed at.
+  var demoImages = document.querySelectorAll('img[data-demo-src]');
+  if (demoImages.length && !reduce) {
+    var loadDemoImage = function(img){
+      if (img._demoLoading) return;
+      img._demoLoading = true;
+      var next = new Image();
+      next.decoding = 'async';
+      next.src = img.getAttribute('data-demo-src');
+      var swap = function(){ img.src = next.src; img.removeAttribute('data-demo-src'); };
+      next.onload = function(){
+        if (next.decode) next.decode().catch(function(){}).then(swap);
+        else swap();
+      };
+    };
+    var imageObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting) { loadDemoImage(entry.target); imageObserver.unobserve(entry.target); }
+          });
+        }, { rootMargin:'500px 0px' })
+      : null;
+    demoImages.forEach(function(img){
+      var card = img.closest('.card') || img;
+      card.addEventListener('pointerenter', function(){ loadDemoImage(img); }, { once:true });
+      card.addEventListener('focusin', function(){ loadDemoImage(img); }, { once:true });
+      if (imageObserver) imageObserver.observe(img); else loadDemoImage(img);
+    });
+  }
+
   // Project demo videos: show the poster by default; play the clip on hover
   // (pointer devices) or while on screen (touch, no hover). The video is only
   // revealed once it is FULLY loaded (canplaythrough) — until then the cover
@@ -292,6 +324,17 @@
       else { v.pause(); try { v.currentTime = 0; } catch(e){} v.classList.remove('is-playing'); }
     };
 
+    var hydrateVideo = function(v){
+      if (v._hydrated || reduce) return;
+      v._hydrated = true;
+      v.querySelectorAll('source[data-src]').forEach(function(source){
+        source.src = source.getAttribute('data-src');
+        source.removeAttribute('data-src');
+      });
+      v.preload = 'auto';
+      v.load();
+    };
+
     demos.forEach(function(v){
       var markIfLoaded = function(){ if (!v._ready && fullyLoaded(v)) { v._ready = true; reveal(v); } };
       v._ready = false;
@@ -301,12 +344,28 @@
       markIfLoaded(); // already buffered (e.g. cached)
     });
 
+    if (!reduce) {
+      var videoObserver = 'IntersectionObserver' in window
+        ? new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+              if (entry.isIntersecting) { hydrateVideo(entry.target); videoObserver.unobserve(entry.target); }
+            });
+          }, { rootMargin:'500px 0px' })
+        : null;
+      demos.forEach(function(v){
+        var card = v.closest('.card') || v;
+        card.addEventListener('pointerenter', function(){ hydrateVideo(v); }, { once:true });
+        card.addEventListener('focusin', function(){ hydrateVideo(v); }, { once:true });
+        if (videoObserver) videoObserver.observe(v); else hydrateVideo(v);
+      });
+    }
+
     if (reduce) {
       demos.forEach(function(v){ v.pause(); });
     } else if (canHover) {
       demos.forEach(function(v){
         var card = v.closest('.card') || v;
-        card.addEventListener('pointerenter', function(){ setActive(v, true); });
+        card.addEventListener('pointerenter', function(){ hydrateVideo(v); setActive(v, true); });
         card.addEventListener('pointerleave', function(){ setActive(v, false); });
       });
     } else if ('IntersectionObserver' in window) {
