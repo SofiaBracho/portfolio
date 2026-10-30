@@ -1,0 +1,98 @@
+{
+  "source": "C:\\Code\\portfolio\\portfolio\\3d\\Sofia-segmented-rigged-eyelashes-eyeliner-RECOVERED.blend",
+  "blender": "5.2.2 LTS",
+  "meshes": 18,
+  "triangles_base": 17555,
+  "triangles_outlines": 9096,
+  "bones": 65,
+  "shape_keys": 0,
+  "actions": 0,
+  "unweighted": {
+    "arm_L": 0,
+    "arm_R": 0,
+    "belt": 0,
+    "button": 0,
+    "eyelashes_L": 0,
+    "eyelashes_R": 0,
+    "eyeliner_L": 0,
+    "eyeliner_R": 0,
+    "eyes": 0,
+    "glasses": 0,
+    "hair": 0,
+    "head": 0,
+    "legs_jeans": 0,
+    "mouth": 0,
+    "scalp_cap": 0,
+    "shoe_L": 0,
+    "shoe_R": 0,
+    "torso_sweater": 0
+  },
+  "material_settings": {
+    "skin": [
+      0.76,
+      0.2,
+      0.18
+    ],
+    "fabric": [
+      0.9,
+      0.14,
+      0.28
+    ],
+    "hair": [
+      0.84,
+      0.22,
+      0.26
+    ],
+    "leather": [
+      0.79,
+      0.2,
+      0.3
+    ],
+    "glasses": [
+      0.64,
+      0.24,
+      0.2
+    ],
+    "eyes": [
+      0.55,
+      0.16,
+      0
+    ],
+    "ink": [
+      0.95,
+      0.1,
+      0
+    ]
+  },
+  "original_geometry_uv_weights_and_bones_unchanged": true,
+  "source_sha256": "8166247e1a1073df57ed94c5369e27b831da9de5191df60e52d68d35f8ef4cdd",
+  "maximum_influences": 6,
+  "maximum_weight_sum_error": 1.601874828338623e-07,
+  "glb_bytes": 10066040,
+  "glb_texture_sizes": {
+    "Mobile_Sofia_eyes": [
+      512,
+      512
+    ],
+    "Mobile_Sofia_basecolor_edited": [
+      2048,
+      2048
+    ],
+    "Mobile_Sofia_normal_edited": [
+      1024,
+      1024
+    ]
+  },
+  "checks": {
+    "static_pose_renders": [
+      "rig-check-arms.png",
+      "rig-check-knee-twist.png"
+    ],
+    "cross_engine_reference": "comic-face-cycles.png",
+    "full_animation_library": false,
+    "iphone_runtime": false,
+    "facial_controls": false,
+    "glb_reimport_render": true
+  },
+  "export_influences_note": "Source has up to six bone influences per vertex. Blender default glTF export keeps four strongest and normalizes; full animated deformation of exported rig remains to be verified."
+}

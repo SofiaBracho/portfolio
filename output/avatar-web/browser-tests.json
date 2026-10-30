@@ -1,0 +1,289 @@
+{
+  "browser": "153.0.8010.12",
+  "platform": "win32",
+  "realMobile": false,
+  "safari": false,
+  "motionSha256": "c2a7a50ff77a9dc46ccfacb890f1fce431b0e43be09dddc5c7868163a95ffe2e",
+  "sizes": [
+    {
+      "width": 320,
+      "height": 740,
+      "layout": {
+        "width": 320,
+        "scrollWidth": 320
+      },
+      "requests": [],
+      "resources": [],
+      "errors": [],
+      "responses": [],
+      "phases": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "layout": {
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "requests": [],
+      "resources": [],
+      "errors": [],
+      "responses": [],
+      "phases": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "layout": {
+        "width": 768,
+        "scrollWidth": 768
+      },
+      "requests": [],
+      "resources": [],
+      "errors": [],
+      "responses": [],
+      "phases": []
+    },
+    {
+      "width": 881,
+      "height": 1000,
+      "layout": {
+        "width": 881,
+        "scrollWidth": 881
+      },
+      "requests": [
+        "http://127.0.0.1:53576/3d/Sofia-comic-semirealista.glb",
+        "http://127.0.0.1:53576/3d/Sofia-portfolio-motion.glb"
+      ],
+      "resources": [
+        {
+          "name": "Sofia-comic-semirealista.glb",
+          "startTime": 1673.3000001907349,
+          "duration": 144.79999995231628,
+          "transferSize": 10066340,
+          "decodedBodySize": 10066040
+        },
+        {
+          "name": "Sofia-portfolio-motion.glb",
+          "startTime": 1675.1000001430511,
+          "duration": 21.200000047683716,
+          "transferSize": 698940,
+          "decodedBodySize": 698640
+        }
+      ],
+      "diagnostics": {
+        "phase": "idle",
+        "currentName": "idle",
+        "paused": false,
+        "renderedFrames": 155,
+        "clips": [
+          "idle",
+          "walk",
+          "wave"
+        ],
+        "calls": 27,
+        "triangles": 26651,
+        "geometries": 27,
+        "textures": 4,
+        "pixelRatio": 1,
+        "outline": {
+          "unlit": true,
+          "side": 0,
+          "toneMapped": false
+        }
+      },
+      "errors": [],
+      "responses": [],
+      "phases": [
+        {
+          "phase": "loading",
+          "time": 1700.1000001430511
+        },
+        {
+          "phase": "walking",
+          "time": 3142.5
+        },
+        {
+          "phase": "turning",
+          "time": 6524.400000095367
+        },
+        {
+          "phase": "waving",
+          "time": 7077.100000143051
+        },
+        {
+          "phase": "idle",
+          "time": 8367.600000143051
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "layout": {
+        "width": 1024,
+        "scrollWidth": 1024
+      },
+      "requests": [
+        "http://127.0.0.1:53576/3d/Sofia-comic-semirealista.glb",
+        "http://127.0.0.1:53576/3d/Sofia-portfolio-motion.glb"
+      ],
+      "resources": [
+        {
+          "name": "Sofia-comic-semirealista.glb",
+          "startTime": 1712.1999998092651,
+          "duration": 128.70000004768372,
+          "transferSize": 10066340,
+          "decodedBodySize": 10066040
+        },
+        {
+          "name": "Sofia-portfolio-motion.glb",
+          "startTime": 1713.0999999046326,
+          "duration": 10,
+          "transferSize": 698940,
+          "decodedBodySize": 698640
+        }
+      ],
+      "diagnostics": {
+        "phase": "idle",
+        "currentName": "idle",
+        "paused": false,
+        "renderedFrames": 155,
+        "clips": [
+          "idle",
+          "walk",
+          "wave"
+        ],
+        "calls": 27,
+        "triangles": 26651,
+        "geometries": 27,
+        "textures": 4,
+        "pixelRatio": 1,
+        "outline": {
+          "unlit": true,
+          "side": 0,
+          "toneMapped": false
+        }
+      },
+      "errors": [],
+      "responses": [],
+      "phases": [
+        {
+          "phase": "loading",
+          "time": 1726.5999999046326
+        },
+        {
+          "phase": "walking",
+          "time": 2439.699999809265
+        },
+        {
+          "phase": "turning",
+          "time": 5789.299999952316
+        },
+        {
+          "phase": "waving",
+          "time": 6333.299999952316
+        },
+        {
+          "phase": "idle",
+          "time": 7633.799999952316
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "layout": {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "requests": [
+        "http://127.0.0.1:53576/3d/Sofia-comic-semirealista.glb",
+        "http://127.0.0.1:53576/3d/Sofia-portfolio-motion.glb"
+      ],
+      "resources": [
+        {
+          "name": "Sofia-comic-semirealista.glb",
+          "startTime": 3376.2999999523163,
+          "duration": 398.60000014305115,
+          "transferSize": 10066340,
+          "decodedBodySize": 10066040
+        },
+        {
+          "name": "Sofia-portfolio-motion.glb",
+          "startTime": 3376.7000000476837,
+          "duration": 10,
+          "transferSize": 698940,
+          "decodedBodySize": 698640
+        }
+      ],
+      "diagnostics": {
+        "phase": "idle",
+        "currentName": "idle",
+        "paused": false,
+        "renderedFrames": 156,
+        "clips": [
+          "idle",
+          "walk",
+          "wave"
+        ],
+        "calls": 27,
+        "triangles": 26651,
+        "geometries": 27,
+        "textures": 4,
+        "pixelRatio": 1,
+        "outline": {
+          "unlit": true,
+          "side": 0,
+          "toneMapped": false
+        }
+      },
+      "errors": [],
+      "responses": [],
+      "phases": [
+        {
+          "phase": "loading",
+          "time": 3404.9000000953674
+        },
+        {
+          "phase": "walking",
+          "time": 4346
+        },
+        {
+          "phase": "turning",
+          "time": 7976.799999952316
+        },
+        {
+          "phase": "waving",
+          "time": 8478.900000095367
+        },
+        {
+          "phase": "idle",
+          "time": 9738.900000095367
+        }
+      ]
+    }
+  ],
+  "consumption": {
+    "sampleSeconds": 3,
+    "avatarFrames": 87,
+    "avatarFps": 29,
+    "pageTaskSeconds": 1.112694,
+    "jsHeapBytes": 6717360,
+    "note": "Whole page CPU/heap, not isolated GPU power or phone battery."
+  },
+  "offscreenPause": {
+    "before": 346,
+    "after": 346
+  },
+  "resizePause": "Paused at 390px, resumed at 1440px, no additional GLB request",
+  "hiddenPause": {
+    "method": "Synthetic document.hidden + visibilitychange in Chromium",
+    "before": 377,
+    "after": 377
+  },
+  "reducedMotionToggle": "Canvas disposed",
+  "reducedMotionInitial": {
+    "glbs": 0
+  }
+}

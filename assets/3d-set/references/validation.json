@@ -1,0 +1,414 @@
+[
+  {
+    "id": "trofeo",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 833292,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1670
+      },
+      {
+        "size": 96,
+        "bytes": 3788
+      },
+      {
+        "size": 144,
+        "bytes": 6092
+      },
+      {
+        "size": 256,
+        "bytes": 12232
+      }
+    ]
+  },
+  {
+    "id": "cofre",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 884562,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1580
+      },
+      {
+        "size": 96,
+        "bytes": 3160
+      },
+      {
+        "size": 144,
+        "bytes": 4938
+      },
+      {
+        "size": 256,
+        "bytes": 10232
+      }
+    ]
+  },
+  {
+    "id": "cofre-abierto",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 945330,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1764
+      },
+      {
+        "size": 96,
+        "bytes": 3752
+      },
+      {
+        "size": 144,
+        "bytes": 5778
+      },
+      {
+        "size": 256,
+        "bytes": 11494
+      }
+    ]
+  },
+  {
+    "id": "nota",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 423625,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1170
+      },
+      {
+        "size": 96,
+        "bytes": 2420
+      },
+      {
+        "size": 144,
+        "bytes": 3426
+      }
+    ]
+  },
+  {
+    "id": "metronomo",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 499711,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1386
+      },
+      {
+        "size": 96,
+        "bytes": 2786
+      },
+      {
+        "size": 144,
+        "bytes": 4368
+      }
+    ]
+  },
+  {
+    "id": "auriculares",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 733571,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1754
+      },
+      {
+        "size": 96,
+        "bytes": 3494
+      },
+      {
+        "size": 144,
+        "bytes": 5420
+      }
+    ]
+  },
+  {
+    "id": "cuaderno",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 761773,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1388
+      },
+      {
+        "size": 96,
+        "bytes": 2618
+      },
+      {
+        "size": 144,
+        "bytes": 4134
+      }
+    ]
+  },
+  {
+    "id": "banderin",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 530529,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1192
+      },
+      {
+        "size": 96,
+        "bytes": 2402
+      },
+      {
+        "size": 144,
+        "bytes": 3664
+      }
+    ]
+  },
+  {
+    "id": "llama",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 736153,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1442
+      },
+      {
+        "size": 96,
+        "bytes": 2854
+      },
+      {
+        "size": 144,
+        "bytes": 4574
+      }
+    ]
+  },
+  {
+    "id": "estrella",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 802362,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1644
+      },
+      {
+        "size": 96,
+        "bytes": 3382
+      },
+      {
+        "size": 144,
+        "bytes": 5408
+      }
+    ]
+  },
+  {
+    "id": "candado",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 581867,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1260
+      },
+      {
+        "size": 96,
+        "bytes": 2500
+      },
+      {
+        "size": 144,
+        "bytes": 3674
+      }
+    ]
+  },
+  {
+    "id": "teclado",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 546846,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1332
+      },
+      {
+        "size": 96,
+        "bytes": 2678
+      },
+      {
+        "size": 144,
+        "bytes": 4198
+      }
+    ]
+  },
+  {
+    "id": "movil",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 376934,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 740
+      },
+      {
+        "size": 96,
+        "bytes": 1348
+      },
+      {
+        "size": 144,
+        "bytes": 2108
+      }
+    ]
+  },
+  {
+    "id": "microfono",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 394650,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 890
+      },
+      {
+        "size": 96,
+        "bytes": 1912
+      },
+      {
+        "size": 144,
+        "bytes": 3164
+      }
+    ]
+  },
+  {
+    "id": "vinilo",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 752448,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1264
+      },
+      {
+        "size": 96,
+        "bytes": 2434
+      },
+      {
+        "size": 144,
+        "bytes": 3864
+      }
+    ]
+  },
+  {
+    "id": "moneda",
+    "width": 1024,
+    "height": 1024,
+    "alpha": true,
+    "pngBytes": 1071142,
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "webps": [
+      {
+        "size": 48,
+        "bytes": 1672
+      },
+      {
+        "size": 96,
+        "bytes": 3650
+      },
+      {
+        "size": 144,
+        "bytes": 5818
+      }
+    ]
+  }
+]

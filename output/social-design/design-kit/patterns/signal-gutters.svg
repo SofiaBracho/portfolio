@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" fill="none">
+  <title>Señales discretas para márgenes exteriores</title>
+  <g stroke="#22D3EE" stroke-opacity=".15" stroke-width="2">
+    <path d="M26 145V416M46 256V580M1054 174V479M1034 386V735M26 918V1218M1054 930V1241"/>
+    <circle cx="26" cy="145" r="8"/><circle cx="46" cy="580" r="8"/><circle cx="1054" cy="479" r="8"/><circle cx="1034" cy="735" r="8"/><circle cx="26" cy="918" r="8"/><circle cx="1054" cy="1241" r="8"/>
+    <path d="M26 251H48M26 345H56M46 405H66M1033 236H1054M1024 607H1034M26 1063H46M1034 1088H1054"/>
+  </g>
+  <g fill="#FFCE1F" fill-opacity=".35"><circle cx="46" cy="256" r="5"/><circle cx="1034" cy="386" r="5"/><circle cx="26" cy="1218" r="5"/></g>
+</svg>

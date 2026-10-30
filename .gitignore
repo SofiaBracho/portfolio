@@ -12,3 +12,4 @@ portfolio.zip
 !.dev.vars.example
 .env*
 !.env.example
+/.agents/

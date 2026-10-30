@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" fill="none">
+  <title>Subrayado orbital de anotación</title>
+  <defs><filter id="soft" x="0" y="0" width="960" height="470" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="9"/></filter></defs>
+  <path d="M80 351C167 251 331 182 572 176C731 172 845 199 910 247M158 361C300 381 501 375 684 334" stroke="#22D3EE" stroke-opacity=".31" stroke-width="17" stroke-linecap="round" filter="url(#soft)"/>
+  <path d="M80 351C167 251 331 182 572 176C731 172 845 199 910 247M158 361C300 381 501 375 684 334" stroke="#22D3EE" stroke-width="6" stroke-linecap="round"/>
+  <path d="M833 221L908 246L862 297" stroke="#22D3EE" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

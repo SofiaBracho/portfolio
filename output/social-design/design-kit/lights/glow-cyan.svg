@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none">
+  <title>Glow cian limpio para fondo editorial</title>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(440 375) rotate(118) scale(325 275)">
+      <stop stop-color="#22D3EE" stop-opacity=".72"/>
+      <stop offset=".28" stop-color="#22D3EE" stop-opacity=".34"/>
+      <stop offset=".62" stop-color="#22D3EE" stop-opacity=".085"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="800" height="800" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <ellipse cx="430" cy="385" rx="330" ry="330" fill="url(#glow)" filter="url(#soft)"/>
+</svg>

@@ -1,0 +1,12 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><title>Sofía · revisión web</title>
+<style>body{background:#05070f;color:#eaf6ff;font:16px system-ui;margin:24px}h1{font-size:24px}h2{font-size:18px;margin:24px 0 8px}.row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}figure{margin:0}img{width:100%;display:block}figcaption{padding:8px;color:#8aa0c8}a{color:#22d3ee}section{break-inside:avoid}</style>
+<h1>Sofía · revisión del avatar en navegador</h1>
+<p>Capturas reales de Chromium. Caminar, saludo y reposo integrados. Pensar y teléfono: candidatos excluidos del sitio; ver <a href="README.md">resultados y límites</a>.</p>
+<main></main>
+<script>
+for(const name of ['idle','walk','wave','thinking','texting']) {
+  const section=document.createElement('section');
+  section.innerHTML=`<h2>${name}</h2><div class="row">${[0,.25,.5,.75].map(t=>`<figure><img src="${name}-${t}.png"><figcaption>${Math.round(t*100)} %</figcaption></figure>`).join('')}</div>`;
+  document.querySelector('main').append(section);
+}
+</script>

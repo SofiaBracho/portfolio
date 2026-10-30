@@ -1,0 +1,26 @@
+{
+  "errors": [],
+  "diagnostics": {
+    "phase": "preview",
+    "currentName": "texting",
+    "paused": false,
+    "renderedFrames": 300,
+    "clips": [
+      "idle",
+      "texting",
+      "thinking",
+      "walk",
+      "wave"
+    ],
+    "calls": 29,
+    "triangles": 26665,
+    "geometries": 29,
+    "textures": 4,
+    "pixelRatio": 1,
+    "outline": {
+      "unlit": true,
+      "side": 0,
+      "toneMapped": false
+    }
+  }
+}

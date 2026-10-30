@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>Propuesta de IA con revisión humana</title>
+  <path d="M25 22v24c0 8 6 14 14 14h18M25 22h17M25 22v44M57 60l12-12M57 60l12 12" stroke="#22D3EE" stroke-width="4"/>
+  <circle cx="25" cy="22" r="7" fill="#0E1422" stroke="#22D3EE" stroke-width="4"/>
+  <circle cx="25" cy="72" r="7" fill="#0E1422" stroke="#22D3EE" stroke-width="4"/>
+  <circle cx="72" cy="47" r="7" fill="#0E1422" stroke="#FFCE1F" stroke-width="4"/>
+  <circle cx="72" cy="73" r="7" fill="#0E1422" stroke="#FFCE1F" stroke-width="4"/>
+  <path d="m41 25 7 7 12-14" stroke="#EAF6FF" stroke-width="4"/>
+</svg>

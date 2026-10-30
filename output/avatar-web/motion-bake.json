@@ -1,0 +1,59 @@
+{
+  "source_sha256": "22c2a754da39d191a71cf446806aa10acf422a33ea89bcef8367ec83191617c1",
+  "target_sha256": "5512f90d5e8812381bbc1f5fe17a200cd65764363962a65ce6374e407201e68c",
+  "motion_sha256": "c2a7a50ff77a9dc46ccfacb890f1fce431b0e43be09dddc5c7868163a95ffe2e",
+  "motion_bytes": 698640,
+  "matched_bones": 65,
+  "same_named_parents": true,
+  "target_to_source_yaw_degrees": -90,
+  "hip_translation_scale": 0.5518879169303161,
+  "palm_rest_correction_degrees": {
+    "Left": 108.6221581066811,
+    "Right": 105.48386376797865
+  },
+  "arm_twist_distribution": {
+    "upper_arm": 0.35,
+    "forearm": 0.75,
+    "hand": 1.0
+  },
+  "phoneLocalPos": [
+    0.05608338862657547,
+    0.11635523289442062,
+    -0.04791760817170143
+  ],
+  "phoneLocalEuler": [
+    2.042405466195779,
+    0.6576081352849104,
+    2.664219319671531
+  ],
+  "baked_fps": 30,
+  "clips": [
+    {
+      "name": "idle",
+      "duration": 16.66666603088379,
+      "samples": 501,
+      "grounding": null,
+      "max_quaternion_step_deg": 1.3717106262733632
+    },
+    {
+      "name": "walk",
+      "duration": 2.0999999046325684,
+      "samples": 64,
+      "grounding": {
+        "sole_rest_y": -0.0007595128855591714,
+        "max_pelvis_lift_model_units": 0.007290817461055546,
+        "corrected_frames": 21
+      },
+      "max_quaternion_step_deg": 31.154869710259323
+    },
+    {
+      "name": "wave",
+      "duration": 1.2666666507720947,
+      "samples": 39,
+      "grounding": null,
+      "max_quaternion_step_deg": 7.150334650563235
+    }
+  ],
+  "copied_legacy_meshes_materials_textures": 0,
+  "validation": "Candidate bake. Requires exported-mesh deformation and contact review."
+}

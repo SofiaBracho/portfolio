@@ -1,0 +1,14 @@
+[
+  {
+    "id": "02",
+    "prompt": "Precise cleanup only. Remove ALL grunge/scratches/speckles/stray cyan or gold marks from the dark navy background: around headline, side edges, behind and around dialog, lower corners. Replace with clean smooth deep navy background with only subtle soft lighting gradient. Also remove stray scratches just outside cyan dialog outline. Preserve exact headline, elegant serif typography, layout, dialog angle, continuous cyan outline, red warning icon, button, white close x, intentional yellow emphasis strokes at left, and SOFÍA BRACHO signature. No new elements, no redesign, no text changes. Keep current canvas aspect 4:5."
+  },
+  {
+    "id": "09",
+    "prompt": "Precise background cleanup only. Remove ALL ghost stamps, faint sketch symbols, stray black glyphs, scratches, creases, paper grain and grunge from the YELLOW background, particularly above newspaper top right and along bottom left and bottom right. Make yellow background a clean uniform rich yellow with a very subtle smooth light variation, no texture/no marks. Preserve large black serif 'IA: qué cambia y qué no.', signature 'SOFÍA BRACHO', deliberate cyan curved arrow, torn newspaper collage and mechanical hand exactly in place. Retain newspaper's intentional print and torn edges, and hand's engraving texture; cleanup applies to surrounding yellow negative space and stray ghost graphics only. Same composition, same 4:5 canvas."
+  },
+  {
+    "id": "10",
+    "prompt": "Precise background cleanup only. Remove ALL grunge, stray speckles, scratches, cyan or gold dust and little accidental marks from the navy background, especially left edge next to form fields and top right outside large yellow 4. Smooth clean deep navy backdrop, subtle soft light gradient only. Also clean ragged debris outside the yellow numeral's silhouette while preserving numeral 4 shape and location; give numeral a clean yellow finish. Preserve headline 'Un formulario, cuatro estados.', all form fields, labels, icons, soft glow, intentional yellow curved arrows and intentional yellow emphasis strokes, signature SOFÍA BRACHO, layout and 4:5 aspect. No other changes."
+  }
+]

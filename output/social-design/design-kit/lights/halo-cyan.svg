@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <title>Halo cian asimétrico</title>
+  <defs>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="translate(472 340) rotate(122) scale(370 255)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity=".39"/>
+      <stop offset=".28" stop-color="#22D3EE" stop-opacity=".17"/>
+      <stop offset=".66" stop-color="#22D3EE" stop-opacity=".035"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="800" height="800" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="34"/></filter>
+  </defs>
+  <ellipse cx="452" cy="352" rx="356" ry="288" fill="url(#core)" filter="url(#soft)"/>
+  <path d="M150 519C235 291 395 205 646 260" stroke="#22D3EE" stroke-opacity=".14" stroke-width="2"/>
+</svg>

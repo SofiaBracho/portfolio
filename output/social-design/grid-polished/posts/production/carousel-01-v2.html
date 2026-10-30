@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carrusel 01 · Interiores editables</title>
+<style>
+@font-face{font-family:Chakra;src:url('../../../../../tmp/pdfs/fonts/ChakraSemi.ttf');font-weight:600}
+@font-face{font-family:Chakra;src:url('../../../../../tmp/pdfs/fonts/ChakraBold.ttf');font-weight:700}
+@font-face{font-family:Grotesk;src:url('../../../../../tmp/pdfs/fonts/Grotesk.ttf');font-weight:400}
+@font-face{font-family:Grotesk;src:url('../../../../../tmp/pdfs/fonts/GroteskSemi.ttf');font-weight:600}
+@font-face{font-family:Mono;src:url('../../../../../tmp/pdfs/fonts/Mono.ttf')}
+:root{--bg:#05070F;--alt:#0A0E1A;--panel:#0E1422;--raised:#121A2C;--ink:#EAF6FF;--muted:#8AA0C8;--cyan:#22D3EE;--yellow:#FFCE1F}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#05070F;color:var(--ink)}
+body{width:1080px;font-family:Grotesk,Arial,sans-serif}
+.slide{display:block;position:relative;width:1080px;height:1350px;overflow:hidden;background:radial-gradient(ellipse 660px 560px at 88% 71%,rgba(34,211,238,.08),transparent 72%),radial-gradient(ellipse 680px 640px at -8% -4%,rgba(255,206,31,.055),transparent 72%),var(--bg)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;background:linear-gradient(90deg,transparent 89px,rgba(34,211,238,.12) 90px,transparent 91px,transparent 988px,rgba(34,211,238,.12) 989px,transparent 990px)}
+.slide::after{content:"";position:absolute;right:-245px;top:320px;width:570px;height:570px;border:1px solid rgba(34,211,238,.11);border-radius:50%;pointer-events:none}
+.topline{position:absolute;left:90px;top:61px;right:90px;display:flex;align-items:center;justify-content:space-between;font:23px Mono,monospace;letter-spacing:.12em;color:var(--muted)}
+.topline .section{color:var(--cyan)}
+.divider{position:absolute;left:90px;right:90px;top:109px;height:1px;background:linear-gradient(90deg,var(--cyan),rgba(34,211,238,.09))}
+.footer{position:absolute;left:90px;right:90px;bottom:70px;display:flex;align-items:center;justify-content:space-between;font:24px Mono,monospace;letter-spacing:.15em;color:var(--ink)}
+.footer .count{letter-spacing:.05em;color:var(--cyan)}
+.footer::before{content:"";position:absolute;left:0;right:0;top:-27px;height:1px;background:rgba(120,180,255,.19)}
+.serif{font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:-.055em;line-height:.96}
+.yellow{color:var(--yellow)}.cyan{color:var(--cyan)}
+.eyebrow{font:24px Mono,monospace;letter-spacing:.11em;color:var(--cyan)}
+.surface{background:linear-gradient(145deg,rgba(18,26,44,.98),rgba(11,19,33,.98));border:1px solid rgba(138,160,200,.28);box-shadow:0 28px 58px rgba(0,0,0,.26),inset 0 1px 0 rgba(234,246,255,.08)}
+.accent-rule{height:5px;border-radius:5px;background:var(--yellow);box-shadow:0 0 18px rgba(255,206,31,.22)}
+.orbit{position:absolute;pointer-events:none;border:3px solid var(--cyan);border-color:var(--cyan) transparent transparent var(--cyan);border-radius:50%;filter:drop-shadow(0 0 10px rgba(34,211,238,.45))}
+
+/* 02 — Who */
+#slide-02 .hero{position:absolute;left:90px;top:174px;font-size:124px}
+#slide-02 .hero .name{display:block;color:var(--yellow)}
+#slide-02 .role{position:absolute;left:90px;right:90px;top:494px;padding:44px 48px 42px;border-radius:24px}
+#slide-02 .role .label{font:22px Mono,monospace;letter-spacing:.14em;color:var(--cyan)}
+#slide-02 .role .main{margin-top:25px;font:700 63px/1.05 Chakra,Arial,sans-serif;letter-spacing:-.02em}
+#slide-02 .role .sub{margin-top:19px;font:400 38px/1.2 Grotesk,Arial,sans-serif;color:var(--muted)}
+#slide-02 .role .accent-rule{width:136px;margin-top:34px}
+#slide-02 .pathline{position:absolute;left:115px;right:115px;top:927px;height:4px;background:linear-gradient(90deg,var(--cyan),var(--yellow));box-shadow:0 0 20px rgba(34,211,238,.4)}
+#slide-02 .path{position:absolute;left:90px;right:90px;top:870px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#slide-02 .pathitem{position:relative;padding:33px 25px 30px;min-height:180px;border-radius:17px;background:rgba(14,20,34,.98);border:1px solid rgba(34,211,238,.27)}
+#slide-02 .pathitem:nth-child(3){border-color:rgba(255,206,31,.47)}
+#slide-02 .pathitem .n{display:block;font:21px Mono,monospace;color:var(--cyan);letter-spacing:.1em}
+#slide-02 .pathitem:nth-child(3) .n{color:var(--yellow)}
+#slide-02 .pathitem .t{display:block;margin-top:20px;font:700 40px Chakra,Arial,sans-serif}
+#slide-02 .orbit{width:350px;height:350px;right:-145px;top:92px;transform:rotate(34deg)}
+
+/* 03 — Work */
+#slide-03 .hero{position:absolute;left:90px;top:172px;font-size:96px}
+#slide-03 .hero .yellow{display:block}
+#slide-03 .intro{position:absolute;left:90px;top:445px;width:850px;font:400 34px/1.29 Grotesk,Arial,sans-serif;color:var(--muted)}
+#slide-03 .rail{position:absolute;left:125px;top:631px;bottom:219px;width:3px;background:linear-gradient(var(--cyan),var(--yellow));box-shadow:0 0 13px rgba(34,211,238,.35)}
+#slide-03 .step{position:absolute;left:90px;right:90px;height:150px;display:grid;grid-template-columns:124px 1fr;align-items:center}
+#slide-03 .step.s1{top:590px}#slide-03 .step.s2{top:759px}#slide-03 .step.s3{top:928px}
+#slide-03 .step .number{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:76px;height:76px;margin-left:0;border-radius:50%;border:2px solid var(--cyan);background:#071522;color:var(--cyan);font:27px Mono,monospace;box-shadow:0 0 24px rgba(34,211,238,.18)}
+#slide-03 .step.s3 .number{border-color:var(--yellow);color:var(--yellow);box-shadow:0 0 24px rgba(255,206,31,.17)}
+#slide-03 .step .card{height:150px;padding:28px 33px;border-radius:18px}
+#slide-03 .step .card .heading{font:700 40px Chakra,Arial,sans-serif}
+#slide-03 .step .card .small{margin-top:10px;font:400 27px/1.22 Grotesk,Arial,sans-serif;color:var(--muted)}
+#slide-03 .step.s2 .card{border-color:rgba(34,211,238,.55)}
+#slide-03 .step.s3 .card{border-color:rgba(255,206,31,.45)}
+#slide-03 .orbit{width:440px;height:440px;right:-195px;top:136px;transform:rotate(8deg)}
+
+/* 04 — Editorial pillars */
+#slide-04 .hero{position:absolute;left:90px;top:171px;font-size:108px}
+#slide-04 .hero .yellow{display:block}
+#slide-04 .intro{position:absolute;left:90px;top:480px;font:400 34px/1.25 Grotesk,Arial,sans-serif;color:var(--muted)}
+#slide-04 .list{position:absolute;left:90px;right:90px;top:590px;display:flex;flex-direction:column;gap:21px}
+#slide-04 .topic{position:relative;display:grid;grid-template-columns:142px 1fr;align-items:center;height:167px;padding:17px 34px 17px 24px;border-radius:20px}
+#slide-04 .topic .num{font:700 73px Georgia,serif;letter-spacing:-.05em;color:var(--cyan)}
+#slide-04 .topic:nth-child(2) .num{color:var(--yellow)}
+#slide-04 .topic:nth-child(3) .num{color:var(--cyan)}
+#slide-04 .topic .title{font:700 41px Chakra,Arial,sans-serif}
+#slide-04 .topic .desc{margin-top:11px;font:400 28px/1.2 Grotesk,Arial,sans-serif;color:var(--muted)}
+#slide-04 .topic:nth-child(2){border-color:rgba(255,206,31,.42)}
+#slide-04 .list::before{content:"";position:absolute;left:86px;top:-30px;bottom:-30px;width:2px;background:linear-gradient(var(--cyan),var(--yellow),var(--cyan));z-index:0}
+#slide-04 .orbit{width:480px;height:480px;right:-240px;top:118px;transform:rotate(15deg)}
+
+/* 05 — Invitation */
+#slide-05 .tiny{position:absolute;left:90px;top:180px}
+#slide-05 .hero{position:absolute;left:90px;right:90px;top:268px;font-size:103px}
+#slide-05 .hero .yellow{display:block}
+#slide-05 .orbit{width:490px;height:490px;right:-145px;top:660px;transform:rotate(-27deg);border-width:4px}
+#slide-05 .motif{position:absolute;left:113px;top:820px;width:768px;height:3px;background:linear-gradient(90deg,var(--cyan),var(--yellow));transform:rotate(-9deg);box-shadow:0 0 20px rgba(34,211,238,.44)}
+#slide-05 .motif::before,#slide-05 .motif::after{content:"";position:absolute;top:-11px;width:25px;height:25px;border-radius:50%;background:var(--cyan);box-shadow:0 0 25px rgba(34,211,238,.6)}
+#slide-05 .motif::after{right:0;background:var(--yellow);box-shadow:0 0 25px rgba(255,206,31,.5)}
+#slide-05 .question{position:absolute;left:90px;right:90px;bottom:225px;padding:36px 44px 41px;border-radius:25px;border:1px solid rgba(255,206,31,.65);background:linear-gradient(135deg,rgba(255,206,31,.12),rgba(18,26,44,.96) 48%);box-shadow:0 25px 60px rgba(0,0,0,.27)}
+#slide-05 .question .q{font:22px Mono,monospace;letter-spacing:.12em;color:var(--yellow)}
+#slide-05 .question .text{margin-top:18px;font:600 45px/1.13 Chakra,Arial,sans-serif}
+</style>
+</head>
+<body>
+<section class="slide" id="slide-02" data-document-role="page" data-label="02 · Quién soy">
+  <div class="topline"><span class="section">PRESENTACIÓN</span><span>PIXEL → CLOUD</span></div><div class="divider"></div>
+  <div class="orbit"></div>
+  <h1 class="hero serif">Soy Sofía<span class="name">Bracho.</span></h1>
+  <div class="role surface"><div class="label">A QUÉ ME DEDICO</div><div class="main">Product engineer<br>y desarrolladora full stack</div><div class="sub">con base en diseño gráfico</div><div class="accent-rule"></div></div>
+  <div class="pathline"></div><div class="path"><div class="pathitem"><span class="n">01 /</span><span class="t">Diseño</span></div><div class="pathitem"><span class="n">02 /</span><span class="t">Código</span></div><div class="pathitem"><span class="n">03 /</span><span class="t">Producto</span></div></div>
+  <div class="footer"><span>SOFÍA BRACHO</span><span class="count">02 / 05</span></div>
+</section>
+<section class="slide" id="slide-03" data-document-role="page" data-label="03 · Qué hago">
+  <div class="topline"><span class="section">MI TRABAJO</span><span>PIXEL → CLOUD</span></div><div class="divider"></div><div class="orbit"></div>
+  <h1 class="hero serif">De la idea<span class="yellow">al producto.</span></h1>
+  <div class="intro">Diseño y desarrollo productos digitales. Conecto necesidades, interfaz e implementación.</div>
+  <div class="rail"></div>
+  <div class="step s1"><div class="number">01</div><div class="card surface"><div class="heading">Entender la necesidad</div><div class="small">¿Qué necesita hacer la persona?</div></div></div>
+  <div class="step s2"><div class="number">02</div><div class="card surface"><div class="heading">Diseñar la interfaz</div><div class="small">Contenido, interacción y estados claros.</div></div></div>
+  <div class="step s3"><div class="number">03</div><div class="card surface"><div class="heading">Construir y revisar</div><div class="small">Implementación que se puede comprobar.</div></div></div>
+  <div class="footer"><span>SOFÍA BRACHO</span><span class="count">03 / 05</span></div>
+</section>
+<section class="slide" id="slide-04" data-document-role="page" data-label="04 · Qué compartiré">
+  <div class="topline"><span class="section">ESTA CUENTA</span><span>PIXEL → CLOUD</span></div><div class="divider"></div><div class="orbit"></div>
+  <h1 class="hero serif">Aquí<span class="yellow">compartiré.</span></h1>
+  <div class="intro">Decisiones, proceso y aprendizajes que pueda explicar.</div>
+  <div class="list">
+    <div class="topic surface"><div class="num">01</div><div><div class="title">Decisiones de interfaz</div><div class="desc">Estados, mensajes y detalles de uso.</div></div></div>
+    <div class="topic surface"><div class="num">02</div><div><div class="title">Código y proceso</div><div class="desc">Cómo construí o corregí algo.</div></div></div>
+    <div class="topic surface"><div class="num">03</div><div><div class="title">IA aplicada con criterio</div><div class="desc">Qué propuso y qué comprobé.</div></div></div>
+  </div>
+  <div class="footer"><span>SOFÍA BRACHO</span><span class="count">04 / 05</span></div>
+</section>
+<section class="slide" id="slide-05" data-document-role="page" data-label="05 · Invitación">
+  <div class="topline"><span class="section">SIGUIENTE PASO</span><span>PIXEL → CLOUD</span></div><div class="divider"></div><div class="orbit"></div>
+  <div class="tiny eyebrow">CONSTRUIR · COMPROBAR · APRENDER</div>
+  <h1 class="hero serif">Quiero mostrar<br>el proceso,<span class="yellow">no solo el<br>resultado.</span></h1>
+  <div class="motif"></div>
+  <div class="question"><div class="q">TE LEO</div><div class="text">¿Vienes del diseño, del código o de ambos?</div></div>
+  <div class="footer"><span>SOFÍA BRACHO</span><span class="count">05 / 05</span></div>
+</section>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "motionSha256": "c2a7a50ff77a9dc46ccfacb890f1fce431b0e43be09dddc5c7868163a95ffe2e",
+  "lateLoad": "Disposed during delayed load, recreated once",
+  "retina": {
+    "deviceScaleFactor": 2,
+    "pixelRatio": 1.5
+  },
+  "errors": [],
+  "failedLoad": "Missing motion removes canvas; hero copy remains visible"
+}

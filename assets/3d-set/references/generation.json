@@ -1,0 +1,71 @@
+{
+  "generator": "built-in image_gen",
+  "tripoCreditsConsumed": 0,
+  "prompt": "Use case: stylized-concept. Create ONE standalone 3D rendered reference object for image-to-3D reconstruction for a youthful music e-learning app. Premium soft toy craftsmanship, realistic non-chibi proportions, smooth matte to satin surfaces, rounded bevels, simple readable silhouette. Palette ONLY ink #1F1A2E, cream, bone white, satin gold for reward objects. No brand accent. Camera fixed: three-quarter from upper left, elevation 30 degrees, yaw 35 degrees, long lens near orthographic. Main soft light upper left, gentle fill, no rim light. Square canvas, object fills 80% maximum dimension, bottom at 88% canvas height, entire object visible. True transparent background. NO ground plane, contact shadow, cast shadow, text, watermark, faces, eyes, mouths, mascot, decorative extra objects. Source target 1024x1024 PNG. Subject: ",
+  "assets": [
+    {
+      "id": "trofeo",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-14e8fcb2-eba5-45e4-b4a5-dfe8a9ff0189.png"
+    },
+    {
+      "id": "cofre",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-0fdbc7f3-ff6f-4265-9a63-32f75fff1056.png"
+    },
+    {
+      "id": "cofre-abierto",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-2e6cc391-90f4-472d-81c4-7db141257957.png"
+    },
+    {
+      "id": "nota",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-5eeaa0c3-43cc-44bc-a68d-0870743e6ded.png"
+    },
+    {
+      "id": "metronomo",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-ad3f20f8-06f2-46d6-af07-a054c7a06bbe.png"
+    },
+    {
+      "id": "auriculares",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-c6714346-4533-4b29-aafd-d500c08412d3.png"
+    },
+    {
+      "id": "cuaderno",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-0d58c50b-bdcd-4750-8b41-817c9e93ce1a.png"
+    },
+    {
+      "id": "banderin",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-41e144e5-1364-4ac8-a1d9-d27871859a1c.png"
+    },
+    {
+      "id": "llama",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-f0c5b5a7-4266-4921-b3c7-4c433e825f54.png"
+    },
+    {
+      "id": "estrella",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-1da5c0c8-80c8-4ff5-af0a-fae62e7c1ede.png"
+    },
+    {
+      "id": "candado",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-b891d6ed-ca48-4b19-9b32-7ad8dcc71bae.png"
+    },
+    {
+      "id": "teclado",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-d088b64f-da76-4281-bd52-4e9f011e41e5.png"
+    },
+    {
+      "id": "movil",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-ad2cfde9-57bf-4412-b6e1-a11e119414bb.png"
+    },
+    {
+      "id": "microfono",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-d0e830dd-3e34-4db8-b06f-0ec79f42d89c.png"
+    },
+    {
+      "id": "vinilo",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-76c69f7f-c282-4c8a-a2e9-f80450805639.png"
+    },
+    {
+      "id": "moneda",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a156f0-3449-7270-8616-b64247e91658\\exec-c56bddc1-e52f-44a9-8cee-6ff2dc0b4c11.png"
+    }
+  ]
+}

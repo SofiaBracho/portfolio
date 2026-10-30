@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="5400" height="1350" viewBox="0 0 5400 1350" fill="none">
+  <title>Luz continua cian · carrusel 01 · cinco tramos de 1080 px</title>
+  <defs>
+    <filter id="ambient" x="-400" y="0" width="6200" height="1350" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="100"/></filter>
+    <filter id="core" x="-400" y="0" width="6200" height="1350" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="fade" x1="0" y1="0" x2="5400" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE" stop-opacity="0"/><stop offset=".12" stop-color="#22D3EE"/><stop offset=".85" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></linearGradient>
+  </defs>
+  <path d="M-150 1080C500 1080 760 1010 1080 970S1700 670 2160 710S2790 1010 3240 970S3900 700 4320 760S5050 1000 5550 920" stroke="url(#fade)" stroke-width="350" stroke-linecap="round" filter="url(#ambient)" opacity=".65"/>
+  <path d="M-150 1080C500 1080 760 1010 1080 970S1700 670 2160 710S2790 1010 3240 970S3900 700 4320 760S5050 1000 5550 920" stroke="url(#fade)" stroke-width="140" stroke-linecap="round" filter="url(#core)" opacity=".55"/>
+</svg>

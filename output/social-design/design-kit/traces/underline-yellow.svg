@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 96" fill="none">
+  <title>Marca de énfasis amarilla</title>
+  <defs><filter id="soft" x="0" y="0" width="700" height="96" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="7"/></filter></defs>
+  <path d="M41 54C191 45 426 39 657 52" stroke="#FFCE1F" stroke-opacity=".28" stroke-width="28" stroke-linecap="round" filter="url(#soft)"/>
+  <path d="M41 54C191 45 426 39 657 52" stroke="#FFCE1F" stroke-width="9" stroke-linecap="round"/>
+  <path d="M518 66C577 65 620 66 655 69" stroke="#FFCE1F" stroke-opacity=".66" stroke-width="3" stroke-linecap="round"/>
+</svg>

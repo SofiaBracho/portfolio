@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <title>Halo amarillo de acción</title>
+  <defs>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="translate(371 403) rotate(-24) scale(291 342)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCE1F" stop-opacity=".34"/>
+      <stop offset=".29" stop-color="#FFCE1F" stop-opacity=".14"/>
+      <stop offset=".7" stop-color="#FFCE1F" stop-opacity=".025"/>
+      <stop offset="1" stop-color="#FFCE1F" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="800" height="800" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="32"/></filter>
+  </defs>
+  <ellipse cx="383" cy="394" rx="302" ry="345" fill="url(#core)" filter="url(#soft)"/>
+  <circle cx="384" cy="396" r="217" stroke="#FFCE1F" stroke-opacity=".075" stroke-width="2"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="1350" viewBox="0 0 12 1350">
+  <title>Acabado de borde de portada al fondo #05070F</title>
+  <defs><linearGradient id="edge"><stop stop-color="#05070F" stop-opacity="0"/><stop offset="1" stop-color="#05070F"/></linearGradient></defs>
+  <path fill="url(#edge)" d="M0 0h12v1350H0z"/>
+</svg>

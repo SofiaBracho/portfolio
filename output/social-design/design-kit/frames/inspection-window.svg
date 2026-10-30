@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" fill="none">
+  <title>Marco de interfaz para anotaciones y ejemplos</title>
+  <defs><linearGradient id="rim" x1="75" y1="70" x2="820" y2="535" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset=".55" stop-color="#22D3EE" stop-opacity=".24"/><stop offset="1" stop-color="#FFCE1F" stop-opacity=".8"/></linearGradient><filter id="glow" x="0" y="0" width="900" height="580" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="13"/></filter></defs>
+  <rect x="31" y="29" width="838" height="522" rx="20" fill="#0E1422"/>
+  <rect x="31" y="29" width="838" height="522" rx="20" stroke="url(#rim)" stroke-opacity=".35" stroke-width="12" filter="url(#glow)"/>
+  <rect x="31" y="29" width="838" height="522" rx="20" stroke="url(#rim)" stroke-width="3"/>
+  <path d="M32 99H868" stroke="#8AA0C8" stroke-opacity=".28" stroke-width="2"/>
+  <circle cx="63" cy="63" r="7" fill="#22D3EE"/><circle cx="87" cy="63" r="7" fill="#8AA0C8" fill-opacity=".6"/><circle cx="111" cy="63" r="7" fill="#FFCE1F"/>
+</svg>

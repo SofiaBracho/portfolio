@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
-<!-- 3D animated avatar (custom Three.js: walk-in, wave, idle, pointer head-tracking). Model: 3d/avatar_web.glb -->
+<!-- Sofia comic avatar; motion-only bake is separate from the shared model/textures. -->
 <script type="importmap">
 {
   "imports": {
@@ -386,14 +386,31 @@
   const desktop = window.matchMedia('(min-width: 881px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let avatarStarted = false;
+  let avatarInView = false;
+  let avatarEpoch = 0;
 
   async function startAvatar() {
-    if (avatarStarted || !mount || !desktop.matches || reducedMotion.matches) return;
+    if (avatarStarted || !mount || !desktop.matches || reducedMotion.matches || document.hidden || !avatarInView) return;
     avatarStarted = true;
+    const epoch = ++avatarEpoch;
+    let instance;
     try {
       const { createHeroAvatar } = await import('./3d/hero-avatar.js');
-      window.hero = createHeroAvatar(mount, { modelUrl: './3d/avatar_web.glb' });
+      if (epoch !== avatarEpoch) return;
+      if (!desktop.matches || reducedMotion.matches || document.hidden || !avatarInView) {
+        avatarStarted = false;
+        return;
+      }
+      instance = createHeroAvatar(mount, {
+        modelUrl: './3d/Sofia-comic-semirealista.glb',
+        motionUrl: './3d/Sofia-portfolio-motion.glb',
+      });
+      window.hero = instance;
+      await instance.ready;
     } catch (error) {
+      instance?.dispose();
+      if (epoch !== avatarEpoch) return;
+      window.hero = null;
       avatarStarted = false;
       console.warn('3D hero could not be loaded.', error);
     }
@@ -404,8 +421,22 @@
     else setTimeout(startAvatar, 500);
   };
 
-  queueAvatar();
+  if (mount) {
+    new IntersectionObserver(entries => {
+      avatarInView = entries[0].isIntersecting;
+      if (avatarInView) queueAvatar();
+    }).observe(mount);
+  }
   desktop.addEventListener('change', queueAvatar);
+  document.addEventListener('visibilitychange', queueAvatar);
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) {
+      avatarEpoch++;
+      window.hero?.dispose();
+      window.hero = null;
+      avatarStarted = false;
+    } else queueAvatar();
+  });
 </script>
 </body>
 </html>

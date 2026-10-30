@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-14",
+  "timezone": "America/Caracas",
+  "status": "corrections_saved_in_canva",
+  "preview_revision": {
+    "date": "2026-10-15",
+    "status": "saved_in_canva",
+    "scope": "Post 01 cover: complete clipped cyan orbit and yellow halo; grade right background into slide 2 #05070F. Keep continuous panoramic light unchanged.",
+    "canva": "Approved refinement saved in existing carousel 01 with four native texts, separate background/halo, orbit, avatar, underline, edge gradient and panoramic light. Post 02 inspected and unchanged because latest approved preview only changed cover 01.",
+    "approval": "User: perfect put those updates into the canva designs",
+    "transactions_committed": ["2217416009152792859", "917001614042710248"],
+    "editable_source_design_id": "DAHYHO6EQlI",
+    "editable_source_url": "https://www.canva.com/d/tOJqCg29EJgWb3M",
+    "editable_source_folder": "FAHYBdiWUPY",
+    "assets": {"background_with_yellow_halo": "MAHYHOkTnLY", "cyan_orbit": "MAHYHGyYOKU", "avatar": "MAHYHDonVF4", "underline": "MAHYHF9RU8Q", "edge_grade": "MAHYHPYhm_E", "panorama": "MAHYB0KFgX4"},
+    "verification": "Saved-state readback confirmed four native cover texts, 30 total native texts, five pages and corrected media assets. Interior text/media identical to prior saved design. Both commits confirmed, including separate 12px gradient below 18% panorama. Full editor visual inspection remains unavailable.",
+    "filing_note": "Editable source design successfully filed in existing UI kit folder. Direct filing of extracted assets was rejected by Canva folder access checks; no retry or workaround attempted. Assets remain usable in saved design.",
+    "original_cover": "../../grid-polished/carousel-1080x1350/cover-01.png",
+    "revised_cover": "cover-01-soft-edge.png"
+  },
+  "correction": {
+    "cause": "Decorative-element screenshot captured underlying form and text, contaminating halo.png on all eight interior pages.",
+    "superseded_isolated_halo_asset_id": "MAHYB_hxBTc",
+    "panorama_sources": ["../lights/panorama-cyan-01.svg", "../lights/panorama-cyan-02.svg"],
+    "panorama_dimensions": { "width": 5400, "height": 1350, "slices": 5 },
+    "panorama_assets_by_slide": {
+      "post_1": ["MAHYB0KFgX4", "MAHYB7uckE0", "MAHYB_iVKZw", "MAHYB4YB8Os", "MAHYBz3xdcI"],
+      "post_2": ["MAHYB1wEshE", "MAHYB6dHtbw", "MAHYB5CyOuA", "MAHYB38SipE", "MAHYB1kZiF4"]
+    },
+    "halo_position": { "left": 0, "top": 0, "width": 1080, "height": 1350 },
+    "halo_opacity": 0.18,
+    "continuity_verification": {
+      "source": "one panoramic SVG per carousel, five consecutive 1080px crops",
+      "seams_checked": 8,
+      "max_final_8bit_rgb_difference": 1,
+      "composite_background": "#05070F",
+      "canva_full_editor_visual_review": "not performed; browser access remains denied"
+    },
+    "post_1_transaction_id": "4057136367286743801",
+    "post_2_transaction_id": "1419152884904938861",
+    "approval": "Sofía: bello, aprobado. Approval includes saving both drafts and ordering post 02 from 01 to 05.",
+    "transaction_status": "both committed",
+    "saved_changes": "Eight interior halo fills replaced with consecutive panoramic slices; separate 18% light overlay on each cover; post 01 slide 4 descriptions at y=563,751,939. All ten light slices saved.",
+    "post_2_current_order": [1, 2, 3, 4, 5],
+    "post_2_required_order": [1, 2, 3, 4, 5],
+    "applied_page_operations": [
+      { "type": "move_pages", "from_page_numbers": [5], "to_after_page_number": 1 },
+      { "type": "move_pages", "from_page_numbers": [5], "to_after_page_number": 2 },
+      { "type": "move_pages", "from_page_numbers": [5], "to_after_page_number": 3 }
+    ],
+    "page_operation_note": "Three approved moves applied sequentially. Read-back confirmed five pages, counters 02/03/04/05 and matching panoramic slice on each page in both designs. Inspection-only transactions closed without changes."
+  },
+  "posts": [
+    {
+      "number": 1,
+      "design_id": "DAHYBmkm3ds",
+      "edit_url": "https://www.canva.com/d/mz8PxzWPo-KtK1C",
+      "pages": 5,
+      "width": 1080,
+      "height": 1350,
+      "editable_texts": 30,
+      "cover_texts": 4,
+      "cover_images": 6
+    },
+    {
+      "number": 2,
+      "design_id": "DAHYBo5sd1E",
+      "edit_url": "https://www.canva.com/d/Z4gQV1Kla6Jw3BZ",
+      "pages": 5,
+      "width": 1080,
+      "height": 1350,
+      "editable_texts": 30,
+      "cover_texts": 5,
+      "cover_images": 7
+    }
+  ],
+  "brandbook": {
+    "design_id": "DAHYBnXlShQ",
+    "edit_url": "https://www.canva.com/d/sv4YgbmMyWZ5OyZ",
+    "pages": 14,
+    "edition": 4
+  },
+  "ui_folder": {
+    "id": "FAHYBdiWUPY",
+    "url": "https://www.canva.com/folder/FAHYBdiWUPY"
+  },
+  "assets": [
+    {
+      "name": "buttons",
+      "asset_id": "MAHYBsDWDeI"
+    },
+    {
+      "name": "profile",
+      "asset_id": "MAHYBri_h2k"
+    },
+    {
+      "name": "form-default",
+      "asset_id": "MAHYBo5RY7w"
+    },
+    {
+      "name": "form-invalid",
+      "asset_id": "MAHYBiPddic"
+    },
+    {
+      "name": "form-retry",
+      "asset_id": "MAHYBo9tYmo"
+    },
+    {
+      "name": "compare",
+      "asset_id": "MAHYBqZf5Qs"
+    },
+    {
+      "name": "cover-error",
+      "asset_id": "MAHYBm7Xv4g"
+    },
+    {
+      "name": "conversation",
+      "asset_id": "MAHYBkM97Jk"
+    }
+  ],
+  "aliases": {
+    "form-summary": "form-retry"
+  },
+  "verification": {
+    "html_approved": true,
+    "canva_save_confirmed": true,
+    "structure_checked": true,
+    "semantic_page_order_checked": true,
+    "all_ten_panorama_assets_checked": true,
+    "full_editor_visual_review": "blocked by browser permission denial",
+    "social_published": false
+  }
+}

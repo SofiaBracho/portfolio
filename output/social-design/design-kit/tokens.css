@@ -1,0 +1,27 @@
+/* Pixel to Cloud · social layout tokens. Source colors/type: GUIA-MAESTRA-MARCA-Y-SISTEMA.md */
+:root {
+  --social-bg: #05070F;
+  --social-bg-alt: #0A0E1A;
+  --social-panel: #0E1422;
+  --social-panel-raised: #121A2C;
+  --social-text: #EAF6FF;
+  --social-muted: #8AA0C8;
+  --social-cyan: #22D3EE;
+  --social-yellow: #FFCE1F;
+  --social-error: #FF6B6B;
+  --social-line: rgba(120, 180, 255, .15);
+  --social-heading: "Chakra Petch", system-ui, sans-serif;
+  --social-body: "Space Grotesk", system-ui, sans-serif;
+  --social-label: "Space Mono", monospace;
+  --social-canvas-w: 1080px;
+  --social-canvas-h: 1350px;
+  --social-safe-x: 96px;
+  --social-safe-y: 96px;
+  --social-space-1: 16px;
+  --social-space-2: 24px;
+  --social-space-3: 32px;
+  --social-space-4: 48px;
+  --social-space-5: 64px;
+  --social-space-6: 80px;
+  --social-space-7: 96px;
+}

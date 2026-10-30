@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>Diseño de interfaz</title>
+  <rect x="12" y="17" width="72" height="62" rx="8" stroke="#22D3EE" stroke-width="4"/>
+  <path d="M12 33h72M25 47h29M25 58h42" stroke="#EAF6FF" stroke-width="4"/>
+  <path d="M62 47h9v8h-9" stroke="#FFCE1F" stroke-width="4"/>
+  <circle cx="24" cy="25" r="2" fill="#22D3EE" stroke="none"/><circle cx="34" cy="25" r="2" fill="#22D3EE" stroke="none"/>
+</svg>

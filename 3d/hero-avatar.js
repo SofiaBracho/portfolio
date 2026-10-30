@@ -1,22 +1,22 @@
 // hero-avatar.js — vanilla three.js portfolio hero
-// Sequence: walk in from left -> wave hello -> idle loop (+ head tracks pointer),
-// with occasional idle-breakers (thinking / texting).
+// Sequence: walk in from right -> wave hello -> idle loop (+ head tracks pointer),
+// Contact gestures stay in the local review bake until hand contact is validated.
 //
 // Usage:
 //   import { createHeroAvatar } from './hero-avatar.js';
 //   const hero = createHeroAvatar(document.getElementById('hero'), {
-//     modelUrl: './avatar_web.glb',
+//     modelUrl: './3d/Sofia-comic-semirealista.glb',
 //   });
 //   // hero.dispose() to tear down.
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const CFG = {
   // camera
   cameraFov: 32,
+  minCameraAspect: 1.35, // Keep the face inside tall desktop viewports.
   cameraPos: [0, 1.12, 2.6], // x,y,z (metres). Avatar ~1.7m, feet at y=0.
   lookAt: [0, 1.12, 0], // raised so the head is not cropped
 
@@ -32,36 +32,57 @@ const CFG = {
   // NB: three.js strips the ':' from glTF bone names -> 'mixamorigHead'
   headBone: 'mixamorigHead',
   neckBone: 'mixamorigNeck',
-  maxYaw: THREE.MathUtils.degToRad(38), // left/right
-  maxPitch: THREE.MathUtils.degToRad(24), // up/down
+  maxYaw: THREE.MathUtils.degToRad(20), // keep curls clear of shoulders
+  maxPitch: THREE.MathUtils.degToRad(12),
   yawSign: 1,
   pitchSign: 1,
   headFollow: 0.12, // smoothing (0..1 per frame)
-  neckShare: 0.45, // fraction of look distributed to neck
 
   // phone prop (shown only during the texting clip), locked to a hand bone
   phoneHandBone: 'mixamorigRightHand',
   phoneClip: 'texting',
   // phone is parented to the hand bone, so these are LOCAL to that hand.
   // tune if it sits off: pos in metres [x,y,z], rot in radians [x,y,z].
-  phoneLocalPos: [0.030, 0.116, 0.068], // tuned in-hand (metric)
-  phoneLocalEuler: [0.848, 0.318, -1.572], // tuned in-hand
+  phoneLocalPos: [0.056083, 0.116355, -0.047918], // Sofia's corrected palm basis, metres
+  phoneLocalEuler: [2.042405, 0.657608, 2.664219],
 
   // idle-breakers
-  breakers: ['thinking', 'texting'],
+  breakers: [], // Contact gestures remain in the separate review bake until hand contact passes.
   breakerEveryMin: 9, // seconds
   breakerEveryMax: 16,
 
   crossfade: 0.35,
+  modelHeight: 1.7,
+  modelYaw: -Math.PI / 2, // Sofia's authored front is +X, glTF is Y-up.
+  maxFps: 30,
+  minWidth: 881,
 };
+
+// These rigid accessories were auto-weighted partly to shoulders/arms. Keep their
+// authored shape in motion, including matching hulls, without changing the source GLB.
+export function prepareSofiaRig(asset) {
+  const rigid = new Set(['hair', 'glasses', 'ComicOutline_hair', 'ComicOutline_glasses']);
+  asset.traverse(o => {
+    if (!o.isSkinnedMesh || !rigid.has(o.name)) return;
+    const head = o.skeleton.bones.findIndex(b => b.name.replace(/[^a-z0-9]/gi, '').toLowerCase() === 'mixamorighead');
+    if (head < 0) throw new Error('Sofia accessory has no head bone');
+    const { skinIndex, skinWeight } = o.geometry.attributes;
+    for (let i = 0; i < skinIndex.count; i++) {
+      skinIndex.setXYZW(i, head, 0, 0, 0);
+      skinWeight.setXYZW(i, 1, 0, 0, 0);
+    }
+    skinIndex.needsUpdate = skinWeight.needsUpdate = true;
+  });
+}
 
 export function createHeroAvatar(container, opts = {}) {
   const cfg = { ...CFG, ...opts };
-  const modelUrl = opts.modelUrl || './avatar_web.glb';
+  const modelUrl = opts.modelUrl || './3d/Sofia-comic-semirealista.glb';
+  const motionUrl = opts.motionUrl || './3d/Sofia-portfolio-motion.glb';
 
   // ---- renderer ----
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.0;
@@ -76,21 +97,21 @@ export function createHeroAvatar(container, opts = {}) {
   camera.position.set(...cfg.cameraPos);
   camera.lookAt(...cfg.lookAt);
 
-  // ---- lights (themed: warm yellow key, cyan rim, to match the site palette) ----
-  const hemi = new THREE.HemisphereLight(0x9fd2ff, 0x2a2410, 0.9); // cyan sky, warm ground
+  // Neutral face light preserves skin/iris color; cyan stays on the silhouette.
+  const hemi = new THREE.HemisphereLight(0xf0f4ff, 0x615450, 1.1);
   scene.add(hemi);
-  const key = new THREE.DirectionalLight(0xffd24a, 2.2); // electric-yellow key (front-right)
+  const key = new THREE.DirectionalLight(0xfff0e2, 2.4);
   key.position.set(2.5, 3, 3);
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0x22d3ee, 1.6); // cyan rim (back-left)
+  const rim = new THREE.DirectionalLight(0x22d3ee, 0.55);
   rim.position.set(-3, 2, -2.5);
   scene.add(rim);
-  const fill = new THREE.DirectionalLight(0x6fa8ff, 0.5); // soft blue fill (front-left)
+  const fill = new THREE.DirectionalLight(0xe0eaff, 0.9);
   fill.position.set(-2, 1, 3);
   scene.add(fill);
 
   // ---- state ----
-  const clock = new THREE.Clock();
+  const clock = new THREE.Clock(false);
   let mixer = null;
   let actions = {};
   let current = null; // current AnimationAction
@@ -109,6 +130,15 @@ export function createHeroAvatar(container, opts = {}) {
   let disposed = false;
   let phoneTuning = false;
   let controls = null;
+  let tunerPanel = null;
+  let raf = 0;
+  let lastFrame = 0;
+  let renderedFrames = 0;
+  let inView = false;
+  let contextLost = false;
+  const desktop = matchMedia(`(min-width: ${cfg.minWidth}px)`);
+  const baseHead = new THREE.Quaternion();
+  const baseNeck = new THREE.Quaternion();
   const handScale = new THREE.Vector3(1, 1, 1);
 
   // metric pos -> local bone units (divide out the bone's tiny world scale)
@@ -119,49 +149,60 @@ export function createHeroAvatar(container, opts = {}) {
   }
 
   // ---- load ----
-  const draco = new DRACOLoader();
-  draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
   const loader = new GLTFLoader();
-  loader.setDRACOLoader(draco);
-
-  loader.load(
-    modelUrl,
-    (gltf) => {
-      if (disposed) return;
-      model = gltf.scene;
+  const ready = Promise.allSettled([loader.loadAsync(modelUrl), loader.loadAsync(motionUrl)]).then((results) => {
+      if (disposed || results.some(r => r.status === 'rejected')) {
+        results.forEach(r => { if (r.status === 'fulfilled') release(r.value.scene); });
+        if (!disposed) throw results.find(r => r.status === 'rejected').reason;
+        return;
+      }
+      const [gltf, motion] = results.map(r => r.value);
+      const asset = gltf.scene;
+      model = asset; // Release the asset even if setup fails before creating its group.
+      prepareSofiaRig(asset);
+      asset.rotation.y = cfg.modelYaw;
+      asset.updateMatrixWorld(true);
+      const bounds = new THREE.Box3().setFromObject(asset);
+      const height = bounds.max.y - bounds.min.y;
+      if (!Number.isFinite(height) || height <= 0) throw new Error('Invalid Sofia bounds');
+      asset.scale.setScalar(cfg.modelHeight / height);
+      asset.position.y = -bounds.min.y * asset.scale.y;
+      model = new THREE.Group();
+      model.add(asset);
       const clean = (s) => s.replace(/[^a-z0-9]/gi, '').toLowerCase();
       const headKey = clean(cfg.headBone);
       const neckKey = clean(cfg.neckBone);
       const handKey = clean(cfg.phoneHandBone);
-      const bones = {}; // cleaned-name -> bone, for robust fallback resolution
       model.traverse((o) => {
         if (o.isMesh) {
           o.frustumCulled = false;
           o.castShadow = false;
+          const materials = Array.isArray(o.material) ? o.material : [o.material];
+          materials.forEach(material => {
+            if (material.name === 'Sofia_Comic_Outline') {
+              material.side = THREE.FrontSide;
+              material.toneMapped = false;
+            }
+          });
         }
         if (o.isBone) {
-          bones[clean(o.name)] = o;
           if (clean(o.name) === headKey) headBone = o;
           if (clean(o.name) === neckKey) neckBone = o;
           if (clean(o.name) === handKey) handBone = o;
         }
       });
-      // hand bone fallback chain so the phone always rides a real hand bone
-      // (configured right hand -> left hand -> any bone whose name contains "hand").
-      if (!handBone) {
-        handBone = bones[clean('mixamorigLeftHand')] ||
-          Object.keys(bones).find((k) => /hand/.test(k)) && bones[Object.keys(bones).find((k) => /hand/.test(k))] ||
-          null;
-        if (handBone) console.warn('[hero-avatar] right-hand bone missing — using fallback hand bone for phone');
-      }
       if (!headBone) console.warn('[hero-avatar] head bone not found — head tracking off');
+      if (headBone) baseHead.copy(headBone.quaternion);
+      if (neckBone) baseNeck.copy(neckBone.quaternion);
       model.position.set(cfg.walkFromX, 0, 0);
       model.rotation.y = cfg.walkFaceYaw;
       scene.add(model);
 
-      phone = makePhone();
-      phone.visible = false;
-      if (handBone) {
+      if (motion.animations.some(clip => clip.name === cfg.phoneClip)) {
+        phone = makePhone();
+        phone.visible = false;
+      }
+      if (phone && handBone) {
         // parent to the hand so the phone is truly held and rides every hand
         // transform of the clip; compensate the bone's world scale so the phone
         // keeps its real-world (metric) size AND so the local offset behaves in
@@ -178,17 +219,16 @@ export function createHeroAvatar(container, opts = {}) {
       setupPhoneTuner();
 
       mixer = new THREE.AnimationMixer(model);
-      for (const clip of gltf.animations) {
-        // strip baked root motion (hips/root position) so the clip plays in place;
-        // world translation is driven by code. Prevents drift + loop "teleport".
-        clip.tracks = clip.tracks.filter((t) => !/(hips|root|armature)\.position$/i.test(t.name));
+      for (const clip of motion.animations) {
+        // Already baked in Sofia's rest space, with only vertical pelvis motion.
         actions[clip.name] = mixer.clipAction(clip);
       }
       startSequence();
-    },
-    undefined,
-    (err) => console.error('[hero-avatar] load failed:', err)
-  );
+      updateActivity();
+  }).catch(error => {
+    phase = 'error';
+    throw error;
+  });
 
   function makePhone() {
     const g = new THREE.Group();
@@ -216,7 +256,7 @@ export function createHeroAvatar(container, opts = {}) {
     if (!phone || !/[?&]phonetune\b/.test(location.search)) return;
     phoneTuning = true;
     phone.visible = true;
-    const panel = document.createElement('div');
+    const panel = tunerPanel = document.createElement('div');
     panel.style.cssText =
       'position:fixed;top:12px;left:12px;z-index:99999;background:#0b0e16ee;color:#cfe;' +
       'font:12px/1.5 monospace;padding:12px 14px;border:1px solid #22d3ee;border-radius:8px;width:230px';
@@ -296,6 +336,12 @@ export function createHeroAvatar(container, opts = {}) {
       return;
     }
     // 1) walk in
+    if (!actions.walk || !actions.wave) {
+      model.position.x = cfg.walkToX;
+      model.rotation.y = cfg.faceYaw;
+      gotoIdle();
+      return;
+    }
     phase = 'walking';
     walkT = 0;
     current = play('walk', { loop: true, fade: 0 });
@@ -307,7 +353,7 @@ export function createHeroAvatar(container, opts = {}) {
     const next = actions[name];
     if (!next) {
       console.warn('[hero-avatar] missing clip', name);
-      return current;
+      return null;
     }
     next.reset();
     next.enabled = true;
@@ -328,6 +374,7 @@ export function createHeroAvatar(container, opts = {}) {
   }
 
   function gotoWave() {
+    if (!actions.wave) return gotoIdle();
     phase = 'waving';
     const wave = play('wave', { loop: false });
     const onFinished = (e) => {
@@ -361,8 +408,9 @@ export function createHeroAvatar(container, opts = {}) {
   // ---- pointer ----
   function onPointerMove(e) {
     const r = container.getBoundingClientRect();
-    pointer.x = ((e.clientX - r.left) / r.width) * 2 - 1;
-    pointer.y = ((e.clientY - r.top) / r.height) * 2 - 1;
+    if (!r.width || !r.height) return;
+    pointer.x = THREE.MathUtils.clamp(((e.clientX - r.left) / r.width) * 2 - 1, -1, 1);
+    pointer.y = THREE.MathUtils.clamp(((e.clientY - r.top) / r.height) * 2 - 1, -1, 1);
   }
   function onPointerLeave() {
     pointer.set(0, 0);
@@ -372,8 +420,19 @@ export function createHeroAvatar(container, opts = {}) {
 
   // ---- head tracking (applied AFTER mixer.update so it overlays the clip) ----
   const _q = new THREE.Quaternion();
-  const _e = new THREE.Euler();
+  const _world = new THREE.Quaternion();
+  const _axis = new THREE.Vector3();
   const headCur = { yaw: 0, pitch: 0 };
+  function lookOffset(bone, share) {
+    bone.updateWorldMatrix(true, false);
+    bone.getWorldQuaternion(_world).invert();
+    _axis.set(0, 1, 0).applyQuaternion(_world);
+    _q.setFromAxisAngle(_axis, headCur.yaw * share);
+    bone.quaternion.multiply(_q);
+    _axis.set(1, 0, 0).applyQuaternion(_world);
+    _q.setFromAxisAngle(_axis, headCur.pitch * share);
+    bone.quaternion.multiply(_q);
+  }
   function applyHeadTracking() {
     if (!headBone) return;
     const tgtYaw = cfg.yawSign * pointer.x * cfg.maxYaw;
@@ -381,30 +440,29 @@ export function createHeroAvatar(container, opts = {}) {
     headCur.yaw += (tgtYaw - headCur.yaw) * cfg.headFollow;
     headCur.pitch += (tgtPitch - headCur.pitch) * cfg.headFollow;
 
-    const neckShare = neckBone ? cfg.neckShare : 0;
-    if (neckBone) {
-      _e.set(headCur.pitch * neckShare, headCur.yaw * neckShare, 0, 'XYZ');
-      _q.setFromEuler(_e);
-      neckBone.quaternion.multiply(_q);
-    }
-    _e.set(headCur.pitch * (1 - neckShare), headCur.yaw * (1 - neckShare), 0, 'XYZ');
-    _q.setFromEuler(_e);
-    headBone.quaternion.multiply(_q);
+    // Move the head chain together; splitting neck/head shears Sofia's facial weights.
+    lookOffset(neckBone || headBone, 1);
   }
 
   // ---- loop ----
-  function animate() {
-    if (disposed) return;
-    requestAnimationFrame(animate);
-    const dt = clock.getDelta();
+  function animate(now) {
+    raf = 0;
+    if (!isActive()) return;
+    raf = requestAnimationFrame(animate);
+    if (now - lastFrame < 1000 / cfg.maxFps - 0.5) return;
+    lastFrame = now;
+    const dt = Math.min(clock.getDelta(), 0.1);
+    if (headBone) headBone.quaternion.copy(baseHead);
+    if (neckBone) neckBone.quaternion.copy(baseNeck);
     if (mixer) mixer.update(dt);
+    if (headBone) baseHead.copy(headBone.quaternion);
+    if (neckBone) baseNeck.copy(neckBone.quaternion);
 
     // entrance translation (walk right -> left)
     if (phase === 'walking' && model) {
       walkT += dt;
       const t = Math.min(walkT / cfg.walkSeconds, 1);
-      const e = t * t * (3 - 2 * t); // smoothstep
-      model.position.x = THREE.MathUtils.lerp(cfg.walkFromX, cfg.walkToX, e);
+      model.position.x = THREE.MathUtils.lerp(cfg.walkFromX, cfg.walkToX, t);
       if (t >= 1) startTurning();
     }
 
@@ -421,7 +479,7 @@ export function createHeroAvatar(container, opts = {}) {
     }
 
     // idle-breakers
-    if (phase === 'idle') {
+    if (phase === 'idle' && cfg.breakers.length) {
       breakerTimer += dt;
       if (breakerTimer >= nextBreakerAt) playBreaker();
     }
@@ -433,8 +491,43 @@ export function createHeroAvatar(container, opts = {}) {
     if (controls) controls.update();
 
     renderer.render(scene, camera);
+    renderedFrames++;
   }
-  animate();
+
+  function isActive() {
+    return !disposed && !!model && !document.hidden && inView && desktop.matches && !contextLost;
+  }
+  function updateActivity() {
+    if (isActive()) {
+      if (!raf) {
+        clock.start();
+        lastFrame = 0;
+        raf = requestAnimationFrame(animate);
+      }
+    } else {
+      cancelAnimationFrame(raf);
+      raf = 0;
+      clock.stop();
+    }
+  }
+  const io = new IntersectionObserver(entries => {
+    inView = entries[0].isIntersecting;
+    updateActivity();
+  });
+  io.observe(container);
+  document.addEventListener('visibilitychange', updateActivity);
+  desktop.addEventListener('change', updateActivity);
+  function onContextLost(event) {
+    event.preventDefault();
+    contextLost = true;
+    updateActivity();
+  }
+  function onContextRestored() {
+    contextLost = false;
+    updateActivity();
+  }
+  renderer.domElement.addEventListener('webglcontextlost', onContextLost);
+  renderer.domElement.addEventListener('webglcontextrestored', onContextRestored);
 
   // ---- resize ----
   function resize() {
@@ -442,6 +535,8 @@ export function createHeroAvatar(container, opts = {}) {
     const h = container.clientHeight || 1;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
+    camera.position.z = cfg.cameraPos[2] * Math.max(1, cfg.minCameraAspect / camera.aspect);
+    camera.lookAt(...cfg.lookAt);
     camera.updateProjectionMatrix();
   }
   const ro = new ResizeObserver(resize);
@@ -452,20 +547,61 @@ export function createHeroAvatar(container, opts = {}) {
     return a + Math.random() * (b - a);
   }
 
+  function release(root) {
+    const geometries = new Set(), materials = new Set(), textures = new Set();
+    root.traverse(o => {
+      if (o.geometry) geometries.add(o.geometry);
+      if (o.material) (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => materials.add(m));
+      if (o.skeleton) o.skeleton.dispose();
+    });
+    materials.forEach(m => {
+      Object.values(m).forEach(v => { if (v?.isTexture) textures.add(v); });
+      m.dispose();
+    });
+    textures.forEach(t => { t.dispose(); t.source?.data?.close?.(); });
+    geometries.forEach(g => g.dispose());
+  }
+
   // ---- public ----
   return {
-    play: (name, loop = true) => play(name, { loop }),
+    ready,
+    play: (name, loop = true) => {
+      if (!model || !actions[name]) return null;
+      model.position.x = cfg.walkToX;
+      model.rotation.y = cfg.faceYaw;
+      phase = 'preview';
+      return play(name, { loop, fade: 0 });
+    },
+    get diagnostics() {
+      return { phase, currentName, paused: !isActive(), renderedFrames,
+        clips: Object.keys(actions), calls: renderer.info.render.calls,
+        triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries,
+        textures: renderer.info.memory.textures, pixelRatio: renderer.getPixelRatio(),
+        outline: model?.getObjectByProperty('isMesh', true) ? (() => {
+          let material;
+          model.traverse(o => { if (o.material?.name === 'Sofia_Comic_Outline') material = o.material; });
+          return material && { unlit: material.isMeshBasicMaterial, side: material.side, toneMapped: material.toneMapped };
+        })() : null };
+    },
     get phase() {
       return phase;
     },
     dispose() {
       disposed = true;
+      updateActivity();
       if (controls) controls.dispose();
+      tunerPanel?.remove();
       ro.disconnect();
+      io.disconnect();
+      document.removeEventListener('visibilitychange', updateActivity);
+      desktop.removeEventListener('change', updateActivity);
       window.removeEventListener('pointermove', onPointerMove);
       container.removeEventListener('pointerleave', onPointerLeave);
+      renderer.domElement.removeEventListener('webglcontextlost', onContextLost);
+      renderer.domElement.removeEventListener('webglcontextrestored', onContextRestored);
+      if (mixer) { mixer.stopAllAction(); mixer.uncacheRoot(model); }
+      if (model) release(model);
       renderer.dispose();
-      draco.dispose();
       if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
     },
   };

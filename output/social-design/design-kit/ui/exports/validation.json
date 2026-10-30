@@ -1,0 +1,532 @@
+{
+  "assets": [
+    {
+      "name": "buttons",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 144
+    },
+    {
+      "name": "profile",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 266.390625
+    },
+    {
+      "name": "form-default",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 322.5
+    },
+    {
+      "name": "form-invalid",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 355.6875
+    },
+    {
+      "name": "form-retry",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 333.484375
+    },
+    {
+      "name": "form-summary",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 333.484375
+    },
+    {
+      "name": "conversation",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 584
+    },
+    {
+      "name": "compare",
+      "x": 32,
+      "y": 32,
+      "width": 520,
+      "height": 192.203125
+    },
+    {
+      "name": "cover-error",
+      "x": 32,
+      "y": 32,
+      "width": 440,
+      "height": 291.703125
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-1-1",
+      "bounds": [],
+      "approvedCover": true
+    },
+    {
+      "id": "post-1-2",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "02 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Soy Sofía Bracho.",
+          "x": 96,
+          "y": 190,
+          "right": 984,
+          "bottom": 282.390625
+        },
+        {
+          "text": "Product engineer y\ndesarrolladora full stack.",
+          "x": 96,
+          "y": 335,
+          "right": 984,
+          "bottom": 455
+        },
+        {
+          "text": "Mi base está en el diseño gráfico.",
+          "x": 96,
+          "y": 492,
+          "right": 984,
+          "bottom": 539.5
+        },
+        {
+          "text": "",
+          "x": 96,
+          "y": 768,
+          "right": 984,
+          "bottom": 1097.578125
+        },
+        {
+          "text": "DISEÑO + CÓDIGO",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-1-3",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "03 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Diseño lo que ves.\nDesarrollo lo que pasa.",
+          "x": 96,
+          "y": 190,
+          "right": 984,
+          "bottom": 358
+        },
+        {
+          "text": "Una interfaz también es lo que ocurre\ncuando alguien la usa.",
+          "x": 96,
+          "y": 410,
+          "right": 984,
+          "bottom": 505
+        },
+        {
+          "text": "",
+          "x": 150,
+          "y": 616,
+          "right": 930,
+          "bottom": 1089.3125
+        },
+        {
+          "text": "Al guardar: validar, guardar y confirmar.",
+          "x": 96,
+          "y": 1140,
+          "right": 984,
+          "bottom": 1182.5
+        },
+        {
+          "text": "DISEÑO + CÓDIGO",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-1-4",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "04 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Aquí compartiré\nlo que voy aprendiendo.",
+          "x": 96,
+          "y": 205,
+          "right": 984,
+          "bottom": 349.875
+        },
+        {
+          "text": "Decisiones de interfaz",
+          "x": 211,
+          "y": 491,
+          "right": 984,
+          "bottom": 544.75
+        },
+        {
+          "text": "Estados, mensajes y detalles de uso.",
+          "x": 211,
+          "y": 563,
+          "right": 984,
+          "bottom": 603
+        },
+        {
+          "text": "Código y proceso",
+          "x": 211,
+          "y": 679,
+          "right": 984,
+          "bottom": 732.75
+        },
+        {
+          "text": "Qué construí, qué falló y qué cambié.",
+          "x": 211,
+          "y": 751,
+          "right": 984,
+          "bottom": 791
+        },
+        {
+          "text": "IA aplicada con criterio",
+          "x": 211,
+          "y": 867,
+          "right": 984,
+          "bottom": 920.75
+        },
+        {
+          "text": "Qué propuso y qué tuve que revisar.",
+          "x": 211,
+          "y": 939,
+          "right": 984,
+          "bottom": 979
+        },
+        {
+          "text": "DISEÑO + CÓDIGO",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-1-5",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "05 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "",
+          "x": 96,
+          "y": 164,
+          "right": 846,
+          "bottom": 1159.453125
+        },
+        {
+          "text": "Encuesta visual · Te leo en comentarios.",
+          "x": 96,
+          "y": 1170,
+          "right": 984,
+          "bottom": 1205
+        },
+        {
+          "text": "DISEÑO + CÓDIGO",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-2-1",
+      "bounds": [],
+      "approvedCover": true
+    },
+    {
+      "id": "post-2-2",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "02 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Alguien ya escribió\ntodo esto.",
+          "x": 96,
+          "y": 190,
+          "right": 984,
+          "bottom": 374.78125
+        },
+        {
+          "text": "Si algo falla, no debería empezar de cero.",
+          "x": 96,
+          "y": 398,
+          "right": 984,
+          "bottom": 443
+        },
+        {
+          "text": "",
+          "x": 150,
+          "y": 500,
+          "right": 930,
+          "bottom": 1072.578125
+        },
+        {
+          "text": "Lo escrito ya costó tiempo.",
+          "x": 96,
+          "y": 1136,
+          "right": 984,
+          "bottom": 1183.5
+        },
+        {
+          "text": "EJEMPLO CONCEPTUAL",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-2-3",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "03 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Explica qué\nhay que corregir.",
+          "x": 96,
+          "y": 190,
+          "right": 984,
+          "bottom": 366.375
+        },
+        {
+          "text": "El error va junto al campo.",
+          "x": 96,
+          "y": 398,
+          "right": 984,
+          "bottom": 443
+        },
+        {
+          "text": "",
+          "x": 150,
+          "y": 480,
+          "right": 930,
+          "bottom": 1111.078125
+        },
+        {
+          "text": "El mensaje sigue ahí.",
+          "x": 96,
+          "y": 1154,
+          "right": 984,
+          "bottom": 1199
+        },
+        {
+          "text": "EJEMPLO CONCEPTUAL",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-2-4",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "04 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Conserva lo escrito.\nPermite reintentar.",
+          "x": 96,
+          "y": 190,
+          "right": 984,
+          "bottom": 358
+        },
+        {
+          "text": "Correo corregido. Esta vez falla el envío.",
+          "x": 96,
+          "y": 398,
+          "right": 984,
+          "bottom": 440.5
+        },
+        {
+          "text": "",
+          "x": 150,
+          "y": 500,
+          "right": 930,
+          "bottom": 1092.078125
+        },
+        {
+          "text": "Una salida, sin empezar de nuevo.",
+          "x": 96,
+          "y": 1140,
+          "right": 984,
+          "bottom": 1185
+        },
+        {
+          "text": "EJEMPLO CONCEPTUAL",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    },
+    {
+      "id": "post-2-5",
+      "bounds": [
+        {
+          "text": "SOFÍA BRACHO",
+          "x": 96,
+          "y": 96,
+          "right": 984,
+          "bottom": 126
+        },
+        {
+          "text": "05 / 05",
+          "x": 860,
+          "y": 96,
+          "right": 1000,
+          "bottom": 126
+        },
+        {
+          "text": "Que el error\npermita continuar.",
+          "x": 96,
+          "y": 190,
+          "right": 984,
+          "bottom": 366.375
+        },
+        {
+          "text": "Mensaje y comportamiento van juntos.",
+          "x": 96,
+          "y": 398,
+          "right": 984,
+          "bottom": 443
+        },
+        {
+          "text": "",
+          "x": 170,
+          "y": 480,
+          "right": 910,
+          "bottom": 1041.71875
+        },
+        {
+          "text": "Explica. Conserva. Ofrece una acción.",
+          "x": 96,
+          "y": 1090,
+          "right": 984,
+          "bottom": 1132.5
+        },
+        {
+          "text": "Guárdalo para tu próximo formulario.",
+          "x": 96,
+          "y": 1160,
+          "right": 984,
+          "bottom": 1205
+        },
+        {
+          "text": "EJEMPLO CONCEPTUAL",
+          "x": 96,
+          "y": 1220,
+          "right": 984,
+          "bottom": 1248.75
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Profile saves in client demo and preserves input",
+    "Inline validation, loading disabled, failed submission and retry preserve message",
+    "Questionnaire selects fixed choice and accepts free response",
+    "Catalog no horizontal overflow at 390px",
+    "No browser runtime errors"
+  ]
+}
