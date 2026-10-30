@@ -5,7 +5,7 @@
 // Usage:
 //   import { createHeroAvatar } from './hero-avatar.js';
 //   const hero = createHeroAvatar(document.getElementById('hero'), {
-//     modelUrl: './3d/Sofia-comic-semirealista.glb',
+//     modelUrl: './3d/Sofia-all-motion-review.glb',
 //   });
 //   // hero.dispose() to tear down.
 
@@ -77,7 +77,7 @@ export function prepareSofiaRig(asset) {
 
 export function createHeroAvatar(container, opts = {}) {
   const cfg = { ...CFG, ...opts };
-  const modelUrl = opts.modelUrl || './3d/Sofia-comic-semirealista.glb';
+  const modelUrl = opts.modelUrl || './3d/Sofia-all-motion-review.glb';
   const motionUrl = opts.motionUrl || './3d/Sofia-portfolio-motion.glb';
 
   // ---- renderer ----
