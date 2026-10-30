@@ -1,5 +1,0 @@
-# Archivos descartados y arte fuente local. No incluirlos en Git.
-carousels/01-diseno-codigo-aprendo/slides/*.png
-carousels/02-interfaz-puede-fallar/slides/*.png
-single-images/03-cambio-cinco-minutos/post-03.png
-production/art-local/
