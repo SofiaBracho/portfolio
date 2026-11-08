@@ -1,5 +1,15 @@
 # UI Kit · Pixel to Cloud
 
+## Catálogo de componentes · 8 de noviembre de 2026
+
+Abre `preview.html` y elige **Componentes**. El catálogo reúne 71 muestras interactivas en nueve familias, con búsqueda por nombre. Incluye los 64 componentes instalables de Base Nova, las composiciones Date Picker, Data Table, Form y Typography, y tres componentes propios en **Social**. Continuidad y los dos posts tienen sus propias vistas.
+
+**Social** incluye `ReactionBar` para alternar reacciones, `SocialPoll` para votar y ver resultados, y `CommentThread` para abrir una conversación. Los componentes viven en `src/components/social/` y reciben sus estados por props. Para una escena de video, pasa los datos del fotograma para elegir qué reacción está activa, cuándo aparecen los resultados o qué comentarios se ven. Los ejemplos del catálogo guardan los cambios en memoria mientras están abiertos.
+
+El catálogo funciona desde un archivo local. Para editarlo, ejecuta `npm ci` y `npm run dev`, y abre `/?view=components`. Ejecuta `npm run preview` para actualizar solo el catálogo dentro de `preview.html` y `npm run check:preview` para probarlo con Microsoft Edge. Los ejemplos viven en `src/catalog/` y usan los componentes reutilizables de `src/components/ui/` con los tokens de `src/brand.css`.
+
+Esta ampliación está disponible para revisión local. La entrega histórica de carruseles y recursos se registra en `CANVA-DELIVERY.json`.
+
 Retoque aprobado y guardado en Canva · 15 de octubre de 2026: portada 01 con órbita cian completa y halo amarillo sin corte; fondo derecho degradado a `#05070F`, igual que lámina 2. Original conservado. Variante `cover-01-soft-edge.png` y acabado de borde en `src/brand.css`; el panorama continuo se conserva. En Canva: cuatro textos nativos y seis capas visuales, incluido degradado de 12 px bajo la luz panorámica al 18%. Recurso editable `DAHYHO6EQlI` guardado en carpeta del kit. Post 02 conserva la versión aprobada, sin cambios nuevos.
 
 Aprobado por Sofía y transferido a Canva el 14 de octubre de 2026. Recurso canónico: componentes React en `src/components/ui/`, tema en `src/brand.css` y composiciones en `src/main.tsx`.
@@ -20,7 +30,7 @@ Paleta existente: `#05070F`, `#0A0E1A`, `#0E1422`, `#121A2C`, `#EAF6FF`, `#8AA0C
 
 `npm ci`, `npm run dev` para revisar; `npm run build` y `npm run export` para generar `preview.html`, PNG transparentes de componentes, capturas de carruseles y PPTX con textos editoriales separados de las imágenes de UI. Las exportaciones PNG se pueden cargar como elementos independientes en Canva; el código sigue siendo editable aquí. No confundir PNG con controles nativos editables de Canva.
 
-`preview.html` incluye fuentes e imágenes y tres vistas: kit, post 01 y post 02. Es una vista visual estática; la demostración React local permite probar estados, validación y respuestas. No transmite ni guarda datos en un servidor.
+`preview.html` incluye fuentes e imágenes. Las vistas de carruseles son estáticas. La vista Componentes y la demostración React local permiten probar estados, validación y respuestas en el navegador.
 
 Durante la revisión se incorporaron Message, MessageScroller y Questionnaire por solicitud de Sofía. La preferencia nueva de rojo para errores reemplaza el amarillo en esos estados; el amarillo conserva su función de acción. Las dependencias y sus versiones exactas quedan en `package-lock.json`.
 

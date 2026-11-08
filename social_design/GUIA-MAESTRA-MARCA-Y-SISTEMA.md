@@ -262,6 +262,8 @@ En los carruseles 01 y 02, el glow cian conecta las cinco láminas: diseñar una
 | Ilustraciones y gráficos | Conservar portadas aprobadas y gráficos editoriales existentes. shadcn estandariza los controles, no elimina la ilustración ni los iconos de la marca. |
 | Exportación Canva | PNG transparentes por componente o composición UI, colocados como imágenes independientes. Titulares y texto editorial separados; conservar las portadas con sus capas de Canva. |
 
+**Ampliación del catálogo, 8 de noviembre de 2026.** La pestaña **Componentes** de `design-kit/ui/preview.html` reúne 71 muestras interactivas. La familia **Social** incorpora reacciones, encuesta con resultados e hilo de comentarios. Cada componente recibe el estado por props para reutilizarlo en interfaces, posts y escenas de video.
+
 Las capturas son ejemplos conceptuales. El preview React permite probar estados en el navegador local; no representa un servicio de mensajería ni envíos reales. La encuesta del post es visual: respuestas en comentarios de Instagram. Reducir textos antes de bajar el tamaño de letra.
 
 En diagramas, escribir primero la relación que se quiere explicar. Para un formulario de error, mostrar estados y transición; para una decisión de producto, una bifurcación con criterio; para un proceso de trabajo, actores y entregables; para una comparación, dos condiciones y la diferencia relevante. Usar conectores con dirección clara, nombres concretos, pocas palabras por nodo y una lectura inequívoca a tamaño de móvil. Aplicar los mismos colores, tipografías, márgenes y geometría angular a los diagramas creados en Lucidchart; exportarlos o llevarlos a Canva solo después de revisar legibilidad y editabilidad del resultado.

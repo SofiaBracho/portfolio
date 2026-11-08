@@ -1,0 +1,61 @@
+.sb-social-card {
+  gap: 12px;
+  padding: clamp(14px, 3vw, 22px);
+  border: 1px solid color-mix(in srgb, var(--border) 46%, var(--card));
+  border-radius: var(--radius-xl);
+  background: var(--background);
+}
+
+.sb-social-card h3 { font: 700 22px/1.15 'Chakra Petch', sans-serif; }
+.sb-social-kicker {
+  color: var(--ring);
+  font: 12px/1.5 'Space Mono', monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.sb-social-reaction,
+.sb-social-option,
+.sb-social-publish {
+  min-height: 40px;
+  border-radius: var(--radius-md);
+}
+
+.sb-social-reaction,
+.sb-social-option {
+  border-color: color-mix(in srgb, var(--border) 60%, var(--card));
+  background: var(--secondary);
+}
+
+.sb-social-reaction[aria-pressed=true],
+.sb-social-option[aria-pressed=true] {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.sb-social-option {
+  position: relative;
+  isolation: isolate;
+  justify-content: start;
+  height: auto;
+  overflow: hidden;
+  padding: 8px 12px;
+  white-space: normal;
+  text-align: start;
+}
+
+.sb-social-option > span:first-of-type:not(.sb-social-fill),
+.sb-social-fill + span { overflow-wrap: anywhere; }
+.sb-social-option .sb-social-count { margin-inline-start: auto; }
+.sb-social-fill {
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  inset-inline-start: 0;
+  background: color-mix(in srgb, var(--ring) 14%, transparent);
+}
+.sb-social-option[aria-pressed=true] .sb-social-fill { background: color-mix(in srgb, var(--primary) 14%, transparent); }
+.sb-social-count { color: var(--muted-foreground); font: 12px/1 'Space Mono', monospace; }
+.sb-social-comment { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 8px; }
+.sb-social-comment [data-slot=bubble-content] { overflow-wrap: anywhere; white-space: pre-wrap; }
+.sb-social-publish { justify-self: start; }
