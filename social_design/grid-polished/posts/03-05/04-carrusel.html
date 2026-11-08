@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La IA lo escribió · Carrusel 04</title>
+<style>
+@font-face {font-family: Chakra; src: url(../../../design-kit/ui/src/fonts/ChakraBold.ttf)}
+@font-face {font-family: Space; src: url(../../../design-kit/ui/src/fonts/Grotesk.ttf)}
+@font-face {font-family: Mono; src: url(../../../design-kit/ui/src/fonts/Mono.ttf)}
+:root {color-scheme:dark; --ink:#eaf6ff; --muted:#8aa0c8; --cyan:#22d3ee; --yellow:#ffce1f; --error:#ff6b6b}
+* {box-sizing:border-box}
+body {margin:0; background:#0a0e1a; font-family:Space,sans-serif; color:var(--ink)}
+main {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr)); gap:18px; max-width:1600px; margin:auto; padding:18px}
+.frame {container-type:inline-size; min-width:0}
+.frame img {display:block; width:100%; height:auto}
+.slide {position:relative; display:flex; flex-direction:column; height:125cqw; overflow:hidden; padding:6.8cqw 7.4cqw 6cqw;
+  background-image:linear-gradient(#8aa0c80d 1px,transparent 1px),linear-gradient(90deg,#8aa0c80d 1px,transparent 1px),radial-gradient(ellipse at 92% 58%,#112a39 0%,#05070f 64%);
+  background-size:4.45cqw 4.45cqw,4.45cqw 4.45cqw,auto}
+.slide::after {content:""; pointer-events:none; position:absolute; inset:3cqw; border:1px solid #22d3ee19; clip-path:polygon(0 0,18% 0,18% 2%,98% 2%,98% 0,100% 0,100% 16%,98% 16%,98% 98%,100% 98%,100% 100%,82% 100%,82% 98%,2% 98%,2% 100%,0 100%,0 84%,2% 84%,2% 2%,0 2%)}
+.meta,.foot {display:flex; justify-content:space-between; align-items:center; gap:2cqw; font:2.25cqw Mono,monospace; letter-spacing:.07em; color:var(--muted)}
+.meta b {font-weight:normal; color:var(--cyan)}
+.foot {margin-top:auto; padding-top:3cqw; border-top:1px solid #8aa0c84a}
+.foot span:last-child {color:var(--cyan)}
+.topic {margin:8.8cqw 0 1.4cqw; color:var(--cyan); font:2.45cqw Mono,monospace; letter-spacing:.08em}
+h1 {font:8.25cqw/.99 Chakra,sans-serif; letter-spacing:-.025em; margin:0; max-width:78cqw}
+h1 em {color:var(--yellow); font-style:normal}
+p {font:4.1cqw/1.25 Space,sans-serif; margin:2.7cqw 0 0; max-width:76cqw}
+code {font-family:Mono,monospace; color:var(--cyan)}
+.panel {margin:4.8cqw 0 0; overflow:hidden; border:1px solid #37566c; border-radius:1.2cqw; background:#0e1422}
+.bar {display:flex; align-items:center; gap:1.8cqw; min-height:6cqw; padding:1.2cqw 2.6cqw; border-bottom:1px solid #30445c; background:#121a2c; font:2.3cqw Mono,monospace; color:#b9cce3}
+.bar strong {margin-left:auto; color:var(--cyan); font-weight:normal}
+.dots {display:inline-flex; gap:.65cqw; flex:none}
+.dots i {width:1.06cqw; height:1.06cqw; border-radius:50%; background:#60789c}
+.dots i:first-child {background:var(--error)}
+.dots i:nth-child(2) {background:var(--yellow)}
+.dots i:last-child {background:var(--cyan)}
+.micro {font:2.24cqw/1.2 Mono,monospace; letter-spacing:.045em; color:#b9cce3}
+.hint {font-size:3.3cqw; margin-top:2.25cqw; color:#b9cce3}
+.diff {margin:0; padding:2.4cqw 0; font:3.25cqw/1.57 Mono,monospace}
+.diff span {display:block; padding:0 2.65cqw}
+.diff .command {color:var(--ink)}
+.diff .hunk {color:var(--muted)}
+.diff .minus {color:#ffc0be; background:#42232e}
+.diff .plus {color:#a6f1f8; background:#10353e}
+.matrix {list-style:none; margin:4.8cqw 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:1.5cqw}
+.matrix li {min-width:0; display:grid; gap:.9cqw; padding:2.15cqw 2.55cqw; border:1px solid #37566c; border-left:.34cqw solid var(--cyan); background:#0e1422}
+.matrix .micro {color:var(--cyan)}
+.matrix b {font:3.42cqw/1.18 Space,sans-serif}
+.address {flex:1; padding:.53cqw 1.45cqw; border-radius:.8cqw; background:#05070f; color:#b9cce3}
+.browser-body {display:grid; grid-template-columns:1.7fr 1fr; gap:2cqw; padding:2.3cqw; background:#0a0e1a}
+.screen {min-width:0; padding:2cqw; border:1px solid #30445c; border-radius:.9cqw; background:#121a2c}
+.screen .micro {color:var(--cyan)}
+.screen b {display:block; margin:1.2cqw 0; font:3.5cqw Chakra,sans-serif}
+.field {padding:.8cqw 1.2cqw; border:1px solid #536887; border-radius:.65cqw; background:#0a0e1a; color:var(--ink); font:2.75cqw Space,sans-serif}
+.screen-error {display:block; margin-top:.85cqw; color:#ffaaaa; font:2.72cqw/1.18 Space,sans-serif}
+.phone {border-top:.42cqw solid #22d3ee; padding-inline:1.6cqw}
+.phone b {font-size:3cqw}
+.ci-heading {display:flex; align-items:center; justify-content:space-between; gap:2cqw; padding:2cqw 2.6cqw; font:3.4cqw Space,sans-serif}
+.ci-heading .micro {color:#ffaaaa}
+.ci-list {margin:0; padding:0; list-style:none}
+.ci-list li {display:grid; grid-template-columns:3.9cqw 1fr auto; align-items:center; gap:1.7cqw; min-height:7.2cqw; padding:1.3cqw 2.6cqw; border-top:1px solid #30445c; font:3.35cqw Space,sans-serif}
+.icon {display:grid; place-items:center; width:3.5cqw; height:3.5cqw; border-radius:50%; background:#113741; color:#a6f1f8; font:2.55cqw/1 Space,sans-serif}
+.icon.bad {background:#462632; color:#ffaaaa}
+.status-ok {color:#a6f1f8}
+.status-bad {color:#ffaaaa}
+.runs {display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; gap:1.4cqw; padding:2.25cqw}
+.run {padding:1.9cqw 2.2cqw; background:#121a2c; border-left:.4cqw solid var(--cyan)}
+.run:first-child {border-color:var(--error)}
+.run b {display:block; margin-top:.7cqw; font:5.5cqw/1 Chakra,sans-serif}
+.run-arrow {align-self:center; color:var(--muted); font:3.5cqw Mono,monospace}
+.review-chat {margin:4.8cqw 0 0}
+.cta {margin:4.5cqw 0 2cqw; border-left:.48cqw solid var(--yellow); padding-left:2.4cqw; color:var(--yellow); font:600 3.5cqw/1.22 Space,sans-serif}
+.engagement {display:grid; grid-template-columns:repeat(3,1fr); gap:1.5cqw; margin:5.5cqw 0 0; padding:0; list-style:none}
+.engagement li {display:grid; justify-items:center; align-content:center; gap:1.6cqw; min-height:19cqw; padding:2cqw 1cqw; border:1px solid #37566c; border-radius:1.2cqw; background:#0e1422; color:var(--ink); font:3.25cqw Space,sans-serif}
+.engagement svg {width:7.8cqw; height:7.8cqw}
+.engagement .save {border-color:#ffce1f80; background:#24201a; color:var(--yellow)}
+body[data-export] main {display:block; width:1080px; max-width:none; margin:0; padding:0}
+</style>
+<main aria-label="Carrusel 04, ocho láminas">
+  <div class="frame" data-slide="1">
+    <img src="../../carousel-1080x1350/cover-04.png" alt="La IA lo escribió. ¿Lo revisaste? Una página de código con marcas amarillas.">
+  </div>
+  <div class="frame" data-slide="2"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">01 / LEE EL CAMBIO</div>
+    <h1>Empieza por <em>el diff.</em></h1>
+    <p>Lee por encima el código. Ubica qué cambió, qué archivos tocó y cómo se conecta con lo que pediste.</p>
+    <figure class="panel" aria-label="Ejemplo de un git diff que cambia quién puede editar">
+      <div class="bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Terminal</span><strong>src/access.ts</strong></div>
+      <pre class="diff"><span class="command">$ git diff -- src/access.ts</span><span class="hunk">@@ -14 +14 @@</span><span class="minus">- return user !== null;</span><span class="plus">+ return user?.role === "editor";</span></pre>
+    </figure>
+    <p class="hint">El diff toca permisos. Comprueba quién puede editar ahora.</p>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>02 / 08</span></div>
+  </section></div>
+  <div class="frame" data-slide="3"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">02 / CUBRE CASOS BORDE</div>
+    <h1>Prueba qué pasa <em>cuando falla.</em></h1>
+    <p>Elige los casos límite relevantes y define qué debería pasar en cada uno antes de probarlos.</p>
+    <ul class="matrix" aria-label="Casos límite y resultados esperados">
+      <li><span class="micro">01 · DATOS VACÍOS</span><b>Muestra un estado vacío.</b></li>
+      <li><span class="micro">02 · SIN PERMISOS</span><b>Bloquea la acción.</b></li>
+      <li><span class="micro">03 · RED CAÍDA</span><b>Conserva lo escrito.</b></li>
+      <li><span class="micro">04 · DOBLE ENVÍO</span><b>Guarda una sola vez.</b></li>
+    </ul>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>03 / 08</span></div>
+  </section></div>
+  <div class="frame" data-slide="4"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">03 / PRUEBA LA INTERFAZ</div>
+    <h1>Recorre el flujo <em>en el navegador.</em></h1>
+    <p>Si cambió la UI, prueba la acción completa en escritorio y móvil. Incluye un dispositivo real cuando puedas.</p>
+    <figure class="panel" aria-label="Navegador abierto con el mismo error de guardado en escritorio y móvil">
+      <div class="bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="address">localhost:3000/perfil</span></div>
+      <div class="browser-body">
+        <div class="screen">
+          <span class="micro">ESCRITORIO</span><b>Ajustes de perfil</b>
+          <div class="field">Nombre · Sofía</div><span class="screen-error">No se guardó. Reintenta.</span>
+        </div>
+        <div class="screen phone">
+          <span class="micro">MÓVIL</span><b>Mi perfil</b>
+          <div class="field">Sofía</div><span class="screen-error">No se guardó.</span>
+        </div>
+      </div>
+    </figure>
+    <p class="hint">Prueba carga, error y éxito. Usa teclado y pantalla táctil.</p>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>04 / 08</span></div>
+  </section></div>
+  <div class="frame" data-slide="5"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">04 / ANÁLISIS ESTÁTICO</div>
+    <h1>Corre el linter <em>y el chequeo de tipos.</em></h1>
+    <p>Usa los comandos del proyecto. Lee los avisos y distingue cuáles introdujo el cambio.</p>
+    <figure class="panel" aria-label="Lista de comprobaciones CI con linter aprobado y tipos fallidos">
+      <div class="ci-heading"><b>Checks de CI</b><span class="micro">1 DE 2 PASÓ</span></div>
+      <ul class="ci-list">
+        <li><span class="icon" aria-hidden="true">✓</span><span>ESLint</span><span class="micro status-ok">APROBADO</span></li>
+        <li><span class="icon bad" aria-hidden="true">×</span><span>Chequeo de tipos</span><span class="micro status-bad">FALLÓ</span></li>
+      </ul>
+    </figure>
+    <p class="hint">Abre el check que falló y ubica el tipo incompatible.</p>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>05 / 08</span></div>
+  </section></div>
+  <div class="frame" data-slide="6"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">05 / PRUEBAS AUTOMATIZADAS</div>
+    <h1>Ejecuta las <em>pruebas relevantes.</em></h1>
+    <p>Corre la suite del área que tocaste y las pruebas del flujo que depende del cambio.</p>
+    <figure class="panel" aria-label="La misma prueba de regresión falla antes del arreglo y pasa después">
+      <div class="bar"><span>form-error.spec.ts</span><strong>MISMA PRUEBA</strong></div>
+      <div class="runs">
+        <div class="run"><span class="micro">ANTES</span><b class="status-bad">FAIL</b></div>
+        <span class="run-arrow" aria-hidden="true">→</span>
+        <div class="run"><span class="micro">DESPUÉS</span><b class="status-ok">PASS</b></div>
+      </div>
+    </figure>
+    <p class="hint">La prueba reproduce el bug y confirma el arreglo.</p>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>06 / 08</span></div>
+  </section></div>
+  <div class="frame" data-slide="7"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">06 / CODE REVIEW</div>
+    <h1>Pide <em>otra mirada.</em></h1>
+    <p>Comparte objetivo, diff y pruebas con un compañero, otro agente o una sesión nueva de IA.</p>
+    <figure class="review-chat">
+      <img src="04-chat-shadcn.png" alt="Revisor/a: Ya tengo el diff y las pruebas. Tú: ¿Qué podría romperse y cómo lo comprobarías?">
+    </figure>
+    <p class="cta">Antes de integrar, apunta qué verificaste y qué falta por probar.</p>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>07 / 08</span></div>
+  </section></div>
+  <div class="frame" data-slide="8"><section class="slide">
+    <div class="meta"><b>[ IA PRÁCTICA ]</b><span>GUÍA DE REVISIÓN</span></div>
+    <div class="topic">GUÍA RÁPIDA / PARA TENER A MANO</div>
+    <h1>Guárdalo para <em>tu próxima revisión.</em></h1>
+    <p>Vuelve a estos pasos cuando la IA te proponga un cambio.</p>
+    <ul class="engagement" aria-label="Formas de interactuar en Instagram">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.8a5.1 5.1 0 0 0-7.2 0L12 7.4l-1.6-1.6a5.1 5.1 0 0 0-7.2 7.2l8.8 8.4 8.8-8.4a5.1 5.1 0 0 0 0-7.2Z"/></svg>
+        <span>Me gusta</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-9 9 9.6 9.6 0 0 1-4.2-1L3 21l1.5-4.8a9 9 0 1 1 16.5-4.7Z"/></svg>
+        <span>Comentar</span>
+      </li>
+      <li class="save">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 2.5h14a1 1 0 0 1 1 1v17.6a.75.75 0 0 1-1.2.6L12 16.8l-6.8 4.9a.75.75 0 0 1-1.2-.6V3.5a1 1 0 0 1 1-1Z"/></svg>
+        <span>Guardar</span>
+      </li>
+    </ul>
+    <p class="hint">¿Qué paso agregarías? Cuéntamelo en comentarios.</p>
+    <div class="foot"><span>SOFÍA BRACHO</span><span>08 / 08</span></div>
+  </section></div>
+</main>
+<script>
+  const slide = new URLSearchParams(location.search).get("slide");
+  if (document.querySelector('[data-slide="' + CSS.escape(slide ?? "") + '"]')) {
+    document.body.dataset.export = "";
+    document.querySelectorAll("[data-slide]").forEach(frame => {
+      frame.hidden = frame.dataset.slide !== slide;
+    });
+  }
+</script>
+</html>

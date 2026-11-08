@@ -18,7 +18,7 @@ Guía completa también copiada en `Proyects/Career/Guía maestra de marca — c
 - Pixel to Cloud es dirección vigente; español, voz clara/curiosa/cercana, experiencia verificable sobre interfaces, código, producto e IA. No volver a estilo visual anterior «Notas de producto».
 - Paleta: fondo `#05070F`, alterno `#0A0E1A`, paneles `#0E1422`/`#121A2C`, texto `#EAF6FF`, apoyo `#8AA0C8`, cian `#22D3EE`, amarillo `#FFCE1F`, **errores rojos `#FF6B6B`**.
 - Chakra Petch / Space Grotesk / Space Mono. Preservar portadas históricas aprobadas con serif; no redefinir identidad por sus píxeles.
-- Usar componentes oficiales shadcn/ui, `base-nova`, Base UI y `@shadcn/react`, variables CSS, `@theme inline`, `cssVariables:true`, clases propias `sb-*`. Simples y consistentes; no inventar nuevas interfaces por post.
+- Revisar primero el catálogo y reutilizar los componentes shadcn del tema cuando encajen. Si falta uno y la pieza necesita una interfaz, crearlo en el kit. Mantener `base-nova`, Base UI, `@shadcn/react`, `@theme inline`, `cssVariables:true` y clases `sb-*`. Usar diagramas, texto o ilustraciones cuando expliquen mejor la idea.
 - Message/Bubble/MessageScroller para conversación; Questionnaire con Diseño/Código/Ambos/respuesta libre. No sustituir ese cierre por formulario.
 - Pies y apoyos breves, legibles en móvil. Acortar antes de empequeñecer tipografía.
 - Preservar ilustración portada 02 y gráfico 4/01 con tres iconos y separadores.

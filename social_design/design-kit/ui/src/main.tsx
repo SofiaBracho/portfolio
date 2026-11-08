@@ -44,7 +44,39 @@ function Conversation(){
 function Compare(){return <div className="sb-compare">{[[PanelsTopLeft,'Diseñar','Cómo se entiende y se usa.'],[Code2,'Construir','Cómo funciona.']].map(([Icon,title,copy]:any)=><Card key={title} className="sb-card"><Icon size={30} color="#22D3EE"/><h2>{title}</h2><p>{copy}</p></Card>)}</div>}
 function Buttons(){return <div className="sb-stack"><div className="sb-actions"><B>Guardar cambios</B><B variant="outline">Cancelar</B></div><div className="sb-actions"><B disabled>Guardar cambios</B><B disabled><LoaderCircle/>Guardando…</B></div><Badge className="sb-badge">Ejemplo conceptual</Badge></div>}
 function CoverError(){return <Card className="sb-card sb-cover-error"><AlertCircle size={48} color="#FF6B6B"/><h2>Algo salió mal.</h2><p>Tu mensaje sigue aquí.</p><B>Reintentar envío <ArrowRight/></B></Card>}
-const assets:Record<string,React.ReactNode>={buttons:<Buttons/>,profile:<Profile/>, 'form-default':<Contact/>, 'form-invalid':<Contact mode="invalid"/>, 'form-retry':<Contact mode="retry"/>, 'form-summary':<Contact mode="summary"/>,conversation:<Conversation/>,compare:<Compare/>, 'cover-error':<CoverError/>}
+function ReviewChat() {
+ return (
+  <section className="sb-chat sb-review-chat" aria-label="Revisión del cambio">
+   <header className="sb-review-chat-title">Revisión del cambio</header>
+   <MessageScrollerProvider defaultScrollPosition="start" autoScroll={false}>
+    <MessageScroller>
+     <MessageScrollerViewport aria-label="Conversación de revisión">
+      <MessageScrollerContent className="sb-transcript">
+       <MessageScrollerItem messageId="reviewer">
+        <Message className="sb-chat-message">
+         <MessageContent>
+          <MessageHeader>Revisor/a</MessageHeader>
+          <Bubble variant="secondary" className="sb-bubble"><BubbleContent>Ya tengo el diff y las pruebas.</BubbleContent></Bubble>
+         </MessageContent>
+        </Message>
+       </MessageScrollerItem>
+       <MessageScrollerItem messageId="question">
+        <Message align="end" className="sb-chat-message">
+         <MessageContent>
+          <MessageHeader>Tú</MessageHeader>
+          <Bubble variant="outline" className="sb-bubble"><BubbleContent>¿Qué podría romperse y cómo lo comprobarías?</BubbleContent></Bubble>
+         </MessageContent>
+        </Message>
+       </MessageScrollerItem>
+      </MessageScrollerContent>
+     </MessageScrollerViewport>
+    </MessageScroller>
+   </MessageScrollerProvider>
+  </section>
+ )
+}
+
+const assets:Record<string,React.ReactNode>={buttons:<Buttons/>,profile:<Profile/>, 'form-default':<Contact/>, 'form-invalid':<Contact mode="invalid"/>, 'form-retry':<Contact mode="retry"/>, 'form-summary':<Contact mode="summary"/>,conversation:<Conversation/>,compare:<Compare/>, 'cover-error':<CoverError/>, 'review-chat':<ReviewChat/>}
 
 function Asset({name}:{name:string}){return <main className="export-stage"><div data-export={name} className={'export-object '+(name==='compare'?'wide':name==='conversation'?'compact':'')}>{assets[name]}</div></main>}
 function Text({children,x=96,y,w=888,size=38,color='#EAF6FF',face='Space Grotesk',weight=400,line=1.25}:{children:React.ReactNode,x?:number,y:number,w?:number,size?:number,color?:string,face?:string,weight?:number,line?:number}){return <div data-ppt-text style={{position:'absolute',left:x,top:y,width:w,fontFamily:face,fontSize:size,color,fontWeight:weight,lineHeight:line,whiteSpace:'pre-line'}}>{children}</div>}

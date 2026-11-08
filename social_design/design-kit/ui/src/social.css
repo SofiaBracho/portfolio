@@ -71,3 +71,20 @@
   padding-top: 12px;
   border-top: 1px solid color-mix(in srgb, var(--border) 30%, var(--card));
 }
+
+.export-object[data-export="review-chat"] { width: 920px; }
+.sb-chat.sb-review-chat { display: flex; flex-direction: column; height: 322px; }
+.sb-review-chat-title {
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  font: 24px/1.25 'Space Mono', monospace;
+}
+.sb-review-chat [data-slot="message-scroller"] { flex: 1; }
+.sb-review-chat .sb-transcript { padding: 16px 24px; }
+.sb-chat.sb-review-chat [data-slot="message-header"] { font-size: 22px; }
+.sb-chat.sb-review-chat [data-slot="bubble-content"] { font-size: 32px; line-height: 1.25; }
+.sb-chat.sb-review-chat [data-slot="message"][data-align="end"] [data-slot="bubble-content"] {
+  border-color: var(--ring);
+  background: var(--background);
+}

@@ -249,6 +249,8 @@ En los carruseles 01 y 02, el glow cian conecta las cinco láminas: diseñar una
 
 **Decisión de Sofía, 14 de octubre de 2026:** reutilizar componentes oficiales shadcn/ui con el tema Pixel to Cloud. Fuente canónica: [`design-kit/ui/`](design-kit/ui/README.md); [preview aprobado](design-kit/ui/preview.html). Evitar redibujar interfaces de manera diferente en cada post.
 
+Antes de diseñar una interfaz para una pieza de contenido, revisa el catálogo y reutiliza los componentes del tema que encajen. Si falta uno, créalo dentro del kit cuando la pieza necesite esa interfaz. Cuando la idea se explique mejor con otro recurso, usa un diagrama, texto o una ilustración.
+
 | Sistema | Regla |
 | --- | --- |
 | Base | Estilo `base-nova`, primitivas Base UI y `@shadcn/react`. Componentes fuente copiados con CLI oficial; versiones exactas en `package-lock.json`. |
