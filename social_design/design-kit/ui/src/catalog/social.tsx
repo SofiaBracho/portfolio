@@ -4,6 +4,7 @@ import { CommentThread, type SocialComment } from '@/components/social/comment-t
 import { ReactionBar, type Reaction } from '@/components/social/reaction-bar'
 import { SocialPoll, type PollOption } from '@/components/social/social-poll'
 import type { Specimen } from '../component-catalog'
+import { postCtas } from './post-cta'
 
 const initialReactions: Reaction[] = [
   { id: 'like', label: 'Me gusta', icon: <Heart />, count: 12 },
@@ -62,4 +63,5 @@ export const social: Specimen[] = [
   ['reaction-bar', 'Reacciones', <ReactionsDemo />],
   ['social-poll', 'Encuesta social', <PollDemo />],
   ['comment-thread', 'Hilo de comentarios', <CommentsDemo />],
+  ...postCtas,
 ]

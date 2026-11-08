@@ -59,3 +59,15 @@
 .sb-social-comment { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 8px; }
 .sb-social-comment [data-slot=bubble-content] { overflow-wrap: anywhere; white-space: pre-wrap; }
 .sb-social-publish { justify-self: start; }
+
+.sb-post-cta {
+  align-content: start;
+  border-inline-start: 2px solid var(--ring);
+}
+
+.sb-post-cta-actions {
+  display: grid;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 30%, var(--card));
+}

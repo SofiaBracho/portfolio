@@ -43,7 +43,7 @@ export default function ComponentCatalog() {
           <header className="sb-library-hero">
             <div className="sb-library-kicker">Sofía Bracho / Catálogo en revisión</div>
             <h1>Pixel to <span>Cloud</span></h1>
-            <p>{specimens.length} muestras interactivas de shadcn/ui. Explora los componentes con el tema de marca y prueba sus estados con el puntero o el teclado.</p>
+            <p>{specimens.length} muestras interactivas de shadcn/ui y Pixel to Cloud. Explora el catálogo y prueba los estados con el puntero o el teclado.</p>
             <div className="sb-library-palette" aria-hidden="true">
               {['--primary', '--ring', '--destructive', '--muted-foreground'].map((color) => <span key={color} style={{ '--swatch': `var(${color})` } as CSSProperties} />)}
             </div>

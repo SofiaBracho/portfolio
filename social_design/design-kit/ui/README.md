@@ -2,9 +2,11 @@
 
 ## Catálogo de componentes · 8 de noviembre de 2026
 
-Abre `preview.html` y elige **Componentes**. El catálogo reúne 71 muestras interactivas en nueve familias, con búsqueda por nombre. Incluye los 64 componentes instalables de Base Nova, las composiciones Date Picker, Data Table, Form y Typography, y tres componentes propios en **Social**. Continuidad y los dos posts tienen sus propias vistas.
+Abre `preview.html` y elige **Componentes**. El catálogo reúne 74 muestras interactivas en nueve familias, con búsqueda por nombre. Incluye los 64 componentes instalables de Base Nova, las composiciones Date Picker, Data Table, Form y Typography, y componentes propios en **Social**. Continuidad y los dos posts tienen sus propias vistas.
 
 **Social** incluye `ReactionBar` para alternar reacciones, `SocialPoll` para votar y ver resultados, y `CommentThread` para abrir una conversación. Los componentes viven en `src/components/social/` y reciben sus estados por props. Para una escena de video, pasa los datos del fotograma para elegir qué reacción está activa, cuándo aparecen los resultados o qué comentarios se ven. Los ejemplos del catálogo guardan los cambios en memoria mientras están abiertos.
+
+`PostCTA` compone cierres de post con una invitación y su acción. En **Social** puedes elegir el próximo caso, proponer un mensaje de error alternativo y guardar una prueba de 30 segundos. El bloque recibe las acciones y sus estados como contenido, así puedes reutilizar el cierre en un carrusel o mostrar un estado concreto en video.
 
 El catálogo funciona desde un archivo local. Para editarlo, ejecuta `npm ci` y `npm run dev`, y abre `/?view=components`. Ejecuta `npm run preview` para actualizar solo el catálogo dentro de `preview.html` y `npm run check:preview` para probarlo con Microsoft Edge. Los ejemplos viven en `src/catalog/` y usan los componentes reutilizables de `src/components/ui/` con los tokens de `src/brand.css`.
 

@@ -262,7 +262,7 @@ En los carruseles 01 y 02, el glow cian conecta las cinco láminas: diseñar una
 | Ilustraciones y gráficos | Conservar portadas aprobadas y gráficos editoriales existentes. shadcn estandariza los controles, no elimina la ilustración ni los iconos de la marca. |
 | Exportación Canva | PNG transparentes por componente o composición UI, colocados como imágenes independientes. Titulares y texto editorial separados; conservar las portadas con sus capas de Canva. |
 
-**Ampliación del catálogo, 8 de noviembre de 2026.** La pestaña **Componentes** de `design-kit/ui/preview.html` reúne 71 muestras interactivas. La familia **Social** incorpora reacciones, encuesta con resultados e hilo de comentarios. Cada componente recibe el estado por props para reutilizarlo en interfaces, posts y escenas de video.
+**Ampliación del catálogo, 8 de noviembre de 2026.** La pestaña **Componentes** de `design-kit/ui/preview.html` reúne 74 muestras interactivas. La familia **Social** incluye reacciones, encuesta con resultados, hilo de comentarios y cierres de post para votar, proponer una alternativa o guardar un reto práctico. Cada componente admite estados definidos por la composición para reutilizarlo en interfaces, posts y escenas de video.
 
 Las capturas son ejemplos conceptuales. El preview React permite probar estados en el navegador local; no representa un servicio de mensajería ni envíos reales. La encuesta del post es visual: respuestas en comentarios de Instagram. Reducir textos antes de bajar el tamaño de letra.
 
